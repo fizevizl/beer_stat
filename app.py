@@ -27,7 +27,7 @@ FIXED_TEMPLATE = "template2.typ" # Шаблон зафиксирован
 
 # --- СЛОВАРЬ ПЕРЕВОДОВ ---
 languages = {
-    "English 🇬🇧": {
+    "en": {
         "title": "🍺 Beer Stat Generator",
         "description": "Upload an Excel file to generate a PDF report.",
         "lang_label": "Select Language:",
@@ -35,9 +35,10 @@ languages = {
         "button": "Generate PDF",
         "success": "PDF created successfully!",
         "download": "📥 Download Report (PDF)",
-        "error": "An error occurred:"
+        "error": "An error occurred:",
+        "lang": "English"
     },
-    "Čeština 🇨🇿": {
+    "🇨🇿": {
         "title": "🍺 Generátor pivních statistik",
         "description": "Nahrajte soubor Excel pro vytvoření PDF reportu.",
         "lang_label": "Vyberte jazyk:",
@@ -45,17 +46,8 @@ languages = {
         "button": "Generovat PDF",
         "success": "PDF bylo úspěšně vytvořeno!",
         "download": "📥 Stáhnout report (PDF)",
-        "error": "Došlo k chybě:"
-    },
-    "Русский 🇷🇺": {
-        "title": "🍺 Генератор статистики пива",
-        "description": "Загрузите Excel-файл для создания PDF-отчета.",
-        "lang_label": "Выберите язык:",
-        "file_label": "Выберите Excel файл (.xlsx)",
-        "button": "Сгенерировать PDF",
-        "success": "PDF успешно создан!",
-        "download": "📥 Скачать отчет (PDF)",
-        "error": "Произошла ошибка:"
+        "error": "Došlo k chybě:",
+        "lang": "cheština"
     }
 }
 
@@ -63,7 +55,7 @@ languages = {
 
 # 1. Выбор языка теперь первым элементом в центре
 temp_lang_list = list(languages.keys())
-lang_choice = st.selectbox("Language / Jazyk / Язык", temp_lang_list, index=0)
+lang_choice = st.selectbox("Language / Jazyk", temp_lang_list, index=0)
 t = languages[lang_choice]
 
 # 2. Основной контент
