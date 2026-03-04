@@ -40,8 +40,10 @@ st.title("🍺 Beer Stat Generator")
 st.write("Загрузите Excel-файл, чтобы получить PDF-отчет по шаблону.")
 
 # 1. Выбор шаблона
-template_options = ["template1.typ", "template2.typ"]
-selected_template = st.selectbox("Выберите шаблон:", template_options)
+# template_options = ["template1.typ", "template2.typ"]
+# selected_template = st.selectbox("Выберите шаблон:", template_options)
+
+selected_template = "template2.typ"
 
 # 2. Загрузка файла
 uploaded_file = st.file_uploader("Выберите Excel файл (.xlsx)", type="xlsx")
