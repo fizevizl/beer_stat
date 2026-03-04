@@ -44,7 +44,7 @@ FIXED_TEMPLATE = "template2.typ" # Шаблон зафиксирован
 languages = {
     "en": {
         "title": "🍺 Beer Stat Generator",
-        "description": "Upload an Excel file to generate a PDF report.",
+        "description": "Upload an Excel file to generate a PDF report. The data for the transfer must be on the first sheet",
         "lang_label": "Select Language:",
         "file_label": "Choose Excel file (.xlsx)",
         "button": "Generate PDF",
@@ -55,7 +55,7 @@ languages = {
     },
     "🇨🇿": {
         "title": "🍺 Generátor pivních statistik",
-        "description": "Nahrajte soubor Excel pro vytvoření PDF reportu.",
+        "description": "Nahrajte soubor Excel pro vytvoření PDF reportu. Údaje pro převod musí být na prvním listu",
         "lang_label": "Vyberte jazyk:",
         "file_label": "Vyberte soubor Excel (.xlsx)",
         "button": "Generovat PDF",
@@ -65,8 +65,6 @@ languages = {
         "lang": "cheština"
     }
 }
-
-# --- ИНТЕРФЕЙС ПРИЛОЖЕНИЯ (ВСЁ В ЦЕНТРЕ) ---
 
 # 1. Выбор языка теперь первым элементом в центре
 # Этот код нужно вставить ПЕРЕД отрисовкой selectbox
