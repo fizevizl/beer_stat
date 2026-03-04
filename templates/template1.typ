@@ -11,11 +11,11 @@
 // Используем шрифт с поддержкой спецсимволов
 #set text(font: "Arial", lang: "en")
 
-#let beer-data = json("data/pivo.json")
+#let beer-data = json("../data/pivo.json")
 
 #table(
   columns: (1fr, 1fr, 50pt), 
-  fill: (x, y) => if y == 0 { gray.lighten(80%) },
+  fill: (x, y) => if y > 0 and calc.even(y) { luma(245) },
   stroke: 0.5pt + gray,
   inset: 7pt,
   
