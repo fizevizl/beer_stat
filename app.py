@@ -69,8 +69,20 @@ languages = {
 # --- ИНТЕРФЕЙС ПРИЛОЖЕНИЯ (ВСЁ В ЦЕНТРЕ) ---
 
 # 1. Выбор языка теперь первым элементом в центре
+# Этот код нужно вставить ПЕРЕД отрисовкой selectbox
+st.markdown("""
+    <style>
+    /* Находим контейнер выбора языка и выравниваем его содержимое вправо */
+    div[data-testid="stSelectbox"] {
+        margin-left: auto;
+        width: 80px !important;
+        padding: 0px;
+        min-height: 30px;
+    }
+    </style>
+    """, unsafe_allow_html=True)
 temp_lang_list = list(languages.keys())
-lang_choice = st.selectbox("Language / Jazyk", temp_lang_list, index=0)
+lang_choice = st.selectbox("", temp_lang_list, index=0)
 t = languages[lang_choice]
 
 # 2. Основной контент
