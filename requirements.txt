@@ -1,3 +1,4 @@
-pandas
+streamlit>=1.31.0
+pandas>=2.0.0
 openpyxl
-streamlit
+altair>=5.0.0
