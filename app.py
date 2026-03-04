@@ -2,7 +2,38 @@ import streamlit as st
 import pandas as pd
 import subprocess
 import os
+import urllib.request
+import tarfile
 
+# --- ФУНКЦИЯ УСТАНОВКИ TYPST ---
+def install_typst():
+    if not os.path.exists("typst_bin/typst"):
+        with st.spinner("Установка Typst..."):
+            os.makedirs("typst_bin", exist_ok=True)
+            # Ссылка на версию для Linux x64
+            url = "https://github.com/typst/typst/releases/latest/download/typst-x86_64-unknown-linux-musl.tar.xz"
+            archive = "typst.tar.xz"
+            urllib.request.urlretrieve(url, archive)
+            
+            # Распаковка
+            with tarfile.open(archive, "r:xz") as tar:
+                tar.extractall(path="typst_bin")
+            
+            # Находим сам файл (он распаковывается в подпапку)
+            for root, dirs, files in os.walk("typst_bin"):
+                if "typst" in files:
+                    os.rename(os.path.join(root, "typst"), "typst_bin/typst")
+                    break
+            
+            os.chmod("typst_bin/typst", 0o755) # Даем права на запуск
+            os.remove(archive)
+
+# Запускаем установку
+install_typst()
+TYPST_PATH = "./typst_bin/typst"
+
+# --- ДАЛЕЕ ВАШ ОСНОВНОЙ КОД ---
+# ... (title, file_uploader и т.д.)
 st.set_page_config(page_title="Beer Stat PDF Generator", page_icon="🍺")
 
 st.title("🍺 Beer Stat Generator")
@@ -38,13 +69,13 @@ if uploaded_file is not None:
             os.makedirs('output', exist_ok=True)
 
             # Команда для Typst
+           # Исправленная команда
             command = [
-                "typst", "compile", 
-                "--root", ".", 
-                f"templates/{selected_template}", 
-                output_path
+            TYPST_PATH, "compile",  # Используем путь к скачанному бинарнику
+            "--root", ".", 
+            f"templates/{selected_template}", 
+            output_path
             ]
-
             # Запуск компиляции
             subprocess.run(command, check=True)
             
