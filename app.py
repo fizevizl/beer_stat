@@ -4,25 +4,40 @@ import subprocess
 import os
 import urllib.request
 import tarfile
+import platform
 
-# --- УСТАНОВКА TYPST ---
+# --- ИСПРАВЛЕННЫЙ БЛОК УСТАНОВКИ ---
 def install_typst():
-    if not os.path.exists("typst_bin/typst"):
+    # 1. Проверка для Windows
+    if platform.system() == "Windows":
+        return "typst" # Используем системную команду
+    
+    # 2. Логика для Linux (Streamlit Cloud)
+    bin_path = "typst_bin/typst"
+    if not os.path.exists(bin_path):
         os.makedirs("typst_bin", exist_ok=True)
         url = "https://github.com/typst/typst/releases/latest/download/typst-x86_64-unknown-linux-musl.tar.xz"
         archive = "typst.tar.xz"
-        urllib.request.urlretrieve(url, archive)
-        with tarfile.open(archive, "r:xz") as tar:
-            tar.extractall(path="typst_bin")
-        for root, dirs, files in os.walk("typst_bin"):
-            if "typst" in files:
-                os.rename(os.path.join(root, "typst"), "typst_bin/typst")
-                break
-        os.chmod("typst_bin/typst", 0o755)
-        if os.path.exists(archive): os.remove(archive)
+        try:
+            urllib.request.urlretrieve(url, archive)
+            with tarfile.open(archive, "r:xz") as tar:
+                tar.extractall(path="typst_bin")
+            # Поиск исполняемого файла в распакованной папке
+            for root, dirs, files in os.walk("typst_bin"):
+                if "typst" in files and root != "typst_bin":
+                    os.rename(os.path.join(root, "typst"), bin_path)
+                    break
+            os.chmod(bin_path, 0o755)
+            if os.path.exists(archive): os.remove(archive)
+        except Exception as e:
+            st.error(f"Failed to install Typst: {e}")
+            return "typst" # Пробуем упасть на системную команду
 
+    return "./" + bin_path
+
+# ВЫЗЫВАЕМ ОДИН РАЗ
+TYPST_PATH = install_typst()# Получаем правильный путь в зависимости от системы
 install_typst()
-TYPST_PATH = "./typst_bin/typst"
 FIXED_TEMPLATE = "template2.typ" # Шаблон зафиксирован
 
 # --- СЛОВАРЬ ПЕРЕВОДОВ ---
@@ -83,7 +98,7 @@ if uploaded_file is not None:
 
             output_path = "output/beer_report.pdf"
             os.makedirs('output', exist_ok=True)
-
+            
             # Используем FIXED_TEMPLATE
             command = [
                 TYPST_PATH, "compile", 
@@ -94,7 +109,6 @@ if uploaded_file is not None:
 
             subprocess.run(command, check=True)
             st.success(t["success"])
-
             with open(output_path, "rb") as f:
                 st.download_button(
                     label=t["download"],
@@ -102,6 +116,6 @@ if uploaded_file is not None:
                     file_name="beer_report.pdf",
                     mime="application/pdf"
                 )
-
+            
         except Exception as e:
             st.error(f"{t['error']} {e}")
