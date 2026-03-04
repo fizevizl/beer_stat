@@ -5,7 +5,7 @@ import os
 import urllib.request
 import tarfile
 
-# --- УСТАНОВКА TYPST (как делали раньше) ---
+# --- УСТАНОВКА TYPST ---
 def install_typst():
     if not os.path.exists("typst_bin/typst"):
         os.makedirs("typst_bin", exist_ok=True)
@@ -23,13 +23,14 @@ def install_typst():
 
 install_typst()
 TYPST_PATH = "./typst_bin/typst"
+FIXED_TEMPLATE = "template2.typ" # Шаблон зафиксирован
 
 # --- СЛОВАРЬ ПЕРЕВОДОВ ---
 languages = {
-    "English": {
+    "English 🇬🇧": {
         "title": "🍺 Beer Stat Generator",
         "description": "Upload an Excel file to generate a PDF report.",
-        "template_label": "Select Template:",
+        "lang_label": "Select Language:",
         "file_label": "Choose Excel file (.xlsx)",
         "button": "Generate PDF",
         "success": "PDF created successfully!",
@@ -39,17 +40,17 @@ languages = {
     "Čeština 🇨🇿": {
         "title": "🍺 Generátor pivních statistik",
         "description": "Nahrajte soubor Excel pro vytvoření PDF reportu.",
-        "template_label": "Vyberte šablonu:",
+        "lang_label": "Vyberte jazyk:",
         "file_label": "Vyberte soubor Excel (.xlsx)",
         "button": "Generovat PDF",
         "success": "PDF bylo úspěšně vytvořeno!",
         "download": "📥 Stáhnout report (PDF)",
         "error": "Došlo k chybě:"
     },
-    "Русский": {
+    "Русский 🇷🇺": {
         "title": "🍺 Генератор статистики пива",
         "description": "Загрузите Excel-файл для создания PDF-отчета.",
-        "template_label": "Выберите шаблон:",
+        "lang_label": "Выберите язык:",
         "file_label": "Выберите Excel файл (.xlsx)",
         "button": "Сгенерировать PDF",
         "success": "PDF успешно создан!",
@@ -58,21 +59,19 @@ languages = {
     }
 }
 
-# --- ИНТЕРФЕЙС ПРИЛОЖЕНИЯ ---
+# --- ИНТЕРФЕЙС ПРИЛОЖЕНИЯ (ВСЁ В ЦЕНТРЕ) ---
 
-# Панель выбора языка в сайдбаре (сбоку)
-st.sidebar.title("Settings / Настройки")
-lang_choice = st.sidebar.selectbox("Language / Язык", list(languages.keys()), index=0) # Index 0 = English
-t = languages[lang_choice] # Переменная t теперь содержит все тексты на выбранном языке
+# 1. Выбор языка теперь первым элементом в центре
+temp_lang_list = list(languages.keys())
+lang_choice = st.selectbox("Language / Jazyk / Язык", temp_lang_list, index=0)
+t = languages[lang_choice]
 
+# 2. Основной контент
 st.title(t["title"])
+# st.info(f"Using template: {FIXED_TEMPLATE}") # Просто уведомление, какой шаблон используется
 st.write(t["description"])
 
-# Выбор шаблона
-template_options = ["template1.typ", "template2.typ"]
-selected_template = st.selectbox(t["template_label"], template_options)
-
-# Загрузка файла
+# 3. Загрузка файла
 uploaded_file = st.file_uploader(t["file_label"], type="xlsx")
 
 if uploaded_file is not None:
@@ -80,7 +79,6 @@ if uploaded_file is not None:
         try:
             df = pd.read_excel(uploaded_file, sheet_name=1)
             
-            # Логика обработки данных
             rename_map = {
                 "Značka piva": "brand_name",
                 "Země původu": "origin_country",
@@ -94,10 +92,11 @@ if uploaded_file is not None:
             output_path = "output/beer_report.pdf"
             os.makedirs('output', exist_ok=True)
 
+            # Используем FIXED_TEMPLATE
             command = [
                 TYPST_PATH, "compile", 
                 "--root", ".", 
-                f"templates/{selected_template}", 
+                f"templates/{FIXED_TEMPLATE}", 
                 output_path
             ]
 
