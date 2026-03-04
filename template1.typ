@@ -25,8 +25,8 @@
   ),
 
   ..beer-data.map(item => (
-    item.at("Značka piva", default: "-"), 
-    item.at("Země původu", default: "-"), 
-    str(item.at("Počet", default: 0)),    
+    item.at("brand_name", default: "-"), 
+    item.at("origin_country", default: "-"), 
+    str(item.at("quantity", default: 0)),    
   )).flatten()
 )
