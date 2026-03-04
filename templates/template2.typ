@@ -15,7 +15,7 @@
     .map(item => {
       let val = item.at("quantity", default: 0)
       // На случай, если в JSON число пришло как строка, переводим в int
-      if type(val) == str { int(val) } else { val }
+      // if type(val) == str { int(val) } else { val }
     })
     .sum()
 )

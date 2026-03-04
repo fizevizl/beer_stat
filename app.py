@@ -8,11 +8,9 @@ import platform
 
 # --- ИСПРАВЛЕННЫЙ БЛОК УСТАНОВКИ ---
 def install_typst():
-    # 1. Проверка для Windows
     if platform.system() == "Windows":
-        return "typst" # Используем системную команду
+        return "typst"
     
-    # 2. Логика для Linux (Streamlit Cloud)
     bin_path = "typst_bin/typst"
     if not os.path.exists(bin_path):
         os.makedirs("typst_bin", exist_ok=True)
@@ -22,7 +20,6 @@ def install_typst():
             urllib.request.urlretrieve(url, archive)
             with tarfile.open(archive, "r:xz") as tar:
                 tar.extractall(path="typst_bin")
-            # Поиск исполняемого файла в распакованной папке
             for root, dirs, files in os.walk("typst_bin"):
                 if "typst" in files and root != "typst_bin":
                     os.rename(os.path.join(root, "typst"), bin_path)
@@ -31,85 +28,83 @@ def install_typst():
             if os.path.exists(archive): os.remove(archive)
         except Exception as e:
             st.error(f"Failed to install Typst: {e}")
-            return "typst" # Пробуем упасть на системную команду
-
+            return "typst"
     return "./" + bin_path
 
-# ВЫЗЫВАЕМ ОДИН РАЗ
-TYPST_PATH = install_typst()# Получаем правильный путь в зависимости от системы
-install_typst()
-FIXED_TEMPLATE = "template2.typ" # Шаблон зафиксирован
+TYPST_PATH = install_typst()
+FIXED_TEMPLATE = "template2.typ"
 
 # --- СЛОВАРЬ ПЕРЕВОДОВ ---
 languages = {
     "en": {
         "title": "🍺 Beer Stat Generator",
-        "description": "Upload an Excel file to generate a PDF report. The data for the transfer must be on the first sheet",
-        "lang_label": "Select Language:",
+        "description": "Upload an Excel file to generate a PDF report. The data for the transfer must be on the second sheet.",
         "file_label": "Choose Excel file (.xlsx)",
         "button": "Generate PDF",
         "success": "PDF created successfully!",
         "download": "📥 Download Report (PDF)",
         "error": "An error occurred:",
-        "lang": "English"
     },
     "🇨🇿": {
         "title": "🍺 Generátor pivních statistik",
-        "description": "Nahrajte soubor Excel pro vytvoření PDF reportu. Údaje pro převod musí být na prvním listu",
-        "lang_label": "Vyberte jazyk:",
+        "description": "Nahrajte soubor Excel pro vytvoření PDF reportu. Údaje pro převod musí být на druhém listu.",
         "file_label": "Vyberte soubor Excel (.xlsx)",
         "button": "Generovat PDF",
         "success": "PDF bylo úspěšně vytvořeno!",
         "download": "📥 Stáhnout report (PDF)",
         "error": "Došlo k chybě:",
-        "lang": "cheština"
     }
 }
 
-# 1. Выбор языка теперь первым элементом в центре
-# Этот код нужно вставить ПЕРЕД отрисовкой selectbox
+# --- ИНТЕРФЕЙС ---
 st.markdown("""
     <style>
-    /* Находим контейнер выбора языка и выравниваем его содержимое вправо */
     div[data-testid="stSelectbox"] {
         margin-left: auto;
-        width: 80px !important;
-        padding: 0px;
-        min-height: 30px;
+        width: 100px !important;
     }
     </style>
     """, unsafe_allow_html=True)
+
 temp_lang_list = list(languages.keys())
 lang_choice = st.selectbox("", temp_lang_list, index=0)
 t = languages[lang_choice]
 
-# 2. Основной контент
 st.title(t["title"])
-# st.info(f"Using template: {FIXED_TEMPLATE}") # Просто уведомление, какой шаблон используется
 st.write(t["description"])
 
 # 3. Загрузка файла
 uploaded_file = st.file_uploader(t["file_label"], type="xlsx")
 
 if uploaded_file is not None:
+    # Определяем параметры листов
+    xls = pd.ExcelFile(uploaded_file)
+    sheet_names = xls.sheet_names
+    sheet_num = 1  # Индекс 1 — это второй лист в Excel
+    
+    # Кнопка генерации (теперь она ОДНА)
     if st.button(t["button"]):
         try:
-            df = pd.read_excel(uploaded_file, sheet_name=1)
+            # Читаем только первые 3 колонки (индексы 0, 1, 2)
+            df = pd.read_excel(uploaded_file, sheet_name=sheet_num, usecols=[0, 1, 2])
             
+            # Переименовываем колонки по индексам для надежности
             rename_map = {
-                "Značka piva": "brand_name",
-                "Země původu": "origin_country",
-                "Počet": "quantity"
+                df.columns[0]: "brand_name",
+                df.columns[1]: "origin_country",
+                df.columns[2]: "quantity"
             }
             df = df.rename(columns=rename_map)
             
+            # Сохраняем данные для Typst
             os.makedirs('data', exist_ok=True)
             df.to_json('data/pivo.json', orient='records', force_ascii=False, indent=2)
 
+            # Путь к результату
             output_path = "output/beer_report.pdf"
             os.makedirs('output', exist_ok=True)
             
-            # Используем FIXED_TEMPLATE
+            # Запуск компиляции
             command = [
                 TYPST_PATH, "compile", 
                 "--root", ".", 
@@ -118,7 +113,10 @@ if uploaded_file is not None:
             ]
 
             subprocess.run(command, check=True)
+            
             st.success(t["success"])
+            
+            # Кнопка скачивания
             with open(output_path, "rb") as f:
                 st.download_button(
                     label=t["download"],
