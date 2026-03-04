@@ -80,13 +80,15 @@ if uploaded_file is not None:
     # Определяем параметры листов
     xls = pd.ExcelFile(uploaded_file)
     sheet_names = xls.sheet_names
-    sheet_num = 1  # Индекс 1 — это второй лист в Excel
+    sheet_num = 2  # Индекс 1 — это второй лист в Excel
     
     # Кнопка генерации (теперь она ОДНА)
     if st.button(t["button"]):
         try:
             # Читаем только первые 3 колонки (индексы 0, 1, 2)
             df = pd.read_excel(uploaded_file, sheet_name=sheet_num, usecols=[0, 1, 2])
+
+            df = df.dropna(subset=[df.columns[0]])
             
             # Переименовываем колонки по индексам для надежности
             rename_map = {
@@ -112,7 +114,11 @@ if uploaded_file is not None:
                 output_path
             ]
 
-            subprocess.run(command, check=True)
+            # Замените subprocess.run(command, check=True) на этот блок:
+            result = subprocess.run(command, capture_output=True, text=True)
+            if result.returncode != 0:
+                st.error(f"Typst Error: {result.stderr}") # Это покажет реальную причину
+                st.stop()
             
             st.success(t["success"])
             
