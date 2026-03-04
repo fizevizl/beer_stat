@@ -5,113 +5,112 @@ import os
 import urllib.request
 import tarfile
 
-# --- ФУНКЦИЯ УСТАНОВКИ TYPST ---
+# --- УСТАНОВКА TYPST (как делали раньше) ---
 def install_typst():
     if not os.path.exists("typst_bin/typst"):
-        with st.spinner("Установка Typst..."):
-            os.makedirs("typst_bin", exist_ok=True)
-            # Ссылка на версию для Linux x64
-            url = "https://github.com/typst/typst/releases/latest/download/typst-x86_64-unknown-linux-musl.tar.xz"
-            archive = "typst.tar.xz"
-            urllib.request.urlretrieve(url, archive)
-            
-            # Распаковка
-            with tarfile.open(archive, "r:xz") as tar:
-                tar.extractall(path="typst_bin")
-            
-            # Находим сам файл (он распаковывается в подпапку)
-            for root, dirs, files in os.walk("typst_bin"):
-                if "typst" in files:
-                    os.rename(os.path.join(root, "typst"), "typst_bin/typst")
-                    break
-            
-            os.chmod("typst_bin/typst", 0o755) # Даем права на запуск
-            os.remove(archive)
+        os.makedirs("typst_bin", exist_ok=True)
+        url = "https://github.com/typst/typst/releases/latest/download/typst-x86_64-unknown-linux-musl.tar.xz"
+        archive = "typst.tar.xz"
+        urllib.request.urlretrieve(url, archive)
+        with tarfile.open(archive, "r:xz") as tar:
+            tar.extractall(path="typst_bin")
+        for root, dirs, files in os.walk("typst_bin"):
+            if "typst" in files:
+                os.rename(os.path.join(root, "typst"), "typst_bin/typst")
+                break
+        os.chmod("typst_bin/typst", 0o755)
+        if os.path.exists(archive): os.remove(archive)
 
-# Запускаем установку
 install_typst()
 TYPST_PATH = "./typst_bin/typst"
 
-localisation = {
-    "en": {
-        "load-file": "Upload Excel file (.xlsx)",
-        "generate-pdf": "Generate PDF",
+# --- СЛОВАРЬ ПЕРЕВОДОВ ---
+languages = {
+    "English": {
+        "title": "🍺 Beer Stat Generator",
+        "description": "Upload an Excel file to generate a PDF report.",
+        "template_label": "Select Template:",
+        "file_label": "Choose Excel file (.xlsx)",
+        "button": "Generate PDF",
+        "success": "PDF created successfully!",
+        "download": "📥 Download Report (PDF)",
+        "error": "An error occurred:"
     },
-    "cz": {
-        "load-file": "Upload Excel file (.xlsx)",
-        "generate-pdf": "Generate PDF",
+    "Čeština 🇨🇿": {
+        "title": "🍺 Generátor pivních statistik",
+        "description": "Nahrajte soubor Excel pro vytvoření PDF reportu.",
+        "template_label": "Vyberte šablonu:",
+        "file_label": "Vyberte soubor Excel (.xlsx)",
+        "button": "Generovat PDF",
+        "success": "PDF bylo úspěšně vytvořeno!",
+        "download": "📥 Stáhnout report (PDF)",
+        "error": "Došlo k chybě:"
     },
-    "ru": {
-        "load-file": "Загрузите Excel-файл (.xlsx), чтобы получить PDF-отчет по шаблону.",
-        "generate-pdf": "Сгенерировать PDF",
+    "Русский": {
+        "title": "🍺 Генератор статистики пива",
+        "description": "Загрузите Excel-файл для создания PDF-отчета.",
+        "template_label": "Выберите шаблон:",
+        "file_label": "Выберите Excel файл (.xlsx)",
+        "button": "Сгенерировать PDF",
+        "success": "PDF успешно создан!",
+        "download": "📥 Скачать отчет (PDF)",
+        "error": "Произошла ошибка:"
     }
 }
 
+# --- ИНТЕРФЕЙС ПРИЛОЖЕНИЯ ---
 
-# --- ДАЛЕЕ ВАШ ОСНОВНОЙ КОД ---
-# ... (title, file_uploader и т.д.)
-st.set_page_config(page_title="Beer Stat PDF Generator", page_icon="🍺")
+# Панель выбора языка в сайдбаре (сбоку)
+st.sidebar.title("Settings / Настройки")
+lang_choice = st.sidebar.selectbox("Language / Язык", list(languages.keys()), index=0) # Index 0 = English
+t = languages[lang_choice] # Переменная t теперь содержит все тексты на выбранном языке
 
-# 1. Выбор языка
-langs_options = ["en", "cz", "ru"]
-# selected_lang = st.selectbox("", langs_options)
+st.title(t["title"])
+st.write(t["description"])
 
-cur_lang = "en"
-# if selected_lang:
-#     cur_lang = selected_lang
-cur_locale = localisation[cur_lang]
+# Выбор шаблона
+template_options = ["template1.typ", "template2.typ"]
+selected_template = st.selectbox(t["template_label"], template_options)
 
-
-st.title("🍺 Beer Stat Generator")
-
-selected_template = "template2.typ"
-
-# 2. Загрузка файла
-uploaded_file = st.file_uploader(cur_locale["load-file"], type="xlsx")
+# Загрузка файла
+uploaded_file = st.file_uploader(t["file_label"], type="xlsx")
 
 if uploaded_file is not None:
-    if st.button(cur_locale["generate-pdf"]):
+    if st.button(t["button"]):
         try:
-            # Читаем данные напрямую из загруженного файла
             df = pd.read_excel(uploaded_file, sheet_name=1)
-
-            # Ваша логика переименования
+            
+            # Логика обработки данных
             rename_map = {
                 "Značka piva": "brand_name",
                 "Země původu": "origin_country",
                 "Počet": "quantity"
             }
             df = df.rename(columns=rename_map)
-
-            # Сохраняем временный JSON (Typst берет данные отсюда)
+            
             os.makedirs('data', exist_ok=True)
             df.to_json('data/pivo.json', orient='records', force_ascii=False, indent=2)
 
-            # Подготовка путей
             output_path = "output/beer_report.pdf"
             os.makedirs('output', exist_ok=True)
 
-            # Команда для Typst
-           # Исправленная команда
             command = [
-            TYPST_PATH, "compile",  # Используем путь к скачанному бинарнику
-            "--root", ".", 
-            f"templates/{selected_template}", 
-            output_path
+                TYPST_PATH, "compile", 
+                "--root", ".", 
+                f"templates/{selected_template}", 
+                output_path
             ]
-            # Запуск компиляции
-            subprocess.run(command, check=True)
-            
-            st.success("PDF успешно создан!")
 
-            # Кнопка для скачивания готового файла
+            subprocess.run(command, check=True)
+            st.success(t["success"])
+
             with open(output_path, "rb") as f:
                 st.download_button(
-                    label="📥 Скачать отчет (PDF)",
+                    label=t["download"],
                     data=f,
                     file_name="beer_report.pdf",
                     mime="application/pdf"
                 )
 
         except Exception as e:
-            st.error(f"Произошла ошибка: {e}")
+            st.error(f"{t['error']} {e}")
