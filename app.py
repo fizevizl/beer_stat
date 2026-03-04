@@ -32,24 +32,45 @@ def install_typst():
 install_typst()
 TYPST_PATH = "./typst_bin/typst"
 
+localisation = {
+    "en": {
+        "load-file": "Upload Excel file (.xlsx)",
+        "generate-pdf": "Generate PDF",
+    },
+    "cz": {
+        "load-file": "Upload Excel file (.xlsx)",
+        "generate-pdf": "Generate PDF",
+    },
+    "ru": {
+        "load-file": "Загрузите Excel-файл (.xlsx), чтобы получить PDF-отчет по шаблону.",
+        "generate-pdf": "Сгенерировать PDF",
+    }
+}
+
+
 # --- ДАЛЕЕ ВАШ ОСНОВНОЙ КОД ---
 # ... (title, file_uploader и т.д.)
 st.set_page_config(page_title="Beer Stat PDF Generator", page_icon="🍺")
 
-st.title("🍺 Beer Stat Generator")
-st.write("Загрузите Excel-файл, чтобы получить PDF-отчет по шаблону.")
+# 1. Выбор языка
+langs_options = ["en", "cz", "ru"]
+# selected_lang = st.selectbox("", langs_options)
 
-# 1. Выбор шаблона
-# template_options = ["template1.typ", "template2.typ"]
-# selected_template = st.selectbox("Выберите шаблон:", template_options)
+cur_lang = "en"
+# if selected_lang:
+#     cur_lang = selected_lang
+cur_locale = localisation[cur_lang]
+
+
+st.title("🍺 Beer Stat Generator")
 
 selected_template = "template2.typ"
 
 # 2. Загрузка файла
-uploaded_file = st.file_uploader("Выберите Excel файл (.xlsx)", type="xlsx")
+uploaded_file = st.file_uploader(cur_locale["load-file"], type="xlsx")
 
 if uploaded_file is not None:
-    if st.button("Сгенерировать PDF"):
+    if st.button(cur_locale["generate-pdf"]):
         try:
             # Читаем данные напрямую из загруженного файла
             df = pd.read_excel(uploaded_file, sheet_name=1)
