@@ -85,35 +85,48 @@ uploaded_file = st.file_uploader(t["file_label"], type=["xlsx", "xls"])
 
 if uploaded_file is not None:
     try:
-        # --- УЛУЧШЕННЫЙ БЛОК ЧТЕНИЯ (Поддержка XML-XLS) ---
+        # --- УНИВЕРСАЛЬНЫЙ БЛОК ЧТЕНИЯ (XML, XLS, XLSX) ---
         df_dict = None
         
+        # 1. Сначала пробуем стандартные методы (XLSX / Бинарный XLS)
         try:
-            # 1. Пробуем прочитать как стандартный Excel (xlsx или честный xls)
+            uploaded_file.seek(0)
             df_dict = pd.read_excel(uploaded_file, sheet_name=None)
         except Exception:
             try:
-                # 2. Если упало, пробуем движок xlrd (старый бинарный xls)
+                # 2. Пробуем старый бинарный формат
                 uploaded_file.seek(0)
                 df_dict = pd.read_excel(uploaded_file, sheet_name=None, engine='xlrd')
             except Exception:
-                # 3. Если всё еще ошибка "Expected BOF record", значит это XML-таблица
+                # 3. ПОСЛЕДНИЙ ШАНС: Читаем как XML Spreadsheet 2003
                 uploaded_file.seek(0)
-                # Читаем HTML-таблицу внутри XML
-                tables = pd.read_html(uploaded_file)
-                if tables:
-                    # Имитируем словарь листов для совместимости с остальным кодом
-                    df_dict = {"Sheet1": tables[0]}
-                else:
-                    raise ValueError("Could not find any tables in the file.")
+                # Читаем содержимое как строку
+                content = uploaded_file.read().decode('utf-8', errors='ignore')
+                
+                # Используем read_xml (нужна библиотека lxml)
+                # Мы ищем все данные внутри тегов Row и Cell
+                try:
+                    # Пытаемся вытащить данные через read_xml
+                    uploaded_file.seek(0)
+                    df_xml = pd.read_xml(uploaded_file, xpath=".//ss:Row", namespaces={"ss": "urn:schemas-microsoft-com:office:spreadsheet"})
+                    # Очищаем колонки от технических префиксов ss:
+                    df_xml.columns = [c.split('}')[-1] for c in df_xml.columns]
+                    df_dict = {"Sheet1": df_xml}
+                except Exception:
+                    # Если XML сложный, пробуем прочитать просто как HTML, но через BeautifulSoup
+                    uploaded_file.seek(0)
+                    df_dict = {"Sheet1": pd.read_html(uploaded_file, flavor='bs4')[0]}
 
-        # Конвертируем всё в XLSX в памяти для унификации
-        output = io.BytesIO()
-        with pd.ExcelWriter(output, engine='openpyxl') as writer:
-            for sheet_name, df_sheet in df_dict.items():
-                df_sheet.to_excel(writer, sheet_name=sheet_name, index=False)
-        output.seek(0)
-        processed_file = output
+        # Если данные найдены, конвертируем в XLSX для унификации
+        if df_dict:
+            output = io.BytesIO()
+            with pd.ExcelWriter(output, engine='openpyxl') as writer:
+                for sheet_name, df_sheet in df_dict.items():
+                    df_sheet.to_excel(writer, sheet_name=sheet_name, index=False)
+            output.seek(0)
+            processed_file = output
+        else:
+            raise ValueError("Unsupported Excel XML format")
 
         # Определяем параметры листов
         xls_tool = pd.ExcelFile(processed_file)
