@@ -5,65 +5,118 @@ import os
 import urllib.request
 import tarfile
 import platform
-import io  # Добавлено для конвертации в памяти
+from pathlib import Path
+import warnings
+from bs4 import XMLParsedAsHTMLWarning
 
-# --- БЛОК УСТАНОВКИ ---
-def install_typst():
+
+warnings.filterwarnings("ignore", category=XMLParsedAsHTMLWarning)
+
+# --- КОНСТАНТЫ ---
+TYPST_VERSION_URL = "https://github.com/typst/typst/releases/latest/download/typst-x86_64-unknown-linux-musl.tar.xz"
+DATA_DIR = Path("data")
+OUTPUT_DIR = Path("output")
+TEMP_DIR = Path("typst_executable")
+TEMPLATE_PATH = Path("templates/template2.typ")
+
+# --- ЛОГИКА УСТАНОВКИ ---
+@st.cache_resource
+def get_typst_path():
+    """Устанавливает Typst и возвращает путь к исполняемому файлу."""
     if platform.system() == "Windows":
         return "typst"
     
-    bin_dir = os.path.abspath("typst_executable")
-    bin_path = os.path.join(bin_dir, "typst")
-    
-    if not os.path.exists(bin_path):
-        os.makedirs(bin_dir, exist_ok=True)
-        url = "https://github.com/typst/typst/releases/latest/download/typst-x86_64-unknown-linux-musl.tar.xz"
+    bin_path = TEMP_DIR / "typst"
+    if not bin_path.exists():
+        TEMP_DIR.mkdir(exist_ok=True)
         archive = "typst.tar.xz"
         try:
-            urllib.request.urlretrieve(url, archive)
+            urllib.request.urlretrieve(TYPST_VERSION_URL, archive)
             with tarfile.open(archive, "r:xz") as tar:
-                tar.extractall(path=bin_dir)
+                tar.extractall(path=TEMP_DIR)
             
-            for root, dirs, files in os.walk(bin_dir):
-                if "typst" in files and root != bin_dir:
-                    os.replace(os.path.join(root, "typst"), bin_path)
+            # Поиск бинарника во вложенных папках архива
+            for p in TEMP_DIR.rglob("typst"):
+                if p.is_file():
+                    p.replace(bin_path)
                     break
             
-            os.chmod(bin_path, 0o775) 
-            if os.path.exists(archive): 
+            bin_path.chmod(0o775)
+            if Path(archive).exists():
                 os.remove(archive)
         except Exception as e:
-            st.error(f"Failed to install Typst: {e}")
+            st.error(f"Typst install failed: {e}")
             return "typst"
-            
-    return bin_path
+    return str(bin_path)
 
-TYPST_PATH = install_typst()
-FIXED_TEMPLATE = "template2.typ"
+# --- ЛОГИКА ОБРАБОТКИ ДАННЫХ ---
+def try_read_excel(file) -> pd.DataFrame:
+    """Пытается прочитать файл разными методами (XLSX, XLS, XML, HTML)."""
+    
+    # 1. Стандартные движки (XLSX / Бинарный XLS)
+    for engine in [None, 'xlrd', 'openpyxl']:
+        try:
+            file.seek(0)
+            return pd.read_excel(file, engine=engine)
+        except Exception:
+            continue
 
-# --- СЛОВАРЬ ПЕРЕВОДОВ ---
+   # 2 Прямое извлечение данных из тегов <Data>
+    try:
+        file.seek(0)
+        import xml.etree.ElementTree as ET
+        tree = ET.parse(file)
+        root = tree.getroot()
+        
+        ns = {'ss': 'urn:schemas-microsoft-com:office:spreadsheet'}
+        rows_data = []
+        
+        for row in root.findall('.//ss:Row', ns):
+            cells = [cell.find('ss:Data', ns).text if cell.find('ss:Data', ns) is not None else "" 
+                     for cell in row.findall('ss:Cell', ns)]
+            if any(cells): # Пропускаем совсем пустые строки
+                rows_data.append(cells)
+        
+        if rows_data:
+            return pd.DataFrame(rows_data)
+    except Exception as e:
+        st.error(f"Error reading XML: {e}")
+
+
+def clean_data(df: pd.DataFrame) -> pd.DataFrame:
+    """Очистка и нормализация данных."""
+    # Если данные слиплись в одну колонку
+    if df.shape[1] == 1:
+        for sep in [';', '\t', ',']:
+            temp_df = df.iloc[:, 0].astype(str).str.split(sep, expand=True)
+            if temp_df.shape[1] >= 2:
+                df = temp_df
+                break
+    
+    df = df.iloc[:, :3]
+    df.columns = ["brand_name", "origin_country", "quantity"]
+    
+    df = df.dropna(subset=["brand_name"])
+    df["quantity"] = pd.to_numeric(df["quantity"], errors='coerce').fillna(0).astype(int)
+    return df[df["quantity"] > 0]
+
+# --- ИНТЕРФЕЙС ---
 languages = {
     "en": {
         "title": "🍺 Beer Stat Generator",
-        "description": "Upload an Excel file to generate a PDF report. The data for the transfer must be on the first sheet.",
-        "file_label": "Choose Excel file (.xlsx, .xls)",
+        "description": "Upload Excel (XLSX, XLS, XML) The data for the transfer must be on the first sheet.",
         "button": "Generate PDF",
-        "success": "PDF created successfully!",
-        "download": "📥 Download Report (PDF)",
-        "error": "An error occurred:",
+        "success": "PDF created!",
+        "download": "📥 Download PDF"
     },
     "🇨🇿": {
         "title": "🍺 Generátor pivních statistik",
-        "description": "Nahrajte soubor Excel pro vytvoření PDF reportu. Údaje pro převod musí být na prvním listu.",
-        "file_label": "Vyberte soubor Excel (.xlsx, .xls)",
+        "description": "Nahrajte Excel (XLSX, XLS, XML) Údaje pro převod musí být na prvním listu.",
         "button": "Generovat PDF",
-        "success": "PDF было успешно vytvořeno!",
-        "download": "📥 Stáhnout report (PDF)",
-        "error": "Došlo k chybě:",
+        "success": "PDF vytvořeno!",
+        "download": "📥 Stáhnout PDF"
     }
 }
-
-# --- ИНТЕРФЕЙС ---
 st.markdown("""
     <style>
     div[data-testid="stSelectbox"] {
@@ -74,125 +127,51 @@ st.markdown("""
     """, unsafe_allow_html=True)
 
 temp_lang_list = list(languages.keys())
-lang_choice = st.selectbox("", temp_lang_list, index=0)
+lang_choice = st.selectbox(
+    "Language Selection",        # Текст метки (теперь он обязателен)
+    options=temp_lang_list, 
+    index=0, 
+    label_visibility="collapsed" # Скрывает метку, сохраняя ваш дизайн
+)
 t = languages[lang_choice]
 
 st.title(t["title"])
-st.write(t["description"])
+st.info(t["description"])
 
-# Загрузка файла (теперь принимает и xls)
-uploaded_file = st.file_uploader(t["file_label"], type=["xlsx", "xls"])
+uploaded_file = st.file_uploader("Excel file", type=["xlsx", "xls", "xml"])
 
-if uploaded_file is not None:
-    try:
-        # --- УНИВЕРСАЛЬНЫЙ БЛОК ЧТЕНИЯ (XML, XLS, XLSX) ---
-        df_dict = None
-        
-        # 1. Сначала пробуем стандартные методы (XLSX / Бинарный XLS)
+if uploaded_file:
+    if st.button(t["button"]):
         try:
-            uploaded_file.seek(0)
-            df_dict = pd.read_excel(uploaded_file, sheet_name=None)
-        except Exception:
-            try:
-                # 2. Пробуем старый бинарный формат
-                uploaded_file.seek(0)
-                df_dict = pd.read_excel(uploaded_file, sheet_name=None, engine='xlrd')
-            except Exception:
-                # 3. ПОСЛЕДНИЙ ШАНС: Читаем как XML Spreadsheet 2003
-                uploaded_file.seek(0)
-                # Читаем содержимое как строку
-                content = uploaded_file.read().decode('utf-8', errors='ignore')
-                
-                # Используем read_xml (нужна библиотека lxml)
-                # Мы ищем все данные внутри тегов Row и Cell
-                try:
-                    # Пытаемся вытащить данные через read_xml
-                    uploaded_file.seek(0)
-                    df_xml = pd.read_xml(uploaded_file, xpath=".//ss:Row", namespaces={"ss": "urn:schemas-microsoft-com:office:spreadsheet"})
-                    # Очищаем колонки от технических префиксов ss:
-                    df_xml.columns = [c.split('}')[-1] for c in df_xml.columns]
-                    df_dict = {"Sheet1": df_xml}
-                except Exception:
-                    # Если XML сложный, пробуем прочитать просто как HTML, но через BeautifulSoup
-                    uploaded_file.seek(0)
-                    df_dict = {"Sheet1": pd.read_html(uploaded_file, flavor='bs4')[0]}
-
-        # Если данные найдены, конвертируем в XLSX для унификации
-        if df_dict:
-            output = io.BytesIO()
-            with pd.ExcelWriter(output, engine='openpyxl') as writer:
-                for sheet_name, df_sheet in df_dict.items():
-                    df_sheet.to_excel(writer, sheet_name=sheet_name, index=False)
-            output.seek(0)
-            processed_file = output
-        else:
-            raise ValueError("Unsupported Excel XML format")
-
-        # Определяем параметры листов
-        xls_tool = pd.ExcelFile(processed_file)
-        sheet_names = xls_tool.sheet_names
-        sheet_num = 0  # Первый лист
-
-        if st.button(t["button"]):
-            df = pd.read_excel(processed_file, sheet_name=sheet_num)
+            # 1. Загрузка
+            raw_df = try_read_excel(uploaded_file)
             
-            # Разлепляем данные, если они в одной колонке
-            if df.shape[1] == 1:
-                temp_df = df.iloc[:, 0].astype(str).str.split(';', expand=True)
-                if temp_df.shape[1] < 3:
-                    temp_df = df.iloc[:, 0].astype(str).str.split('\t', expand=True)
-                df = temp_df
-
-            # Берем первые 3 колонки
-            df = df.iloc[:, :3]
+            # 2. Очистка
+            df = clean_data(raw_df)
             
-            # Переименовываем
-            new_names = ["brand_name", "origin_country", "quantity"]
-            df.columns = [new_names[i] for i in range(len(df.columns))]
-
-            # --- ВАЖНАЯ ОЧИСТКА ---
-            # 1. Удаляем строки, где нет названия бренда
-            df = df.dropna(subset=["brand_name"])
-            
-            # 2. Превращаем количество в числа. Всё, что не число -> станет 0
-            df["quantity"] = pd.to_numeric(df["quantity"], errors='coerce').fillna(0).astype(int)
-            
-            # 3. Убираем строки, где количество 0 (чтобы не суммировать пустоту)
-            df = df[df["quantity"] > 0]
-
             if df.empty:
-                st.error("Data is empty after processing. Check your Excel content!")
+                st.warning("No data found after cleaning.")
                 st.stop()
-            
-            # Сохраняем JSON
-            os.makedirs('data', exist_ok=True)
-            df.to_json('data/pivo.json', orient='records', force_ascii=False, indent=2)
 
-            # Путь к PDF
-            output_path = "output/beer_report.pdf"
-            os.makedirs('output', exist_ok=True)
-            
-            command = [
-                TYPST_PATH, "compile", 
-                "--root", ".", 
-                f"templates/{FIXED_TEMPLATE}", 
-                output_path
-            ]
+            # 3. Сохранение промежуточных данных
+            DATA_DIR.mkdir(exist_ok=True)
+            df.to_json(DATA_DIR / 'pivo.json', orient='records', force_ascii=False, indent=2)
 
-            result = subprocess.run(command, capture_output=True, text=True)
-            if result.returncode != 0:
+            # 4. Компиляция PDF
+            OUTPUT_DIR.mkdir(exist_ok=True)
+            pdf_path = OUTPUT_DIR / "beer_report.pdf"
+            
+            typst_bin = get_typst_path()
+            cmd = [typst_bin, "compile", "--root", ".", str(TEMPLATE_PATH), str(pdf_path)]
+            
+            result = subprocess.run(cmd, capture_output=True, text=True)
+            
+            if result.returncode == 0:
+                st.success(t["success"])
+                with open(pdf_path, "rb") as f:
+                    st.download_button(t["download"], f, "beer_report.pdf", "application/pdf")
+            else:
                 st.error(f"Typst Error: {result.stderr}")
-                st.stop()
-            
-            st.success(t["success"])
-            
-            with open(output_path, "rb") as f:
-                st.download_button(
-                    label=t["download"],
-                    data=f,
-                    file_name="beer_report.pdf",
-                    mime="application/pdf"
-                )
-    
-    except Exception as e:
-        st.error(f"{t['error']} {e}")
+
+        except Exception as e:
+            st.error(f"Error: {e}")
