@@ -5,42 +5,48 @@ import os
 import urllib.request
 import tarfile
 import platform
-from pathlib import Path
+import json
 import warnings
+from pathlib import Path
 from bs4 import XMLParsedAsHTMLWarning
 
-
+# Отключаем специфическое предупреждение парсера BS4, чтобы не засорять консоль
 warnings.filterwarnings("ignore", category=XMLParsedAsHTMLWarning)
 
-# --- КОНСТАНТЫ ---
+# --- ГЛОБАЛЬНЫЕ НАСТРОЙКИ И ПУТИ ---
 TYPST_VERSION_URL = "https://github.com/typst/typst/releases/latest/download/typst-x86_64-unknown-linux-musl.tar.xz"
-DATA_DIR = Path("data")
-OUTPUT_DIR = Path("output")
-TEMP_DIR = Path("typst_executable")
-TEMPLATE_PATH = Path("templates/template2.typ")
+DATA_DIR = Path("data")              # Папка для промежуточных JSON данных
+OUTPUT_DIR = Path("output")          # Папка для готовых PDF отчетов
+TEMP_DIR = Path("typst_executable")  # Папка для исполняемого файла Typst
+TEMPLATE_PATH = Path("templates/template2.typ") # Путь к шаблону отчета
 
-# --- ЛОГИКА УСТАНОВКИ ---
+# --- АВТОМАТИЧЕСКАЯ УСТАНОВКА TYPST ---
 @st.cache_resource
 def get_typst_path():
-    """Устанавливает Typst и возвращает путь к исполняемому файлу."""
+    """
+    Проверяет наличие Typst. Если его нет — скачивает и распаковывает.
+    Работает как для Windows (ожидает в системе), так и для Linux (Streamlit Cloud).
+    """
     if platform.system() == "Windows":
-        return "typst"
+        return "typst"  # Предполагаем, что в Windows Typst добавлен в PATH
     
     bin_path = TEMP_DIR / "typst"
     if not bin_path.exists():
         TEMP_DIR.mkdir(exist_ok=True)
         archive = "typst.tar.xz"
         try:
+            # Скачиваем свежий релиз Typst для Linux
             urllib.request.urlretrieve(TYPST_VERSION_URL, archive)
             with tarfile.open(archive, "r:xz") as tar:
                 tar.extractall(path=TEMP_DIR)
             
-            # Поиск бинарника во вложенных папках архива
+            # Находим бинарный файл во вложенных папках и переносим в корень TEMP_DIR
             for p in TEMP_DIR.rglob("typst"):
                 if p.is_file():
                     p.replace(bin_path)
                     break
             
+            # Даем права на выполнение файла
             bin_path.chmod(0o775)
             if Path(archive).exists():
                 os.remove(archive)
@@ -49,11 +55,14 @@ def get_typst_path():
             return "typst"
     return str(bin_path)
 
-# --- ЛОГИКА ОБРАБОТКИ ДАННЫХ ---
+# --- МОДУЛЬ ЧТЕНИЯ ДАННЫХ ---
 def try_read_excel(file) -> pd.DataFrame:
-    """Пытается прочитать файл разными методами (XLSX, XLS, XML, HTML)."""
+    """
+    Универсальный «комбайн» для чтения таблиц. 
+    Пробует по очереди: XLSX, старый XLS, XML Spreadsheet 2003 и HTML.
+    """
     
-    # 1. Стандартные движки (XLSX / Бинарный XLS)
+    # 1. Пробуем стандартные движки Pandas (XLSX, XLS)
     for engine in [None, 'xlrd', 'openpyxl']:
         try:
             file.seek(0)
@@ -61,31 +70,42 @@ def try_read_excel(file) -> pd.DataFrame:
         except Exception:
             continue
 
-   # 2 Прямое извлечение данных из тегов <Data>
+    # 2. Ручной разбор XML Spreadsheet 2003 (частый формат выгрузок из 1С/SAP)
     try:
         file.seek(0)
         import xml.etree.ElementTree as ET
         tree = ET.parse(file)
         root = tree.getroot()
         
+        # Пространство имен Excel XML
         ns = {'ss': 'urn:schemas-microsoft-com:office:spreadsheet'}
         rows_data = []
         
+        # Итерируемся по строкам и ячейкам
         for row in root.findall('.//ss:Row', ns):
             cells = [cell.find('ss:Data', ns).text if cell.find('ss:Data', ns) is not None else "" 
                      for cell in row.findall('ss:Cell', ns)]
-            if any(cells): # Пропускаем совсем пустые строки
+            if any(cells): # Игнорируем абсолютно пустые строки
                 rows_data.append(cells)
         
         if rows_data:
             return pd.DataFrame(rows_data)
     except Exception as e:
-        st.error(f"Error reading XML: {e}")
+        # Если XML не подошел, ошибка запишется, но мы пойдем дальше
+        pass
 
+    # Если ничего не помогло — выбрасываем исключение
+    raise ValueError("The file format was not recognized. Please ensure it is a valid Excel or XML file.")
 
+# --- МОДУЛЬ ОЧИСТКИ ДАННЫХ ---
 def clean_data(df: pd.DataFrame) -> pd.DataFrame:
-    """Очистка и нормализация данных."""
-    # Если данные слиплись в одну колонку
+    """
+    Приводит таблицу к единому стандарту:
+    - Разделяет слипшиеся колонки (CSV-style).
+    - Выбирает первые 3 колонки (Бренд, Страна, Кол-во).
+    - Удаляет пустые строки и преобразует числа.
+    """
+    # Если данные загрузились одной строкой текста — пробуем разделить по разделителям
     if df.shape[1] == 1:
         for sep in [';', '\t', ',']:
             temp_df = df.iloc[:, 0].astype(str).str.split(sep, expand=True)
@@ -93,30 +113,36 @@ def clean_data(df: pd.DataFrame) -> pd.DataFrame:
                 df = temp_df
                 break
     
+    # Оставляем только три важных столбца и даем им понятные имена
     df = df.iloc[:, :3]
     df.columns = ["brand_name", "origin_country", "quantity"]
     
+    # Удаляем строки без названия бренда
     df = df.dropna(subset=["brand_name"])
+    
+    # Конвертируем количество в целое число (ошибки станут нулями)
     df["quantity"] = pd.to_numeric(df["quantity"], errors='coerce').fillna(0).astype(int)
+    
+    # Возвращаем только те позиции, где количество больше нуля
     return df[df["quantity"] > 0]
 
-# --- ИНТЕРФЕЙС ---
-languages = {
-    "en": {
-        "title": "🍺 Beer Stat Generator",
-        "description": "Upload Excel (XLSX, XLS, XML) The data for the transfer must be on the first sheet.",
-        "button": "Generate PDF",
-        "success": "PDF created!",
-        "download": "📥 Download PDF"
-    },
-    "🇨🇿": {
-        "title": "🍺 Generátor pivních statistik",
-        "description": "Nahrajte Excel (XLSX, XLS, XML) Údaje pro převod musí být na prvním listu.",
-        "button": "Generovat PDF",
-        "success": "PDF vytvořeno!",
-        "download": "📥 Stáhnout PDF"
-    }
-}
+# --- ИНТЕРФЕЙС ПРИЛОЖЕНИЯ ---
+def load_language():
+    """Загружает переводы из внешнего JSON файла."""
+    try:
+        with open("language.json", "r", encoding="utf-8") as f:
+            return json.load(f)
+    except Exception as e:
+        # Если файл потерян — возвращаем минимальный английский интерфейс
+        return {
+            "en": {"title": "Error", "description": f"Could not load language.json: {e}", 
+                   "button": "Error", "success": "Error", "download": "Error"}
+        }
+
+# Подготовка словаря языков
+languages = load_language()
+
+# Кастомный CSS для компактного выбора языка в углу
 st.markdown("""
     <style>
     div[data-testid="stSelectbox"] {
@@ -126,50 +152,55 @@ st.markdown("""
     </style>
     """, unsafe_allow_html=True)
 
+# Выбор языка (лейбл скрыт для красоты)
 temp_lang_list = list(languages.keys())
 lang_choice = st.selectbox(
-    "Language Selection",        # Текст метки (теперь он обязателен)
+    "Language Selection", 
     options=temp_lang_list, 
     index=0, 
-    label_visibility="collapsed" # Скрывает метку, сохраняя ваш дизайн
+    label_visibility="collapsed"
 )
-t = languages[lang_choice]
+lang = languages[lang_choice]
 
-st.title(t["title"])
-st.info(t["description"])
+# Заголовок и описание
+st.title(lang["title"])
+st.info(lang["description"])
 
+# Поле загрузки файла
 uploaded_file = st.file_uploader("Excel file", type=["xlsx", "xls", "xml"])
 
 if uploaded_file:
-    if st.button(t["button"]):
+    if st.button(lang["button"]):
         try:
-            # 1. Загрузка
+            # ЭТАП 1: Чтение
             raw_df = try_read_excel(uploaded_file)
             
-            # 2. Очистка
+            # ЭТАП 2: Очистка
             df = clean_data(raw_df)
             
             if df.empty:
                 st.warning("No data found after cleaning.")
                 st.stop()
 
-            # 3. Сохранение промежуточных данных
+            # ЭТАП 3: Сохранение данных для Typst
             DATA_DIR.mkdir(exist_ok=True)
             df.to_json(DATA_DIR / 'pivo.json', orient='records', force_ascii=False, indent=2)
 
-            # 4. Компиляция PDF
+            # ЭТАП 4: Генерация PDF через Typst
             OUTPUT_DIR.mkdir(exist_ok=True)
             pdf_path = OUTPUT_DIR / "beer_report.pdf"
             
             typst_bin = get_typst_path()
+            # Запускаем внешнюю команду компиляции
             cmd = [typst_bin, "compile", "--root", ".", str(TEMPLATE_PATH), str(pdf_path)]
             
             result = subprocess.run(cmd, capture_output=True, text=True)
             
             if result.returncode == 0:
-                st.success(t["success"])
+                st.success(lang["success"])
+                # ЭТАП 5: Кнопка скачивания готового файла
                 with open(pdf_path, "rb") as f:
-                    st.download_button(t["download"], f, "beer_report.pdf", "application/pdf")
+                    st.download_button(lang["download"], f, "beer_report.pdf", "application/pdf")
             else:
                 st.error(f"Typst Error: {result.stderr}")
 

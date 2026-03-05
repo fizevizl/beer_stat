@@ -1,0 +1,16 @@
+{
+    "en": {
+        "title": "🍺 Beer Stat Generator",
+        "description": "Upload Excel (XLSX, XLS, XML) The data for the transfer must be on the first sheet.",
+        "button": "Generate PDF",
+        "success": "PDF created!",
+        "download": "📥 Download PDF"
+    },
+    "🇨🇿": {
+        "title": "🍺 Generátor pivních statistik",
+        "description": "Nahrajte Excel (XLSX, XLS, XML) Údaje pro převod musí být na prvním listu.",
+        "button": "Generovat PDF",
+        "success": "PDF vytvořeno!",
+        "download": "📥 Stáhnout PDF"
+    }
+}
