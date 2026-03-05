@@ -134,39 +134,35 @@ if uploaded_file is not None:
         sheet_num = 0  # Первый лист
 
         if st.button(t["button"]):
-            # 1. Читаем лист БЕЗ usecols, чтобы не упасть, если колонок мало
             df = pd.read_excel(processed_file, sheet_name=sheet_num)
             
-            # 2. Если все данные "слиплись" в одну колонку (бывает в XML/CSV), 
-            # пробуем разделить их (например, по точке с запятой)
+            # Разлепляем данные, если они в одной колонке
             if df.shape[1] == 1:
-                col_name = df.columns[0]
-                # Пробуем разбить первую колонку, если там есть разделители
-                temp_df = df[col_name].astype(str).str.split(';', expand=True)
-                if temp_df.shape[1] >= 3:
-                    df = temp_df
-                else:
-                    temp_df = df[col_name].astype(str).str.split('\t', expand=True)
-                    if temp_df.shape[1] >= 3:
-                        df = temp_df
+                temp_df = df.iloc[:, 0].astype(str).str.split(';', expand=True)
+                if temp_df.shape[1] < 3:
+                    temp_df = df.iloc[:, 0].astype(str).str.split('\t', expand=True)
+                df = temp_df
 
-            # 3. Теперь, когда мы сделали всё возможное, берем первые 3 колонки
-            # Если их всё равно меньше, берем сколько есть, чтобы не вылетала ошибка
-            cols_to_take = min(3, df.shape[1])
-            df = df.iloc[:, :cols_to_take]
-
-            # Очистка пустых строк
-            df = df.dropna(subset=[df.columns[0]])
+            # Берем первые 3 колонки
+            df = df.iloc[:, :3]
             
-            # Переименование колонок (динамическое)
+            # Переименовываем
             new_names = ["brand_name", "origin_country", "quantity"]
-            rename_map = {df.columns[i]: new_names[i] for i in range(len(df.columns))}
-            df = df.rename(columns=rename_map)
+            df.columns = [new_names[i] for i in range(len(df.columns))]
+
+            # --- ВАЖНАЯ ОЧИСТКА ---
+            # 1. Удаляем строки, где нет названия бренда
+            df = df.dropna(subset=["brand_name"])
             
-            # Если каких-то колонок не хватило, создаем пустые, чтобы Typst не ругался
-            for col in new_names:
-                if col not in df.columns:
-                    df[col] = ""
+            # 2. Превращаем количество в числа. Всё, что не число -> станет 0
+            df["quantity"] = pd.to_numeric(df["quantity"], errors='coerce').fillna(0).astype(int)
+            
+            # 3. Убираем строки, где количество 0 (чтобы не суммировать пустоту)
+            df = df[df["quantity"] > 0]
+
+            if df.empty:
+                st.error("Data is empty after processing. Check your Excel content!")
+                st.stop()
             
             # Сохраняем JSON
             os.makedirs('data', exist_ok=True)
