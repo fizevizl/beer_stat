@@ -7,6 +7,20 @@ import tarfile
 import platform
 import io
 from pathlib import Path
+import xlrd
+
+# --- УСТАНОВКА XLRD (ДЛЯ ПОДДЕРЖКИ СТАРЫХ XLS) ---
+def install_xlrd():
+    try:
+        import xlrd
+        return True
+    except ImportError:
+        try:
+            subprocess.run(["pip", "install", "xlrd==1.2.0"], check=True)
+            return True
+        except Exception as e:
+            st.error(f"Не удалось установить xlrd: {e}")
+            return False
 
 # --- УСТАНОВКА TYPST (ДЛЯ ОБЛАКА) ---
 def install_typst():
@@ -74,6 +88,7 @@ def load_excel_data(uploaded_file):
                 return None
             
 # --- ИНИЦИАЛИЗАЦИЯ ---
+install_xlrd()  # Устанавливаем xlrd для поддержки старых xls
 TYPST_PATH = install_typst()
 FIXED_TEMPLATE = "template2.typ"
 
