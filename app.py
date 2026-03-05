@@ -162,15 +162,16 @@ languages = load_language()
 # )
 # lang = languages[lang_choice]
 
+# --- ИНТЕРФЕЙС ПРИЛОЖЕНИЯ ---
+languages = load_language()
+
+# Устанавливаем английский по умолчанию без отрисовки интерфейса выбора
 lang_choice = "en" 
 
-# Проверка на случай, если в JSON почему-то нет ключа "en"
-if lang_choice not in languages:
-    lang_choice = list(languages.keys())[0]
+# Если в будущем захотите вернуть выбор, 
+# вы сможете снова добавить st.selectbox, использующий keys из languages
+lang = languages.get(lang_choice, languages[list(languages.keys())[0]])
 
-lang = languages[lang_choice]
-
-# Заголовок и описание
 st.title(lang["title"])
 st.info(lang["description"])
 
