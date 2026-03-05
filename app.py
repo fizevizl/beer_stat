@@ -6,7 +6,7 @@ import urllib.request
 import tarfile
 import platform
 
-# --- ИСПРАВЛЕННЫЙ БЛОК УСТАНОВКИ ---
+# --- БЛОК УСТАНОВКИ ---
 def install_typst():
     if platform.system() == "Windows":
         return "typst"
@@ -90,7 +90,7 @@ if uploaded_file is not None:
     # Определяем параметры листов
     xls = pd.ExcelFile(uploaded_file)
     sheet_names = xls.sheet_names
-    sheet_num = 2  # Индекс 1 — это второй лист в Excel
+    sheet_num = 0  # Индекс 0 — это первый лист в Excel
     
     # Кнопка генерации
     if st.button(t["button"]):
