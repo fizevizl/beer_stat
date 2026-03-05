@@ -85,35 +85,57 @@ if uploaded_file is not None:
     # Используем нашу логику преобразования
     df = load_excel_data(uploaded_file)
     
-    if df is not None:
-        # Показываем превью того, что прочитали
-        st.write("Превью данных из файла:")
-        st.dataframe(df.head(3))
-
-        if st.button("Сгенерировать PDF"):
+    if st.button("Сгенерировать PDF"):
             try:
-                # Очистка и подготовка колонок
-                # Если всё слиплось в одну колонку (бывает в CSV-подобных XLS)
+                # 1. Проверяем, не слиплись ли данные в одну колонку
                 if df.shape[1] == 1:
-                    df = df.iloc[:, 0].astype(str).str.split(';', expand=True)
+                    # Пробуем разделить по распространенным разделителям
+                    for sep in [';', '\t', '|']:
+                        temp_df = df.iloc[:, 0].astype(str).str.split(sep, expand=True)
+                        if temp_df.shape[1] >= 2:
+                            df = temp_df
+                            break
+                
+                # 2. Динамически назначаем имена колонок
+                # Вычисляем, сколько у нас колонок на самом деле
+                real_cols_count = df.shape[1]
+                target_names = ["brand_name", "origin_country", "quantity"]
+                
+                # Назначаем имена только для тех колонок, которые существуют
+                new_columns = {}
+                for i in range(real_cols_count):
+                    if i < len(target_names):
+                        new_columns[df.columns[i]] = target_names[i]
+                
+                df = df.rename(columns=new_columns)
 
-                # Берем первые 3 колонки
-                df = df.iloc[:, :3]
-                df.columns = ["brand_name", "origin_country", "quantity"]
+                # 3. Добавляем недостающие колонки, если файл слишком узкий
+                for name in target_names:
+                    if name not in df.columns:
+                        df[name] = "—" # Заполняем прочерком
 
-                # Финальная чистка данных
+                # 4. Очистка данных
                 df = df.dropna(subset=["brand_name"])
-                df["quantity"] = pd.to_numeric(df["quantity"], errors='coerce').fillna(0).astype(int)
-                df = df[df["quantity"] > 0]
+                
+                # Превращаем количество в число (извлекаем цифры, если там "10 шт")
+                if "quantity" in df.columns:
+                    df["quantity"] = df["quantity"].astype(str).str.extract(r'(\d+)')[0]
+                    df["quantity"] = pd.to_numeric(df["quantity"], errors='coerce').fillna(0).astype(int)
 
-                # Сохранение JSON для Typst
+                # Удаляем пустые строки
+                df = df[df["brand_name"].astype(str).str.strip() != ""]
+
+                # Проверка на пустоту
+                if df.empty:
+                    st.error("После обработки данных таблица оказалась пустой. Проверьте формат файла.")
+                    st.stop()
+
+                # --- Далее стандартный запуск Typst ---
                 os.makedirs('data', exist_ok=True)
                 df.to_json('data/pivo.json', orient='records', force_ascii=False, indent=2)
-
-                # Компиляция PDF
+                
                 output_path = "output/beer_report.pdf"
                 os.makedirs('output', exist_ok=True)
-                
                 command = [TYPST_PATH, "compile", "--root", ".", f"templates/{FIXED_TEMPLATE}", output_path]
                 result = subprocess.run(command, capture_output=True, text=True)
                 
@@ -123,6 +145,6 @@ if uploaded_file is not None:
                     st.success("PDF успешно создан!")
                     with open(output_path, "rb") as f:
                         st.download_button("📥 Скачать отчет", f, "beer_report.pdf", "application/pdf")
-            
+
             except Exception as e:
-                st.error(f"Ошибка обработки: {e}")
+                st.error(f"Ошибка при подготовке данных: {e}")
