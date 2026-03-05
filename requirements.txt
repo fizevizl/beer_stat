@@ -1,5 +1,6 @@
 streamlit>=1.31.0
 pandas>=2.0.0
-openpyxl
 altair>=5.0.0
+openpyxl
 xlrd
+lxml
