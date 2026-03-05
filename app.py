@@ -5,13 +5,13 @@ import os
 import urllib.request
 import tarfile
 import platform
+import io  # Добавлено для конвертации в памяти
 
 # --- БЛОК УСТАНОВКИ ---
 def install_typst():
     if platform.system() == "Windows":
         return "typst"
     
-    # Создаем папку и путь к самому бинарнику
     bin_dir = os.path.abspath("typst_executable")
     bin_path = os.path.join(bin_dir, "typst")
     
@@ -24,15 +24,12 @@ def install_typst():
             with tarfile.open(archive, "r:xz") as tar:
                 tar.extractall(path=bin_dir)
             
-            # Ищем файл typst внутри распакованных папок и переносим в корень bin_dir
             for root, dirs, files in os.walk(bin_dir):
                 if "typst" in files and root != bin_dir:
                     os.replace(os.path.join(root, "typst"), bin_path)
                     break
             
-            # ВАЖНО: Принудительно ставим права на чтение и выполнение
             os.chmod(bin_path, 0o775) 
-            
             if os.path.exists(archive): 
                 os.remove(archive)
         except Exception as e:
@@ -48,8 +45,8 @@ FIXED_TEMPLATE = "template2.typ"
 languages = {
     "en": {
         "title": "🍺 Beer Stat Generator",
-        "description": "Upload an Excel file to generate a PDF report. The data for the transfer must be on the second sheet.",
-        "file_label": "Choose Excel file (.xlsx)",
+        "description": "Upload an Excel file to generate a PDF report. The data for the transfer must be on the first sheet.",
+        "file_label": "Choose Excel file (.xlsx, .xls)",
         "button": "Generate PDF",
         "success": "PDF created successfully!",
         "download": "📥 Download Report (PDF)",
@@ -57,10 +54,10 @@ languages = {
     },
     "🇨🇿": {
         "title": "🍺 Generátor pivních statistik",
-        "description": "Nahrajte soubor Excel pro vytvoření PDF reportu. Údaje pro převod musí být на druhém listu.",
-        "file_label": "Vyberte soubor Excel (.xlsx)",
+        "description": "Nahrajte soubor Excel pro vytvoření PDF reportu. Údaje pro převod musí být na prvním listu.",
+        "file_label": "Vyberte soubor Excel (.xlsx, .xls)",
         "button": "Generovat PDF",
-        "success": "PDF bylo úspěšně vytvořeno!",
+        "success": "PDF было успешно vytvořeno!",
         "download": "📥 Stáhnout report (PDF)",
         "error": "Došlo k chybě:",
     }
@@ -71,7 +68,7 @@ st.markdown("""
     <style>
     div[data-testid="stSelectbox"] {
         margin-left: auto;
-        width: 100px !important;
+        width: 80px !important;
     }
     </style>
     """, unsafe_allow_html=True)
@@ -83,24 +80,40 @@ t = languages[lang_choice]
 st.title(t["title"])
 st.write(t["description"])
 
-# 3. Загрузка файла
-uploaded_file = st.file_uploader(t["file_label"], type="xlsx")
+# Загрузка файла (теперь принимает и xls)
+uploaded_file = st.file_uploader(t["file_label"], type=["xlsx", "xls"])
 
 if uploaded_file is not None:
-    # Определяем параметры листов
-    xls = pd.ExcelFile(uploaded_file)
-    sheet_names = xls.sheet_names
-    sheet_num = 0  # Индекс 0 — это первый лист в Excel
+    # --- БЛОК КОНВЕРТАЦИИ XLS -> XLSX ---
+    file_ext = uploaded_file.name.split('.')[-1].lower()
     
-    # Кнопка генерации
-    if st.button(t["button"]):
-        try:
-            # Читаем только первые 3 колонки (индексы 0, 1, 2)
-            df = pd.read_excel(uploaded_file, sheet_name=sheet_num, usecols=[0, 1, 2])
+    try:
+        if file_ext == "xls":
+            # Читаем старый формат
+            df_xls = pd.read_excel(uploaded_file, sheet_name=None, engine='xlrd')
+            # Конвертируем в XLSX в оперативной памяти
+            output = io.BytesIO()
+            with pd.ExcelWriter(output, engine='openpyxl') as writer:
+                for sheet_name, df_sheet in df_xls.items():
+                    df_sheet.to_excel(writer, sheet_name=sheet_name, index=False)
+            output.seek(0)
+            processed_file = output
+        else:
+            processed_file = uploaded_file
 
+        # Определяем параметры листов
+        xls_tool = pd.ExcelFile(processed_file)
+        sheet_names = xls_tool.sheet_names
+        sheet_num = 0  # Первый лист
+
+        if st.button(t["button"]):
+            # Читаем только первые 3 колонки
+            df = pd.read_excel(processed_file, sheet_name=sheet_num, usecols=[0, 1, 2])
+            
+            # Очистка пустых строк
             df = df.dropna(subset=[df.columns[0]])
             
-            # Переименовываем колонки по индексам для надежности
+            # Переименование колонок
             rename_map = {
                 df.columns[0]: "brand_name",
                 df.columns[1]: "origin_country",
@@ -108,15 +121,14 @@ if uploaded_file is not None:
             }
             df = df.rename(columns=rename_map)
             
-            # Сохраняем данные для Typst
+            # Сохраняем JSON
             os.makedirs('data', exist_ok=True)
             df.to_json('data/pivo.json', orient='records', force_ascii=False, indent=2)
 
-            # Путь к результату
+            # Путь к PDF
             output_path = "output/beer_report.pdf"
             os.makedirs('output', exist_ok=True)
             
-            # Запуск компиляции
             command = [
                 TYPST_PATH, "compile", 
                 "--root", ".", 
@@ -126,12 +138,11 @@ if uploaded_file is not None:
 
             result = subprocess.run(command, capture_output=True, text=True)
             if result.returncode != 0:
-                st.error(f"Typst Error: {result.stderr}") # Это покажет реальную причину
+                st.error(f"Typst Error: {result.stderr}")
                 st.stop()
             
             st.success(t["success"])
             
-            # Кнопка скачивания
             with open(output_path, "rb") as f:
                 st.download_button(
                     label=t["download"],
@@ -139,6 +150,6 @@ if uploaded_file is not None:
                     file_name="beer_report.pdf",
                     mime="application/pdf"
                 )
-            
-        except Exception as e:
-            st.error(f"{t['error']} {e}")
+    
+    except Exception as e:
+        st.error(f"{t['error']} {e}")
