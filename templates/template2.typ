@@ -6,19 +6,15 @@
   footer: context align(center)[Page #counter(page).display()],
 )
 
-#set text(font: "Calibri", lang: "en", size: 8pt) // Уменьшим шрифт, чтобы влезало больше
+#set text(font: "Libertinus Serif", lang: "en", size: 8pt) // Уменьшим шрифт, чтобы влезало больше
 
 #let beer-data = json("../data/pivo.json")
 
-#let total-quantity = (
-  beer-data
-    .map(item => {
-      let val = item.at("quantity", default: 0)
-      // На случай, если в JSON число пришло как строка, переводим в int
-      // if type(val) == str { int(val) } else { val }
-    })
-    .sum()
-)
+#let total_quantity = beer-data.map(item => {
+  let val = item.at("quantity", default: 0)
+  // Убеждаемся, что значение — это число
+  if type(val) == str { int(val) } else { val }
+}).sum(default: 0) // Добавили default: 0 на случай пустого списка
 
 // 1. Сортировка по алфавиту по ключу "brand_name" (или "Značka piva")
 #let sorted-data = beer-data.sorted(key: it => it.at("brand_name", default: ""))
@@ -59,4 +55,4 @@
     ))
     .flatten(),
 )
-#align(right)[*Celkem:* #total-quantity]
+#align(right)[*Celkem:* #total_quantity]

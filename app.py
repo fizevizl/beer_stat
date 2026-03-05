@@ -5,9 +5,10 @@ import os
 import urllib.request
 import tarfile
 import platform
-import io  # Добавлено для конвертации в памяти
+import io
+from pathlib import Path
 
-# --- БЛОК УСТАНОВКИ ---
+# --- УСТАНОВКА TYPST (ДЛЯ ОБЛАКА) ---
 def install_typst():
     if platform.system() == "Windows":
         return "typst"
@@ -23,176 +24,96 @@ def install_typst():
             urllib.request.urlretrieve(url, archive)
             with tarfile.open(archive, "r:xz") as tar:
                 tar.extractall(path=bin_dir)
-            
             for root, dirs, files in os.walk(bin_dir):
                 if "typst" in files and root != bin_dir:
                     os.replace(os.path.join(root, "typst"), bin_path)
                     break
-            
             os.chmod(bin_path, 0o775) 
-            if os.path.exists(archive): 
-                os.remove(archive)
+            if os.path.exists(archive): os.remove(archive)
         except Exception as e:
             st.error(f"Failed to install Typst: {e}")
             return "typst"
-            
     return bin_path
 
+# --- ЛОГИКА ПРЕОБРАЗОВАНИЯ ДЛЯ ОБЛАКА (БЕЗ EXCEL) ---
+def load_excel_data(uploaded_file):
+    """
+    Универсальная логика чтения: пробует XLSX, бинарный XLS и XML-XLS.
+    Работает в Linux/Cloud без установленного Microsoft Office.
+    """
+    try:
+        # 1. Пробуем стандартный pandas (xlsx или правильный xls)
+        uploaded_file.seek(0)
+        return pd.read_excel(uploaded_file, sheet_name=0)
+    except Exception:
+        try:
+            # 2. Пробуем старый бинарный формат (xlrd)
+            uploaded_file.seek(0)
+            return pd.read_excel(uploaded_file, sheet_name=0, engine='xlrd')
+        except Exception:
+            try:
+                # 3. Если это XML-XLS (тот самый заголовок <?xml), читаем как HTML/XML таблицу
+                uploaded_file.seek(0)
+                # Нужны библиотеки: lxml, beautifulsoup4
+                tables = pd.read_html(uploaded_file, flavor='bs4')
+                if tables:
+                    return tables[0]
+                else:
+                    raise ValueError("Таблицы не найдены внутри XML")
+            except Exception as e:
+                st.error(f"Ошибка при чтении файла: {e}")
+                return None
+
+# --- ИНИЦИАЛИЗАЦИЯ ---
 TYPST_PATH = install_typst()
 FIXED_TEMPLATE = "template2.typ"
 
-# --- СЛОВАРЬ ПЕРЕВОДОВ ---
-languages = {
-    "en": {
-        "title": "🍺 Beer Stat Generator",
-        "description": "Upload an Excel file to generate a PDF report. The data for the transfer must be on the first sheet.",
-        "file_label": "Choose Excel file (.xlsx, .xls)",
-        "button": "Generate PDF",
-        "success": "PDF created successfully!",
-        "download": "📥 Download Report (PDF)",
-        "error": "An error occurred:",
-    },
-    "🇨🇿": {
-        "title": "🍺 Generátor pivních statistik",
-        "description": "Nahrajte soubor Excel pro vytvoření PDF reportu. Údaje pro převod musí být na prvním listu.",
-        "file_label": "Vyberte soubor Excel (.xlsx, .xls)",
-        "button": "Generovat PDF",
-        "success": "PDF было успешно vytvořeno!",
-        "download": "📥 Stáhnout report (PDF)",
-        "error": "Došlo k chybě:",
-    }
-}
+st.title("🍺 Beer Stat Generator (Cloud Version)")
 
-# --- ИНТЕРФЕЙС ---
-st.markdown("""
-    <style>
-    div[data-testid="stSelectbox"] {
-        margin-left: auto;
-        width: 80px !important;
-    }
-    </style>
-    """, unsafe_allow_html=True)
-
-temp_lang_list = list(languages.keys())
-lang_choice = st.selectbox("", temp_lang_list, index=0)
-t = languages[lang_choice]
-
-st.title(t["title"])
-st.write(t["description"])
-
-# Загрузка файла (теперь принимает и xls)
-uploaded_file = st.file_uploader(t["file_label"], type=["xlsx", "xls"])
+uploaded_file = st.file_uploader("Выберите файл (.xlsx, .xls)", type=["xlsx", "xls"])
 
 if uploaded_file is not None:
-    try:
-        # --- УНИВЕРСАЛЬНЫЙ БЛОК ЧТЕНИЯ (XML, XLS, XLSX) ---
-        df_dict = None
-        
-        # 1. Сначала пробуем стандартные методы (XLSX / Бинарный XLS)
-        try:
-            uploaded_file.seek(0)
-            df_dict = pd.read_excel(uploaded_file, sheet_name=None)
-        except Exception:
-            try:
-                # 2. Пробуем старый бинарный формат
-                uploaded_file.seek(0)
-                df_dict = pd.read_excel(uploaded_file, sheet_name=None, engine='xlrd')
-            except Exception:
-                # 3. ПОСЛЕДНИЙ ШАНС: Читаем как XML Spreadsheet 2003
-                uploaded_file.seek(0)
-                # Читаем содержимое как строку
-                content = uploaded_file.read().decode('utf-8', errors='ignore')
-                
-                # Используем read_xml (нужна библиотека lxml)
-                # Мы ищем все данные внутри тегов Row и Cell
-                try:
-                    # Пытаемся вытащить данные через read_xml
-                    uploaded_file.seek(0)
-                    df_xml = pd.read_xml(uploaded_file, xpath=".//ss:Row", namespaces={"ss": "urn:schemas-microsoft-com:office:spreadsheet"})
-                    # Очищаем колонки от технических префиксов ss:
-                    df_xml.columns = [c.split('}')[-1] for c in df_xml.columns]
-                    df_dict = {"Sheet1": df_xml}
-                except Exception:
-                    # Если XML сложный, пробуем прочитать просто как HTML, но через BeautifulSoup
-                    uploaded_file.seek(0)
-                    df_dict = {"Sheet1": pd.read_html(uploaded_file, flavor='bs4')[0]}
-
-        # Если данные найдены, конвертируем в XLSX для унификации
-        if df_dict:
-            output = io.BytesIO()
-            with pd.ExcelWriter(output, engine='openpyxl') as writer:
-                for sheet_name, df_sheet in df_dict.items():
-                    df_sheet.to_excel(writer, sheet_name=sheet_name, index=False)
-            output.seek(0)
-            processed_file = output
-        else:
-            raise ValueError("Unsupported Excel XML format")
-
-        # Определяем параметры листов
-        xls_tool = pd.ExcelFile(processed_file)
-        sheet_names = xls_tool.sheet_names
-        sheet_num = 0  # Первый лист
-
-        if st.button(t["button"]):
-            df = pd.read_excel(processed_file, sheet_name=sheet_num)
-            
-            # Разлепляем данные, если они в одной колонке
-            if df.shape[1] == 1:
-                temp_df = df.iloc[:, 0].astype(str).str.split(';', expand=True)
-                if temp_df.shape[1] < 3:
-                    temp_df = df.iloc[:, 0].astype(str).str.split('\t', expand=True)
-                df = temp_df
-
-            # Берем первые 3 колонки
-            df = df.iloc[:, :3]
-            
-            # Переименовываем
-            new_names = ["brand_name", "origin_country", "quantity"]
-            df.columns = [new_names[i] for i in range(len(df.columns))]
-
-            # --- ВАЖНАЯ ОЧИСТКА ---
-            # 1. Удаляем строки, где нет названия бренда
-            df = df.dropna(subset=["brand_name"])
-            
-            # 2. Превращаем количество в числа. Всё, что не число -> станет 0
-            df["quantity"] = pd.to_numeric(df["quantity"], errors='coerce').fillna(0).astype(int)
-            
-            # 3. Убираем строки, где количество 0 (чтобы не суммировать пустоту)
-            df = df[df["quantity"] > 0]
-
-            if df.empty:
-                st.error("Data is empty after processing. Check your Excel content!")
-                st.stop()
-            
-            # Сохраняем JSON
-            os.makedirs('data', exist_ok=True)
-            df.to_json('data/pivo.json', orient='records', force_ascii=False, indent=2)
-
-            # Путь к PDF
-            output_path = "output/beer_report.pdf"
-            os.makedirs('output', exist_ok=True)
-            
-            command = [
-                TYPST_PATH, "compile", 
-                "--root", ".", 
-                f"templates/{FIXED_TEMPLATE}", 
-                output_path
-            ]
-
-            result = subprocess.run(command, capture_output=True, text=True)
-            if result.returncode != 0:
-                st.error(f"Typst Error: {result.stderr}")
-                st.stop()
-            
-            st.success(t["success"])
-            
-            with open(output_path, "rb") as f:
-                st.download_button(
-                    label=t["download"],
-                    data=f,
-                    file_name="beer_report.pdf",
-                    mime="application/pdf"
-                )
+    # Используем нашу логику преобразования
+    df = load_excel_data(uploaded_file)
     
-    except Exception as e:
-        st.error(f"{t['error']} {e}")
+    if df is not None:
+        # Показываем превью того, что прочитали
+        st.write("Превью данных из файла:")
+        st.dataframe(df.head(3))
+
+        if st.button("Сгенерировать PDF"):
+            try:
+                # Очистка и подготовка колонок
+                # Если всё слиплось в одну колонку (бывает в CSV-подобных XLS)
+                if df.shape[1] == 1:
+                    df = df.iloc[:, 0].astype(str).str.split(';', expand=True)
+
+                # Берем первые 3 колонки
+                df = df.iloc[:, :3]
+                df.columns = ["brand_name", "origin_country", "quantity"]
+
+                # Финальная чистка данных
+                df = df.dropna(subset=["brand_name"])
+                df["quantity"] = pd.to_numeric(df["quantity"], errors='coerce').fillna(0).astype(int)
+                df = df[df["quantity"] > 0]
+
+                # Сохранение JSON для Typst
+                os.makedirs('data', exist_ok=True)
+                df.to_json('data/pivo.json', orient='records', force_ascii=False, indent=2)
+
+                # Компиляция PDF
+                output_path = "output/beer_report.pdf"
+                os.makedirs('output', exist_ok=True)
+                
+                command = [TYPST_PATH, "compile", "--root", ".", f"templates/{FIXED_TEMPLATE}", output_path]
+                result = subprocess.run(command, capture_output=True, text=True)
+                
+                if result.returncode != 0:
+                    st.error(f"Typst Error: {result.stderr}")
+                else:
+                    st.success("PDF успешно создан!")
+                    with open(output_path, "rb") as f:
+                        st.download_button("📥 Скачать отчет", f, "beer_report.pdf", "application/pdf")
+            
+            except Exception as e:
+                st.error(f"Ошибка обработки: {e}")
