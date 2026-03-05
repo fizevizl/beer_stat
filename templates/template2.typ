@@ -10,6 +10,10 @@
 
 #let beer-data = json("../data/pivo.json")
 
+#let unique_brands = beer-data.map(item => item.at("brand_name", default: "")).dedup().len()
+
+#let unique_countries = beer-data.map(item => item.at("origin_country", default: "")).dedup().len()
+
 #let total_quantity = beer-data.map(item => {
   let val = item.at("quantity", default: 0)
   // Убеждаемся, что значение — это число
@@ -55,4 +59,25 @@
     ))
     .flatten(),
 )
-#align(right)[*Celkem:* #total_quantity]
+
+// --- ФИНАЛЬНЫЙ БЛОК С ИТОГАМИ ---
+// Добавляем float: true, чтобы разрешить scope: "parent"
+#block(width: 100%)[
+  #set text(size: 10pt)
+  #v(1em) 
+  #block(
+    width: 100%,
+    stroke: 0.5pt + gray,
+    inset: 5pt,
+    radius: 0pt,
+    fill: luma(250)
+  )[
+    #grid(
+      columns: (1fr, 0.9fr, 1fr),
+      align: center,
+      [*Unikátní značky:* #unique_brands],
+      [*Unikátní země:* #unique_countries],
+      [*Celkový počet:* #total_quantity]
+    )
+  ]
+]
