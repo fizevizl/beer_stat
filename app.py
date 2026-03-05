@@ -170,39 +170,37 @@ st.info(lang["description"])
 uploaded_file = st.file_uploader("Excel file", type=["xlsx", "xls", "xml"])
 
 if uploaded_file:
-    if st.button(lang["button"]):
-        try:
-            # ЭТАП 1: Чтение
-            raw_df = try_read_excel(uploaded_file)
-            
-            # ЭТАП 2: Очистка
-            df = clean_data(raw_df)
-            
-            if df.empty:
-                st.warning("No data found after cleaning.")
-                st.stop()
+    try:
+        # ЭТАП 1: Чтение
+        raw_df = try_read_excel(uploaded_file)
+        
+        # ЭТАП 2: Очистка
+        df = clean_data(raw_df)
+        
+        if df.empty:
+            st.warning("No data found after cleaning.")
+            st.stop()
 
-            # ЭТАП 3: Сохранение данных для Typst
-            DATA_DIR.mkdir(exist_ok=True)
-            df.to_json(DATA_DIR / 'pivo.json', orient='records', force_ascii=False, indent=2)
+        # ЭТАП 3: Сохранение данных для Typst
+        DATA_DIR.mkdir(exist_ok=True)
+        df.to_json(DATA_DIR / 'pivo.json', orient='records', force_ascii=False, indent=2)
 
-            # ЭТАП 4: Генерация PDF через Typst
-            OUTPUT_DIR.mkdir(exist_ok=True)
-            pdf_path = OUTPUT_DIR / "beer_report.pdf"
-            
-            typst_bin = get_typst_path()
-            # Запускаем внешнюю команду компиляции
-            cmd = [typst_bin, "compile", "--root", ".", str(TEMPLATE_PATH), str(pdf_path)]
-            
-            result = subprocess.run(cmd, capture_output=True, text=True)
-            
-            if result.returncode == 0:
-                st.success(lang["success"])
-                # ЭТАП 5: Кнопка скачивания готового файла
-                with open(pdf_path, "rb") as f:
-                    st.download_button(lang["download"], f, "beer_report.pdf", "application/pdf")
-            else:
-                st.error(f"Typst Error: {result.stderr}")
+        # ЭТАП 4: Генерация PDF через Typst
+        OUTPUT_DIR.mkdir(exist_ok=True)
+        pdf_path = OUTPUT_DIR / "beer_report.pdf"          
+        
+        typst_bin = get_typst_path()
+        cmd = [typst_bin, "compile", "--root", ".", str(TEMPLATE_PATH), str(pdf_path)]
+        
+        result = subprocess.run(cmd, capture_output=True, text=True)
+        
+        if result.returncode == 0:
+            st.success(lang["success"])
+            # ЭТАП 5: Кнопка скачивания готового файла
+            with open(pdf_path, "rb") as f:
+                st.download_button(lang["download"], f, "beer_report.pdf", "application/pdf")
+        else:
+            st.error(f"Typst Error: {result.stderr}")
 
-        except Exception as e:
-            st.error(f"Error: {e}")
+    except Exception as e:
+        st.error(f"Error: {e}")

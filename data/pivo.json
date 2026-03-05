@@ -1,5 +1,2480 @@
 [
   {
+    "brand_name":"Gambrinus 10°",
+    "origin_country":"Česká republika",
+    "quantity":8148
+  },
+  {
+    "brand_name":"Kozel 10°",
+    "origin_country":"Česká republika",
+    "quantity":4048
+  },
+  {
+    "brand_name":"Litoměřice Kalich 10°",
+    "origin_country":"Česká republika",
+    "quantity":2192
+  },
+  {
+    "brand_name":"Zlatopramen 11°",
+    "origin_country":"Česká republika",
+    "quantity":1514
+  },
+  {
+    "brand_name":"Bernard 10°",
+    "origin_country":"Česká republika",
+    "quantity":1268
+  },
+  {
+    "brand_name":"Staropramen 10°",
+    "origin_country":"Česká republika",
+    "quantity":1056
+  },
+  {
+    "brand_name":"Kozel 11°",
+    "origin_country":"Česká republika",
+    "quantity":857
+  },
+  {
+    "brand_name":"Březňák 10°",
+    "origin_country":"Česká republika",
+    "quantity":750
+  },
+  {
+    "brand_name":"Braník 10°",
+    "origin_country":"Česká republika",
+    "quantity":710
+  },
+  {
+    "brand_name":"Budějovický Budvar 10°",
+    "origin_country":"Česká republika",
+    "quantity":666
+  },
+  {
+    "brand_name":"Zlatopramen 10°",
+    "origin_country":"Česká republika",
+    "quantity":460
+  },
+  {
+    "brand_name":"Gambrinus 11° Excelent",
+    "origin_country":"Česká republika",
+    "quantity":350
+  },
+  {
+    "brand_name":"Radegast 10°",
+    "origin_country":"Česká republika",
+    "quantity":326
+  },
+  {
+    "brand_name":"Litoměřice Kalich 11°",
+    "origin_country":"Česká republika",
+    "quantity":319
+  },
+  {
+    "brand_name":"Holba 11° Šerák",
+    "origin_country":"Česká republika",
+    "quantity":290
+  },
+  {
+    "brand_name":"Zubr 10°",
+    "origin_country":"Česká republika",
+    "quantity":247
+  },
+  {
+    "brand_name":"Březňák 11°",
+    "origin_country":"Česká republika",
+    "quantity":210
+  },
+  {
+    "brand_name":"Plzeňský Prazdroj 12°",
+    "origin_country":"Česká republika",
+    "quantity":131
+  },
+  {
+    "brand_name":"Bruncvík 10° výčepní",
+    "origin_country":"Česká republika",
+    "quantity":124
+  },
+  {
+    "brand_name":"Primus 10°",
+    "origin_country":"Česká republika",
+    "quantity":116
+  },
+  {
+    "brand_name":"Děčín 10° Bukanýr",
+    "origin_country":"Česká republika",
+    "quantity":110
+  },
+  {
+    "brand_name":"Staropramen 11°",
+    "origin_country":"Česká republika",
+    "quantity":106
+  },
+  {
+    "brand_name":"Staročech 10°",
+    "origin_country":"Česká republika",
+    "quantity":99
+  },
+  {
+    "brand_name":"Starobrno 11°",
+    "origin_country":"Česká republika",
+    "quantity":91
+  },
+  {
+    "brand_name":"Gambrinus 12°",
+    "origin_country":"Česká republika",
+    "quantity":79
+  },
+  {
+    "brand_name":"Ožujsko",
+    "origin_country":"Chorvatsko",
+    "quantity":78
+  },
+  {
+    "brand_name":"Bernard 11°",
+    "origin_country":"Česká republika",
+    "quantity":71
+  },
+  {
+    "brand_name":"Samson 10°",
+    "origin_country":"Česká republika",
+    "quantity":61
+  },
+  {
+    "brand_name":"Krušovice 10°",
+    "origin_country":"Česká republika",
+    "quantity":54
+  },
+  {
+    "brand_name":"Heineken",
+    "origin_country":"Nizozemsko",
+    "quantity":51
+  },
+  {
+    "brand_name":"Guinness",
+    "origin_country":"Irsko",
+    "quantity":49
+  },
+  {
+    "brand_name":"Budějovický Budvar 11° Budvar 33",
+    "origin_country":"Česká republika",
+    "quantity":48
+  },
+  {
+    "brand_name":"Birell 0% Pomelo & Grep",
+    "origin_country":"Česká republika",
+    "quantity":46
+  },
+  {
+    "brand_name":"Chmelař 10°",
+    "origin_country":"Česká republika",
+    "quantity":45
+  },
+  {
+    "brand_name":"Kozel 10° Černý",
+    "origin_country":"Česká republika",
+    "quantity":43
+  },
+  {
+    "brand_name":"Gambrinus 10° Nepasterizovaný",
+    "origin_country":"Česká republika",
+    "quantity":41
+  },
+  {
+    "brand_name":"Bertold 10°",
+    "origin_country":"Česká republika",
+    "quantity":39
+  },
+  {
+    "brand_name":"Svijany 11° Máz",
+    "origin_country":"Česká republika",
+    "quantity":38
+  },
+  {
+    "brand_name":"Budějovický Budvar 12°",
+    "origin_country":"Česká republika",
+    "quantity":33
+  },
+  {
+    "brand_name":"Karlovačko",
+    "origin_country":"Chorvatsko",
+    "quantity":33
+  },
+  {
+    "brand_name":"Bakalář 11°",
+    "origin_country":"Česká republika",
+    "quantity":32
+  },
+  {
+    "brand_name":"Děčín 11° Kapitán",
+    "origin_country":"Česká republika",
+    "quantity":32
+  },
+  {
+    "brand_name":"Litovel 10°",
+    "origin_country":"Česká republika",
+    "quantity":32
+  },
+  {
+    "brand_name":"Litovel 11° Moravan",
+    "origin_country":"Česká republika",
+    "quantity":31
+  },
+  {
+    "brand_name":"Staropramen Cool Lemon",
+    "origin_country":"Česká republika",
+    "quantity":31
+  },
+  {
+    "brand_name":"Labuť Litoměřice 12° Žák světlé",
+    "origin_country":"Česká republika",
+    "quantity":28
+  },
+  {
+    "brand_name":"Bernard 12°",
+    "origin_country":"Česká republika",
+    "quantity":27
+  },
+  {
+    "brand_name":"Lobkowicz Premium 12°",
+    "origin_country":"Česká republika",
+    "quantity":26
+  },
+  {
+    "brand_name":"Holba 10° Classic",
+    "origin_country":"Česká republika",
+    "quantity":23
+  },
+  {
+    "brand_name":"Konrad Chytrón",
+    "origin_country":"Česká republika",
+    "quantity":23
+  },
+  {
+    "brand_name":"Stella Artois",
+    "origin_country":"Belgie",
+    "quantity":23
+  },
+  {
+    "brand_name":"Podkováň 10°",
+    "origin_country":"Česká republika",
+    "quantity":22
+  },
+  {
+    "brand_name":"Chodovar 11°",
+    "origin_country":"Česká republika",
+    "quantity":20
+  },
+  {
+    "brand_name":"Zlatý Bažant 10°",
+    "origin_country":"Slovensko",
+    "quantity":20
+  },
+  {
+    "brand_name":"Braník 11°",
+    "origin_country":"Česká republika",
+    "quantity":19
+  },
+  {
+    "brand_name":"Zlatý Bažant 12°",
+    "origin_country":"Slovensko",
+    "quantity":19
+  },
+  {
+    "brand_name":"Cvikov 11° Hvozd",
+    "origin_country":"Česká republika",
+    "quantity":18
+  },
+  {
+    "brand_name":"Krušovice 10° Černé",
+    "origin_country":"Česká republika",
+    "quantity":18
+  },
+  {
+    "brand_name":"Nikšićko Pivo",
+    "origin_country":"Černá Hora",
+    "quantity":18
+  },
+  {
+    "brand_name":"Platan 10°",
+    "origin_country":"Česká republika",
+    "quantity":18
+  },
+  {
+    "brand_name":"Dalešice 11°",
+    "origin_country":"Česká republika",
+    "quantity":17
+  },
+  {
+    "brand_name":"Krakonoš 11°",
+    "origin_country":"Česká republika",
+    "quantity":17
+  },
+  {
+    "brand_name":"Krušovice 11° Mušketýr",
+    "origin_country":"Česká republika",
+    "quantity":17
+  },
+  {
+    "brand_name":"Löwenbräu Original",
+    "origin_country":"Německo",
+    "quantity":17
+  },
+  {
+    "brand_name":"Zlatopramen Radler Mandarinka, Jasmín",
+    "origin_country":"Česká republika",
+    "quantity":17
+  },
+  {
+    "brand_name":"Argus Lemon",
+    "origin_country":"Polsko",
+    "quantity":16
+  },
+  {
+    "brand_name":"BirGo Grapefruit",
+    "origin_country":"Česká republika",
+    "quantity":16
+  },
+  {
+    "brand_name":"Novopacké pivo 10° Brouček",
+    "origin_country":"Česká republika",
+    "quantity":16
+  },
+  {
+    "brand_name":"Pernštejn 12°",
+    "origin_country":"Česká republika",
+    "quantity":16
+  },
+  {
+    "brand_name":"Starobrno 10°",
+    "origin_country":"Česká republika",
+    "quantity":16
+  },
+  {
+    "brand_name":"Louny 10°",
+    "origin_country":"Česká republika",
+    "quantity":15
+  },
+  {
+    "brand_name":"Carlsberg Lager",
+    "origin_country":"Dánsko",
+    "quantity":14
+  },
+  {
+    "brand_name":"Hák 10°",
+    "origin_country":"Česká republika",
+    "quantity":14
+  },
+  {
+    "brand_name":"Regent 10°",
+    "origin_country":"Česká republika",
+    "quantity":14
+  },
+  {
+    "brand_name":"Staropramen 12°",
+    "origin_country":"Česká republika",
+    "quantity":14
+  },
+  {
+    "brand_name":"Birell 0% Višeň & Ostružina",
+    "origin_country":"Česká republika",
+    "quantity":13
+  },
+  {
+    "brand_name":"BirGo Citron Limetka",
+    "origin_country":"Česká republika",
+    "quantity":13
+  },
+  {
+    "brand_name":"Perlenbacher Beer & Lemonade",
+    "origin_country":"Německo",
+    "quantity":13
+  },
+  {
+    "brand_name":"Starobrno 12° Červený ležák",
+    "origin_country":"Česká republika",
+    "quantity":13
+  },
+  {
+    "brand_name":"Biskupský pivovar U sv. Štěpána 10° Vikář",
+    "origin_country":"Česká republika",
+    "quantity":12
+  },
+  {
+    "brand_name":"Freiberger Pils",
+    "origin_country":"Německo",
+    "quantity":12
+  },
+  {
+    "brand_name":"Krušovice 12°",
+    "origin_country":"Česká republika",
+    "quantity":12
+  },
+  {
+    "brand_name":"Bakalář 10°",
+    "origin_country":"Česká republika",
+    "quantity":11
+  },
+  {
+    "brand_name":"Beránek 13° polotmavý",
+    "origin_country":"Česká republika",
+    "quantity":11
+  },
+  {
+    "brand_name":"Flekovský ležák 13°",
+    "origin_country":"Česká republika",
+    "quantity":11
+  },
+  {
+    "brand_name":"Guinness Extra Stout",
+    "origin_country":"Irsko",
+    "quantity":11
+  },
+  {
+    "brand_name":"Harrach 12° Světlé",
+    "origin_country":"Česká republika",
+    "quantity":11
+  },
+  {
+    "brand_name":"Harrachov 8° Huťské výčepní",
+    "origin_country":"Česká republika",
+    "quantity":11
+  },
+  {
+    "brand_name":"Birell 0% Limetka & malina",
+    "origin_country":"Česká republika",
+    "quantity":10
+  },
+  {
+    "brand_name":"Britos",
+    "origin_country":"Bulharsko",
+    "quantity":10
+  },
+  {
+    "brand_name":"Budějovický Budvar 12° Tmavé",
+    "origin_country":"Česká republika",
+    "quantity":10
+  },
+  {
+    "brand_name":"Cvikov 10° Luž",
+    "origin_country":"Česká republika",
+    "quantity":10
+  },
+  {
+    "brand_name":"Guinness Draught",
+    "origin_country":"Irsko",
+    "quantity":10
+  },
+  {
+    "brand_name":"Postřižiny 10° Pepinova desítka",
+    "origin_country":"Česká republika",
+    "quantity":10
+  },
+  {
+    "brand_name":"Kamenitza",
+    "origin_country":"Bulharsko",
+    "quantity":9
+  },
+  {
+    "brand_name":"Klasik 10°",
+    "origin_country":"Česká republika",
+    "quantity":9
+  },
+  {
+    "brand_name":"Konrad 12° Červený král",
+    "origin_country":"Česká republika",
+    "quantity":9
+  },
+  {
+    "brand_name":"Pernštejn 11° Vilém",
+    "origin_country":"Česká republika",
+    "quantity":9
+  },
+  {
+    "brand_name":"Radegast 12°",
+    "origin_country":"Česká republika",
+    "quantity":9
+  },
+  {
+    "brand_name":"Svijany 10°",
+    "origin_country":"Česká republika",
+    "quantity":9
+  },
+  {
+    "brand_name":"Tyskie",
+    "origin_country":"Polsko",
+    "quantity":9
+  },
+  {
+    "brand_name":"Březňák 12°",
+    "origin_country":"Česká republika",
+    "quantity":8
+  },
+  {
+    "brand_name":"Corgoň 10°",
+    "origin_country":"Slovensko",
+    "quantity":8
+  },
+  {
+    "brand_name":"Krombacher Pils",
+    "origin_country":"Německo",
+    "quantity":8
+  },
+  {
+    "brand_name":"Kyjovský pivovar 10° Kyjovská Desítka",
+    "origin_country":"Česká republika",
+    "quantity":8
+  },
+  {
+    "brand_name":"Pernštejn 10°",
+    "origin_country":"Česká republika",
+    "quantity":8
+  },
+  {
+    "brand_name":"Staropramen Cool Grep",
+    "origin_country":"Česká republika",
+    "quantity":8
+  },
+  {
+    "brand_name":"Staropramen Cool Nealko Grep",
+    "origin_country":"Česká republika",
+    "quantity":8
+  },
+  {
+    "brand_name":"Svijany 13° Kněžna",
+    "origin_country":"Česká republika",
+    "quantity":8
+  },
+  {
+    "brand_name":"Ursus",
+    "origin_country":"Rumunsko",
+    "quantity":8
+  },
+  {
+    "brand_name":"Zubr 11° Grand",
+    "origin_country":"Česká republika",
+    "quantity":8
+  },
+  {
+    "brand_name":"Argus Malina Limetka",
+    "origin_country":"Česká republika",
+    "quantity":7
+  },
+  {
+    "brand_name":"Arnoštova Hořká 10",
+    "origin_country":"Česká republika",
+    "quantity":7
+  },
+  {
+    "brand_name":"Bernard 11° Nefiltrované",
+    "origin_country":"Česká republika",
+    "quantity":7
+  },
+  {
+    "brand_name":"Bruncvík Dark beer Tmavé",
+    "origin_country":"Česká republika",
+    "quantity":7
+  },
+  {
+    "brand_name":"Ciucaş",
+    "origin_country":"Rumunsko",
+    "quantity":7
+  },
+  {
+    "brand_name":"Černodolský ležák 10°",
+    "origin_country":"Česká republika",
+    "quantity":7
+  },
+  {
+    "brand_name":"Klášter 10°",
+    "origin_country":"Česká republika",
+    "quantity":7
+  },
+  {
+    "brand_name":"Lanýž 10°",
+    "origin_country":"Česká republika",
+    "quantity":7
+  },
+  {
+    "brand_name":"Starobrno 13° Adventní speciál",
+    "origin_country":"Česká republika",
+    "quantity":7
+  },
+  {
+    "brand_name":"Svijany 11° 450",
+    "origin_country":"Česká republika",
+    "quantity":7
+  },
+  {
+    "brand_name":"Ur-Krostitzer Feinherbes Pilsner",
+    "origin_country":"Německo",
+    "quantity":7
+  },
+  {
+    "brand_name":"Urpiner 10°",
+    "origin_country":"Slovensko",
+    "quantity":7
+  },
+  {
+    "brand_name":"Zlatovar 10° Axman",
+    "origin_country":"Česká republika",
+    "quantity":7
+  },
+  {
+    "brand_name":"Alhambra Premium",
+    "origin_country":"Španělsko",
+    "quantity":6
+  },
+  {
+    "brand_name":"Bavaria",
+    "origin_country":"Nizozemsko",
+    "quantity":6
+  },
+  {
+    "brand_name":"Birell 0% Citronáda",
+    "origin_country":"Česká republika",
+    "quantity":6
+  },
+  {
+    "brand_name":"Birell 0% Malina",
+    "origin_country":"Česká republika",
+    "quantity":6
+  },
+  {
+    "brand_name":"Burgasko Svetlo",
+    "origin_country":"Bulharsko",
+    "quantity":6
+  },
+  {
+    "brand_name":"Césu light",
+    "origin_country":"Lotyšsko",
+    "quantity":6
+  },
+  {
+    "brand_name":"Cvikov 8° Sklář",
+    "origin_country":"Česká republika",
+    "quantity":6
+  },
+  {
+    "brand_name":"Dresdner Felsenkeller Pilsner",
+    "origin_country":"Německo",
+    "quantity":6
+  },
+  {
+    "brand_name":"Duff Beer",
+    "origin_country":"Německo",
+    "quantity":6
+  },
+  {
+    "brand_name":"Ježek 11°",
+    "origin_country":"Česká republika",
+    "quantity":6
+  },
+  {
+    "brand_name":"Kamenice nad Lipou 11° Kamenická",
+    "origin_country":"Česká republika",
+    "quantity":6
+  },
+  {
+    "brand_name":"Kozel 12°",
+    "origin_country":"Česká republika",
+    "quantity":6
+  },
+  {
+    "brand_name":"Lobkowicz 10°",
+    "origin_country":"Česká republika",
+    "quantity":6
+  },
+  {
+    "brand_name":"Ostravar 10°",
+    "origin_country":"Česká republika",
+    "quantity":6
+  },
+  {
+    "brand_name":"Pardál 10°",
+    "origin_country":"Česká republika",
+    "quantity":6
+  },
+  {
+    "brand_name":"Albrecht 10°",
+    "origin_country":"Česká republika",
+    "quantity":5
+  },
+  {
+    "brand_name":"Birra Moretti",
+    "origin_country":"Itálie",
+    "quantity":5
+  },
+  {
+    "brand_name":"Břevnovský Benedict 11° Tmavý ležák",
+    "origin_country":"Česká republika",
+    "quantity":5
+  },
+  {
+    "brand_name":"Hák 10° Pampeliška",
+    "origin_country":"Česká republika",
+    "quantity":5
+  },
+  {
+    "brand_name":"Hubertus Kácov 11°",
+    "origin_country":"Česká republika",
+    "quantity":5
+  },
+  {
+    "brand_name":"Kozel Medový",
+    "origin_country":"Česká republika",
+    "quantity":5
+  },
+  {
+    "brand_name":"Labuť Litoměřice 11º Světlá",
+    "origin_country":"Česká republika",
+    "quantity":5
+  },
+  {
+    "brand_name":"Landskron Pilsner",
+    "origin_country":"Německo",
+    "quantity":5
+  },
+  {
+    "brand_name":"Polička 11° Otakar",
+    "origin_country":"Česká republika",
+    "quantity":5
+  },
+  {
+    "brand_name":"Samson 12°",
+    "origin_country":"Česká republika",
+    "quantity":5
+  },
+  {
+    "brand_name":"Staropramen 12° Extra chmelená",
+    "origin_country":"Česká republika",
+    "quantity":5
+  },
+  {
+    "brand_name":"Strelka výčepní 4,3%",
+    "origin_country":"Česká republika",
+    "quantity":5
+  },
+  {
+    "brand_name":"Svijany 11° Fanda",
+    "origin_country":"Česká republika",
+    "quantity":5
+  },
+  {
+    "brand_name":"Šariš 10°",
+    "origin_country":"Slovensko",
+    "quantity":5
+  },
+  {
+    "brand_name":"Tuborg Classic",
+    "origin_country":"Dánsko",
+    "quantity":5
+  },
+  {
+    "brand_name":"Tyskie Gronie",
+    "origin_country":"Polsko",
+    "quantity":5
+  },
+  {
+    "brand_name":"Zlatý Bažant 11°",
+    "origin_country":"Slovensko",
+    "quantity":5
+  },
+  {
+    "brand_name":"Zubr 11°",
+    "origin_country":"Česká republika",
+    "quantity":5
+  },
+  {
+    "brand_name":"Ambrosius 10°",
+    "origin_country":"Česká republika",
+    "quantity":4
+  },
+  {
+    "brand_name":"Bernard 13° Speciální černé pivo",
+    "origin_country":"Česká republika",
+    "quantity":4
+  },
+  {
+    "brand_name":"Birell 0% Červený pomeranč",
+    "origin_country":"Česká republika",
+    "quantity":4
+  },
+  {
+    "brand_name":"Birell Borůvka & Brusinka",
+    "origin_country":"Česká republika",
+    "quantity":4
+  },
+  {
+    "brand_name":"Birell Hruška & Kdoule",
+    "origin_country":"Česká republika",
+    "quantity":4
+  },
+  {
+    "brand_name":"Borsodi Bivaly",
+    "origin_country":"Maďarsko",
+    "quantity":4
+  },
+  {
+    "brand_name":"Břeclav 12° Kanec",
+    "origin_country":"Česká republika",
+    "quantity":4
+  },
+  {
+    "brand_name":"Budějovický Budvar 12° Kroužkovaný",
+    "origin_country":"Česká republika",
+    "quantity":4
+  },
+  {
+    "brand_name":"Ciuc 12°",
+    "origin_country":"Rumunsko",
+    "quantity":4
+  },
+  {
+    "brand_name":"Ferdinand 10°",
+    "origin_country":"Česká republika",
+    "quantity":4
+  },
+  {
+    "brand_name":"Hák 11°",
+    "origin_country":"Česká republika",
+    "quantity":4
+  },
+  {
+    "brand_name":"Harrachov 12° Čertovské pivo",
+    "origin_country":"Česká republika",
+    "quantity":4
+  },
+  {
+    "brand_name":"Karel IV. 11°",
+    "origin_country":"Česká republika",
+    "quantity":4
+  },
+  {
+    "brand_name":"Klášter 11°",
+    "origin_country":"Česká republika",
+    "quantity":4
+  },
+  {
+    "brand_name":"Koliba 10° Kousek",
+    "origin_country":"Česká republika",
+    "quantity":4
+  },
+  {
+    "brand_name":"Koliba 12° Kousek světlý ležák",
+    "origin_country":"Česká republika",
+    "quantity":4
+  },
+  {
+    "brand_name":"Koliba 12° medová",
+    "origin_country":"Česká republika",
+    "quantity":4
+  },
+  {
+    "brand_name":"König Pilsener",
+    "origin_country":"Německo",
+    "quantity":4
+  },
+  {
+    "brand_name":"Kozel 12° Mistrův Ležák",
+    "origin_country":"Česká republika",
+    "quantity":4
+  },
+  {
+    "brand_name":"Litoměřice Fořt 12°",
+    "origin_country":"Česká republika",
+    "quantity":4
+  },
+  {
+    "brand_name":"Moravcova jedenáctka 11°",
+    "origin_country":"Česká republika",
+    "quantity":4
+  },
+  {
+    "brand_name":"Permon 12°",
+    "origin_country":"Česká republika",
+    "quantity":4
+  },
+  {
+    "brand_name":"Peroni Nastro Azzurro",
+    "origin_country":"Itálie",
+    "quantity":4
+  },
+  {
+    "brand_name":"Postřižiny 10° Nymburk Lager Beer",
+    "origin_country":"Česká republika",
+    "quantity":4
+  },
+  {
+    "brand_name":"Postřižiny 11° Jedenáctka",
+    "origin_country":"Česká republika",
+    "quantity":4
+  },
+  {
+    "brand_name":"Postřižiny 11° Tmavý ležák",
+    "origin_country":"Česká republika",
+    "quantity":4
+  },
+  {
+    "brand_name":"Primátor Chipper Grapefruit Beer",
+    "origin_country":"Česká republika",
+    "quantity":4
+  },
+  {
+    "brand_name":"Samson 11°",
+    "origin_country":"Česká republika",
+    "quantity":4
+  },
+  {
+    "brand_name":"Staročech 12°",
+    "origin_country":"Česká republika",
+    "quantity":4
+  },
+  {
+    "brand_name":"Tyskie Klasyczne",
+    "origin_country":"Polsko",
+    "quantity":4
+  },
+  {
+    "brand_name":"Únětické pivo 10,7°",
+    "origin_country":"Česká republika",
+    "quantity":4
+  },
+  {
+    "brand_name":"Zlatopramen Radler 0% Brusinka & Rybíz",
+    "origin_country":"Česká republika",
+    "quantity":4
+  },
+  {
+    "brand_name":"Zlatý Bažant Radler Grapefruit",
+    "origin_country":"Slovensko",
+    "quantity":4
+  },
+  {
+    "brand_name":"Żubr",
+    "origin_country":"Polsko",
+    "quantity":4
+  },
+  {
+    "brand_name":"Albrecht 12° Kateřina Tmavé",
+    "origin_country":"Česká republika",
+    "quantity":3
+  },
+  {
+    "brand_name":"Amstel Pilsener",
+    "origin_country":"Nizozemsko",
+    "quantity":3
+  },
+  {
+    "brand_name":"Argus 10°",
+    "origin_country":"Česká republika",
+    "quantity":3
+  },
+  {
+    "brand_name":"Argus Grep",
+    "origin_country":"Polsko",
+    "quantity":3
+  },
+  {
+    "brand_name":"Beck's",
+    "origin_country":"Německo",
+    "quantity":3
+  },
+  {
+    "brand_name":"Bernard 10° Nefiltrované",
+    "origin_country":"Česká republika",
+    "quantity":3
+  },
+  {
+    "brand_name":"Bernard 12° Černé",
+    "origin_country":"Česká republika",
+    "quantity":3
+  },
+  {
+    "brand_name":"Biskupský pivovar polotmavý speciál 13°",
+    "origin_country":"Česká republika",
+    "quantity":3
+  },
+  {
+    "brand_name":"Biskupský pivovar U sv. Štěpána 12° Štěpán",
+    "origin_country":"Česká republika",
+    "quantity":3
+  },
+  {
+    "brand_name":"Born 12° Dáma APA",
+    "origin_country":"Česká republika",
+    "quantity":3
+  },
+  {
+    "brand_name":"Born 12° Král",
+    "origin_country":"Česká republika",
+    "quantity":3
+  },
+  {
+    "brand_name":"Bosman Full",
+    "origin_country":"Polsko",
+    "quantity":3
+  },
+  {
+    "brand_name":"Brackie",
+    "origin_country":"Polsko",
+    "quantity":3
+  },
+  {
+    "brand_name":"Braník černý",
+    "origin_country":"Česká republika",
+    "quantity":3
+  },
+  {
+    "brand_name":"BrewDog Punk IPA",
+    "origin_country":"Spojené království",
+    "quantity":3
+  },
+  {
+    "brand_name":"Bruncvík polotmavý ležák",
+    "origin_country":"Česká republika",
+    "quantity":3
+  },
+  {
+    "brand_name":"Břevnovský Benedict 15° Klášterní IPA",
+    "origin_country":"Česká republika",
+    "quantity":3
+  },
+  {
+    "brand_name":"Cvikov 12° Klíč",
+    "origin_country":"Česká republika",
+    "quantity":3
+  },
+  {
+    "brand_name":"Černá Hora Velen Pšeničné",
+    "origin_country":"Česká republika",
+    "quantity":3
+  },
+  {
+    "brand_name":"Černý Orel 13°",
+    "origin_country":"Česká republika",
+    "quantity":3
+  },
+  {
+    "brand_name":"Dobruška 12° Rampušák",
+    "origin_country":"Česká republika",
+    "quantity":3
+  },
+  {
+    "brand_name":"Dudák 12° Premium",
+    "origin_country":"Česká republika",
+    "quantity":3
+  },
+  {
+    "brand_name":"Ferdinand 11° Max",
+    "origin_country":"Česká republika",
+    "quantity":3
+  },
+  {
+    "brand_name":"Harrach 10°",
+    "origin_country":"Česká republika",
+    "quantity":3
+  },
+  {
+    "brand_name":"Holsten Pils",
+    "origin_country":"Německo",
+    "quantity":3
+  },
+  {
+    "brand_name":"Chotěboř 12°",
+    "origin_country":"Česká republika",
+    "quantity":3
+  },
+  {
+    "brand_name":"Karel IV. 12° Pšeničné",
+    "origin_country":"Česká republika",
+    "quantity":3
+  },
+  {
+    "brand_name":"Knajzl 12°",
+    "origin_country":"Česká republika",
+    "quantity":3
+  },
+  {
+    "brand_name":"Kocour 12°",
+    "origin_country":"Česká republika",
+    "quantity":3
+  },
+  {
+    "brand_name":"Konrad 11°",
+    "origin_country":"Česká republika",
+    "quantity":3
+  },
+  {
+    "brand_name":"Konrad 11° Tmavý",
+    "origin_country":"Česká republika",
+    "quantity":3
+  },
+  {
+    "brand_name":"Korça Pils",
+    "origin_country":"Albánie",
+    "quantity":3
+  },
+  {
+    "brand_name":"Kozel 11° Řezaný",
+    "origin_country":"Česká republika",
+    "quantity":3
+  },
+  {
+    "brand_name":"Krakonoš 10°",
+    "origin_country":"Česká republika",
+    "quantity":3
+  },
+  {
+    "brand_name":"Krušnohor 13° polotmavé",
+    "origin_country":"Česká republika",
+    "quantity":3
+  },
+  {
+    "brand_name":"Leffe Bruin",
+    "origin_country":"Belgie",
+    "quantity":3
+  },
+  {
+    "brand_name":"Leon Steiner 0%",
+    "origin_country":"Polsko",
+    "quantity":3
+  },
+  {
+    "brand_name":"Lidskoe Klasičnoe světloe",
+    "origin_country":"Bělorusko",
+    "quantity":3
+  },
+  {
+    "brand_name":"Lipan 10°",
+    "origin_country":"Česká republika",
+    "quantity":3
+  },
+  {
+    "brand_name":"Lipan 12° Tmavý",
+    "origin_country":"Česká republika",
+    "quantity":3
+  },
+  {
+    "brand_name":"Litoměřice Kalich 12° Vánoční Ležák",
+    "origin_country":"Česká republika",
+    "quantity":3
+  },
+  {
+    "brand_name":"Lounský žejdlík 13° Tmavá",
+    "origin_country":"Česká republika",
+    "quantity":3
+  },
+  {
+    "brand_name":"Morava 11° Polotmavé",
+    "origin_country":"Česká republika",
+    "quantity":3
+  },
+  {
+    "brand_name":"Moritz 11 polotmavé",
+    "origin_country":"Česká republika",
+    "quantity":3
+  },
+  {
+    "brand_name":"Na Rychtě 12° Vojtěch",
+    "origin_country":"Česká republika",
+    "quantity":3
+  },
+  {
+    "brand_name":"Novopacké pivo 12° Vodnický ležák",
+    "origin_country":"Česká republika",
+    "quantity":3
+  },
+  {
+    "brand_name":"Ossegg 12° Philipp",
+    "origin_country":"Česká republika",
+    "quantity":3
+  },
+  {
+    "brand_name":"Ossegg 13° Tomáš černé",
+    "origin_country":"Česká republika",
+    "quantity":3
+  },
+  {
+    "brand_name":"Ostravar 12°",
+    "origin_country":"Česká republika",
+    "quantity":3
+  },
+  {
+    "brand_name":"Ostravar 13° Černá Barbora",
+    "origin_country":"Česká republika",
+    "quantity":3
+  },
+  {
+    "brand_name":"Paulaner Premium Pils",
+    "origin_country":"Německo",
+    "quantity":3
+  },
+  {
+    "brand_name":"Pivovar Děčín 14° Vánoční speciál",
+    "origin_country":"Česká republika",
+    "quantity":3
+  },
+  {
+    "brand_name":"Pod Lípou 10° Čeledín",
+    "origin_country":"Česká republika",
+    "quantity":3
+  },
+  {
+    "brand_name":"Primátor 10°",
+    "origin_country":"Česká republika",
+    "quantity":3
+  },
+  {
+    "brand_name":"Primátor 12° Premium",
+    "origin_country":"Česká republika",
+    "quantity":3
+  },
+  {
+    "brand_name":"Primátor Stout",
+    "origin_country":"Česká republika",
+    "quantity":3
+  },
+  {
+    "brand_name":"Proud 12° Ležák",
+    "origin_country":"Česká republika",
+    "quantity":3
+  },
+  {
+    "brand_name":"Radeberger Pilsner",
+    "origin_country":"Německo",
+    "quantity":3
+  },
+  {
+    "brand_name":"Radegast 0% Birell Pomelo & Grep",
+    "origin_country":"Česká republika",
+    "quantity":3
+  },
+  {
+    "brand_name":"Radegast 15° Hutná",
+    "origin_country":"Česká republika",
+    "quantity":3
+  },
+  {
+    "brand_name":"Rohozec 11° polotmavé",
+    "origin_country":"Česká republika",
+    "quantity":3
+  },
+  {
+    "brand_name":"Rohozec 11° Skalák",
+    "origin_country":"Česká republika",
+    "quantity":3
+  },
+  {
+    "brand_name":"Spitt",
+    "origin_country":"Česká republika",
+    "quantity":3
+  },
+  {
+    "brand_name":"Staročech ležák polotmavý",
+    "origin_country":"Česká republika",
+    "quantity":3
+  },
+  {
+    "brand_name":"Staropramen 0% Nealko",
+    "origin_country":"Česká republika",
+    "quantity":3
+  },
+  {
+    "brand_name":"Staropramen 12° Nefiltrovaný ležák",
+    "origin_country":"Česká republika",
+    "quantity":3
+  },
+  {
+    "brand_name":"Staropramen Cool Višeň a Limetka",
+    "origin_country":"Česká republika",
+    "quantity":3
+  },
+  {
+    "brand_name":"Sternburg Export",
+    "origin_country":"Německo",
+    "quantity":3
+  },
+  {
+    "brand_name":"Svatý Florian 11° Tmavý",
+    "origin_country":"Česká republika",
+    "quantity":3
+  },
+  {
+    "brand_name":"Svijanská Trumpetka",
+    "origin_country":"Česká republika",
+    "quantity":3
+  },
+  {
+    "brand_name":"U Stočesů 11° Stočeská",
+    "origin_country":"Česká republika",
+    "quantity":3
+  },
+  {
+    "brand_name":"Vratislav 11°",
+    "origin_country":"Česká republika",
+    "quantity":3
+  },
+  {
+    "brand_name":"Vysoký Chlumec 13° Masopustní speciál",
+    "origin_country":"Česká republika",
+    "quantity":3
+  },
+  {
+    "brand_name":"Zichovec 10° Krahulík",
+    "origin_country":"Česká republika",
+    "quantity":3
+  },
+  {
+    "brand_name":"Zichovec 11° Krahulík",
+    "origin_country":"Česká republika",
+    "quantity":3
+  },
+  {
+    "brand_name":"Zichovec 15° Juicy Lucy NEIPA",
+    "origin_country":"Česká republika",
+    "quantity":3
+  },
+  {
+    "brand_name":"Zipfer Pils",
+    "origin_country":"Rakousko",
+    "quantity":3
+  },
+  {
+    "brand_name":"Zlatopramen Radler Grapefruit",
+    "origin_country":"Česká republika",
+    "quantity":3
+  },
+  {
+    "brand_name":"Zlatý Bažant Radler Citron",
+    "origin_country":"Slovensko",
+    "quantity":3
+  },
+  {
+    "brand_name":"Žatec 11° Premium",
+    "origin_country":"Česká republika",
+    "quantity":3
+  },
+  {
+    "brand_name":"Žiwell Jedenástka 11° svetlý ležiak",
+    "origin_country":"Slovensko",
+    "quantity":3
+  },
+  {
+    "brand_name":"11° Děčíňák",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Amstel Lager",
+    "origin_country":"Nizozemsko",
+    "quantity":2
+  },
+  {
+    "brand_name":"Apatinsko",
+    "origin_country":"Srbsko",
+    "quantity":2
+  },
+  {
+    "brand_name":"Ariana",
+    "origin_country":"Bulharsko",
+    "quantity":2
+  },
+  {
+    "brand_name":"Astra Rotlicht",
+    "origin_country":"Německo",
+    "quantity":2
+  },
+  {
+    "brand_name":"B13 Pils 4,5%",
+    "origin_country":"Rumunsko",
+    "quantity":2
+  },
+  {
+    "brand_name":"Bakalář 11° Černovar Černé",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Bakalář 14° Medový speciál",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Berliner Kindl Jubiläums Pilsener",
+    "origin_country":"Německo",
+    "quantity":2
+  },
+  {
+    "brand_name":"Berliner Kindl Pils",
+    "origin_country":"Německo",
+    "quantity":2
+  },
+  {
+    "brand_name":"Bernard 11° Polotmavý",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Bernard 12° Jantarový ležák",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Beznoska 9° Chmelová",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Bingo Mango-Limetka",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Birell 0% Polotmavý",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Birell 0% Polotmavý citron",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Birell Active Mango & citrón",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Biskupický Gajdoš 13° Višňový",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Born Garde Neipa 13°",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Braník 12°",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Břeclav 10° Delegát",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Břevnovský Benedict 11° Pšeničné",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Břevnovský Benedict 12°",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Břevnovský Benedikt 11° Belgian Witbier",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Březňák 10° Tmavý",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Březňák 13° Svatomartinské",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Buchťák 11° Buchťák na pomeranči",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Clock 15° Zlaté prasátko 2022 Kveik IPA",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Corona Extra",
+    "origin_country":"Mexiko",
+    "quantity":2
+  },
+  {
+    "brand_name":"Crius Blonde",
+    "origin_country":"Belgie",
+    "quantity":2
+  },
+  {
+    "brand_name":"Černá Hora 12° Granát",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Černigivske 10°",
+    "origin_country":"Ukrajina",
+    "quantity":2
+  },
+  {
+    "brand_name":"Černigivske 12° Bile",
+    "origin_country":"Ukrajina",
+    "quantity":2
+  },
+  {
+    "brand_name":"Dalešice 11° Nefiltrované",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Deep 10°",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Deep 11°",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Dudák 11° Nektar",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Dudák 13° Král Šumavy",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Dva Kohouti 10° Helles",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Eibauer Schwarzbier",
+    "origin_country":"Německo",
+    "quantity":2
+  },
+  {
+    "brand_name":"Elektra 11° Polotmavé",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Emeran 12° Kníže Nebes",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Emeran 12° Polotmavé medové",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Falkenstejn 9° Svižnej Emil",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Faxe Extra Strong 10%",
+    "origin_country":"Dánsko",
+    "quantity":2
+  },
+  {
+    "brand_name":"Faxe Premium",
+    "origin_country":"Dánsko",
+    "quantity":2
+  },
+  {
+    "brand_name":"Feldschlösschen Pilsner",
+    "origin_country":"Německo",
+    "quantity":2
+  },
+  {
+    "brand_name":"Gambrinus 12° Nefiltrovaný",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Gambrinus 12° Nepasterizovaná",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Gösser Gold",
+    "origin_country":"Rakousko",
+    "quantity":2
+  },
+  {
+    "brand_name":"Hák 13° Černé",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Hák 8° Summer ALE",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Harrachov 12° Františkův ležák",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Hasič 12° polotmavý ležák",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Helene 11° Stoud",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Herold 14° Polotmavé",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Hoegaarden Rosée",
+    "origin_country":"Belgie",
+    "quantity":2
+  },
+  {
+    "brand_name":"HORAL 1860 světlý ležák 11°",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Hostivar 11°",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Hostivar 12° Polotmavé",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Hradecký Klenot 11°",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Hradecký Klenot 12° Velikonoční zelené",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Hradecký Klenot 13° Sváteční",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Hrdelák 12° světlá",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Chang",
+    "origin_country":"Thajsko",
+    "quantity":2
+  },
+  {
+    "brand_name":"Chmeloun 12° KraluPol Polotmavé",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Chodovar 12° Skalní polotmavé kvasnicové",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Chomout 13,3° Něžná Bára",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"IKEA Öl Ljus Lager",
+    "origin_country":"Švédsko",
+    "quantity":2
+  },
+  {
+    "brand_name":"IKEA Öl Mörk Lager",
+    "origin_country":"Švédsko",
+    "quantity":2
+  },
+  {
+    "brand_name":"Jánošík polotmavý 11°",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Jelen",
+    "origin_country":"Srbsko",
+    "quantity":2
+  },
+  {
+    "brand_name":"Jever Pilsener",
+    "origin_country":"Německo",
+    "quantity":2
+  },
+  {
+    "brand_name":"Jupiler",
+    "origin_country":"Belgie",
+    "quantity":2
+  },
+  {
+    "brand_name":"Karásek a Stülpner 11° Karáskova Světlá",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Karel IV. 12° Polotmavé",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Karlovačko Crno",
+    "origin_country":"Chorvatsko",
+    "quantity":2
+  },
+  {
+    "brand_name":"Keller Bier",
+    "origin_country":"Německo",
+    "quantity":2
+  },
+  {
+    "brand_name":"Kelt 10°",
+    "origin_country":"Slovensko",
+    "quantity":2
+  },
+  {
+    "brand_name":"Keltské dědictví",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Keras 10° Výčepní světlé",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Kocour 14° Jahodový Porter",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Koliba 12° Kousek světlý ležák",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Kolkovna 12° Red Lager",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Königsbacher Pils",
+    "origin_country":"Německo",
+    "quantity":2
+  },
+  {
+    "brand_name":"Konrad 10°",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Konrad 11° Vratislavický ležák",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Konrad 16° Bizon Black Ale",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Köstritzer Schwarzbier",
+    "origin_country":"Německo",
+    "quantity":2
+  },
+  {
+    "brand_name":"Krakonoš 12°",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Kronl 11° Sarka Farka",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Krušnohor 11°",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Krušnohor 12°",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Krušnohor 13° Meďák",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Krušnohor 14° tmavé",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Krušovice Bohém",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Książęce",
+    "origin_country":"Polsko",
+    "quantity":2
+  },
+  {
+    "brand_name":"Książęce Złote Pszeniczne",
+    "origin_country":"Polsko",
+    "quantity":2
+  },
+  {
+    "brand_name":"Kvilda 11° pšeničné",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Kvilda 12° Dvanácterák",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Lanýž 11° Polotmavý",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Lanýž 12°",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Lisý dědek 12°",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Litoměřice Černý orel 13°",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Litovel 0% Řezaný citron",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Litovel 11°",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Lobkowicz 11°",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Lobkowicz Démon 13°",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Lomza Export",
+    "origin_country":"Polsko",
+    "quantity":2
+  },
+  {
+    "brand_name":"Louny 12°",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Lvivske Lev pšenične",
+    "origin_country":"Ukrajina",
+    "quantity":2
+  },
+  {
+    "brand_name":"Maes Pils",
+    "origin_country":"Belgie",
+    "quantity":2
+  },
+  {
+    "brand_name":"Malastrana 11° Original Pils",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Malastrana 18° Imperial Pils",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Malastrana Dark Lager",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Malastrana Strong Bock",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Master 18° Tmavé",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Matuška 12° California",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Matuška 12° světlý ležák",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Matuška 13° Apollo Galaxy",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Mlýn Ležák 12°",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Mordýř 11° Kuněrtický Kastelán",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Mordýř 11° Světlý ležák",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Mount Eagle",
+    "origin_country":"Spojené státy",
+    "quantity":2
+  },
+  {
+    "brand_name":"Muflon 12° Chmel",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Muflon 12° Polotmavé",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Namysłów Pils",
+    "origin_country":"Polsko",
+    "quantity":2
+  },
+  {
+    "brand_name":"Nikšićko Tamno",
+    "origin_country":"Černá Hora",
+    "quantity":2
+  },
+  {
+    "brand_name":"Novosad 12° František",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"O'Hara's Irish Stout",
+    "origin_country":"Irsko",
+    "quantity":2
+  },
+  {
+    "brand_name":"Oboloň 11°",
+    "origin_country":"Ukrajina",
+    "quantity":2
+  },
+  {
+    "brand_name":"Oboloň Premium",
+    "origin_country":"Ukrajina",
+    "quantity":2
+  },
+  {
+    "brand_name":"Opat 12°",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Orlovský pivovar 12° Dvanda",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Orlovský pivovar 12° Kombinátor",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Ossegg 11° Ruthard",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Ostravar 11° Mustang",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"PAN Lager",
+    "origin_country":"Chorvatsko",
+    "quantity":2
+  },
+  {
+    "brand_name":"PAN Zlatni",
+    "origin_country":"Chorvatsko",
+    "quantity":2
+  },
+  {
+    "brand_name":"Paulaner Hefe-Weißbier Naturtrüb",
+    "origin_country":"Německo",
+    "quantity":2
+  },
+  {
+    "brand_name":"Peja",
+    "origin_country":"Kosovo",
+    "quantity":2
+  },
+  {
+    "brand_name":"Perlenbacher Kellerbier Naturtrüb",
+    "origin_country":"Německo",
+    "quantity":2
+  },
+  {
+    "brand_name":"Permon 10° Summer Ale",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Permon 12° Stout",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Pernštejn 10° Arnoštova hořká",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Pioneer Beer 11° Rezident",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Písecký hradební pivovar 10° Florián",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Plasy 13° Felčar polotmavé",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Plasy 13° Pekelník tmavé",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Platan 11°",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Poutník 12° Kvasnicový",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Primátor American Pale Ale",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Primátor Tchyně IPL",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Primátor Weizenbier",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Račice 12° polotmavé",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Radegast 0% Birell",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Radegast 10° Ratar",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Radegast 12° Ryze hořká",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Radegast 15° Extra hořká",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Rastinger světlé výčepní",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Rebel 10°",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Regent 11°",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Regent 12°",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Richtár Jakub 12°",
+    "origin_country":"Slovensko",
+    "quantity":2
+  },
+  {
+    "brand_name":"Rohozec 10° Ypsilon",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Rohozec 11° Skalák řezané",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Rožnov 12,9° Rothschild",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Rudohor 10° Groš",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Rychtář 11°",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Saaz shine 10° výčepní",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Sever Grepáč 11°",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Schlossbrauerei Au Auer Helles",
+    "origin_country":"Německo",
+    "quantity":2
+  },
+  {
+    "brand_name":"Soproni",
+    "origin_country":"Maďarsko",
+    "quantity":2
+  },
+  {
+    "brand_name":"Soproni 1895",
+    "origin_country":"Maďarsko",
+    "quantity":2
+  },
+  {
+    "brand_name":"Staré Brno výčepní",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Starobrno 12° Štatl",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Starobrno Zelené pivo",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Staročech 0% Mango",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Staročech 12° Extra chmelený",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Staročech Polotmavý citron 0%",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Staročech Pomelo & Grep",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Staropramen 11° Granát",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Staropramen 11° Nepasterizované",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Staropramen Cool Jablko & Hruška",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Sv. Florian tmavý uzený speciál 13°",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Svatováclavský pivovar 13° Tmavé pivo pana Bruna",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Svatý Florian 14° Rubínový speciál",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Svijany 13° Kvasničák",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Švihadlo 11° ALE",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Tatra Jasne Pełne",
+    "origin_country":"Polsko",
+    "quantity":2
+  },
+  {
+    "brand_name":"Točená 10° (Kladno Kročehlavy)",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Topvar 10°",
+    "origin_country":"Slovensko",
+    "quantity":2
+  },
+  {
+    "brand_name":"Trumf 10°",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Trumf 11°",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Tsingtao Lager",
+    "origin_country":"Čína",
+    "quantity":2
+  },
+  {
+    "brand_name":"U Orloje 11° Žatecký Samec",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"U Stočesů 10° světlá",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"U Stočesů 12° Řepiš Polotmavý",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"U Stočesů 14° Nakuřovaný speciál",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Únětické pivo 10° Nefiltrované",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Únětické pivo 10° Světlé",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Urpiner 13° IPL",
+    "origin_country":"Slovensko",
+    "quantity":2
+  },
+  {
+    "brand_name":"Ursus Black",
+    "origin_country":"Rumunsko",
+    "quantity":2
+  },
+  {
+    "brand_name":"Veltins",
+    "origin_country":"Německo",
+    "quantity":2
+  },
+  {
+    "brand_name":"Velvet",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Vinohradský pivovar 12°",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Volt 20° Impuls Imperial Stout",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Vukovarsko domaće pivo",
+    "origin_country":"Chorvatsko",
+    "quantity":2
+  },
+  {
+    "brand_name":"Vysoký Chlumec 10° Princ Max X",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Warka",
+    "origin_country":"Polsko",
+    "quantity":2
+  },
+  {
+    "brand_name":"Weihenstephaner Hefe Weissbier",
+    "origin_country":"Německo",
+    "quantity":2
+  },
+  {
+    "brand_name":"Wieselburger Gold",
+    "origin_country":"Rakousko",
+    "quantity":2
+  },
+  {
+    "brand_name":"Zagorka Special",
+    "origin_country":"Bulharsko",
+    "quantity":2
+  },
+  {
+    "brand_name":"Zakarpatske svetle",
+    "origin_country":"Ukrajina",
+    "quantity":2
+  },
+  {
+    "brand_name":"Ze Sklepa hořká 12",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Zichovec 12° Bayern Weisse",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Zíchovec 8° Malý ležák",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Zlatopramen Radler Citrón",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Zlatopramen Radler Tmavá višeň",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Żywiec",
+    "origin_country":"Polsko",
+    "quantity":2
+  },
+  {
+    "brand_name":"Žatec 10° Plavčík",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"Žatec 13° Sedmý schod",
+    "origin_country":"Česká republika",
+    "quantity":2
+  },
+  {
+    "brand_name":"10° Topper světlé",
+    "origin_country":"Česká republika",
+    "quantity":1
+  },
+  {
     "brand_name":"11° Adelaide",
     "origin_country":"Česká republika",
     "quantity":1
@@ -10,13 +2485,23 @@
     "quantity":1
   },
   {
-    "brand_name":"11° Děčíňák",
+    "brand_name":"12° Shovel světlé",
     "origin_country":"Česká republika",
-    "quantity":2
+    "quantity":1
   },
   {
     "brand_name":"13° Golden Gate",
     "origin_country":"Česká republika",
+    "quantity":1
+  },
+  {
+    "brand_name":"5th Element ABA",
+    "origin_country":"Chorvatsko",
+    "quantity":1
+  },
+  {
+    "brand_name":"9 White Deer Stag Stoud",
+    "origin_country":"Irsko",
     "quantity":1
   },
   {
@@ -30,14 +2515,9 @@
     "quantity":1
   },
   {
-    "brand_name":"Albrecht 10°",
+    "brand_name":"Agent 11° Jaro",
     "origin_country":"Česká republika",
-    "quantity":5
-  },
-  {
-    "brand_name":"Albrecht 12° Kateřina Tmavé",
-    "origin_country":"Česká republika",
-    "quantity":3
+    "quantity":1
   },
   {
     "brand_name":"Albrechtický pivovar 11° Pankáč",
@@ -60,11 +2540,6 @@
     "quantity":1
   },
   {
-    "brand_name":"Alhambra Premium",
-    "origin_country":"Španělsko",
-    "quantity":6
-  },
-  {
     "brand_name":"Alster",
     "origin_country":"Německo",
     "quantity":1
@@ -80,19 +2555,24 @@
     "quantity":1
   },
   {
-    "brand_name":"Ambrosius 10°",
+    "brand_name":"Andělská 11° světlá",
     "origin_country":"Česká republika",
-    "quantity":4
+    "quantity":1
   },
   {
-    "brand_name":"Amstel Lager",
-    "origin_country":"Nizozemsko",
-    "quantity":2
+    "brand_name":"Andělská 14° IPA",
+    "origin_country":"Česká republika",
+    "quantity":1
   },
   {
-    "brand_name":"Amstel Pilsener",
-    "origin_country":"Nizozemsko",
-    "quantity":3
+    "brand_name":"Andělský pivovar 10° tmavá",
+    "origin_country":"Česká republika",
+    "quantity":1
+  },
+  {
+    "brand_name":"Andělský pivovar 13° Polotmavý kolagen",
+    "origin_country":"Česká republika",
+    "quantity":1
   },
   {
     "brand_name":"Antoš 10° Slánský Rarach",
@@ -125,14 +2605,14 @@
     "quantity":1
   },
   {
-    "brand_name":"Antoš 15° Coll me Jack Daniels Stoud",
+    "brand_name":"Antoš 14° Crystal IPA",
     "origin_country":"Česká republika",
     "quantity":1
   },
   {
-    "brand_name":"Apatinsko",
-    "origin_country":"Srbsko",
-    "quantity":2
+    "brand_name":"Antoš 15° Coll me Jack Daniels Stoud",
+    "origin_country":"Česká republika",
+    "quantity":1
   },
   {
     "brand_name":"Argo lager",
@@ -143,11 +2623,6 @@
     "brand_name":"Argus 0% Nealko",
     "origin_country":"Česká republika",
     "quantity":1
-  },
-  {
-    "brand_name":"Argus 10°",
-    "origin_country":"Česká republika",
-    "quantity":3
   },
   {
     "brand_name":"Argus 11° Bitter",
@@ -175,29 +2650,14 @@
     "quantity":1
   },
   {
-    "brand_name":"Argus Grep",
-    "origin_country":"Polsko",
-    "quantity":3
-  },
-  {
     "brand_name":"Argus Lager 5%",
     "origin_country":"Česká republika",
     "quantity":1
   },
   {
-    "brand_name":"Argus Lemon",
-    "origin_country":"Polsko",
-    "quantity":16
-  },
-  {
     "brand_name":"Argus Maestic",
     "origin_country":"Česká republika",
     "quantity":1
-  },
-  {
-    "brand_name":"Argus Malina Limetka",
-    "origin_country":"Česká republika",
-    "quantity":7
   },
   {
     "brand_name":"Argus Nepasterované",
@@ -210,9 +2670,24 @@
     "quantity":1
   },
   {
-    "brand_name":"Arnoštova Hořká 10",
-    "origin_country":"Česká republika",
-    "quantity":6
+    "brand_name":"Ariana Grep Radler",
+    "origin_country":"Bulharsko",
+    "quantity":1
+  },
+  {
+    "brand_name":"Ariana Lager",
+    "origin_country":"Bulharsko",
+    "quantity":1
+  },
+  {
+    "brand_name":"Ariana Lemon Radler",
+    "origin_country":"Bulharsko",
+    "quantity":1
+  },
+  {
+    "brand_name":"Ariana Malina Radler",
+    "origin_country":"Bulharsko",
+    "quantity":1
   },
   {
     "brand_name":"Arrigõ 11° Exclusive",
@@ -225,9 +2700,14 @@
     "quantity":1
   },
   {
-    "brand_name":"Astra Rotlicht",
+    "brand_name":"Astika",
+    "origin_country":"Bulharsko",
+    "quantity":1
+  },
+  {
+    "brand_name":"Astra Arschkalt",
     "origin_country":"Německo",
-    "quantity":2
+    "quantity":1
   },
   {
     "brand_name":"Augustinerbräu Edelstoff",
@@ -240,6 +2720,11 @@
     "quantity":1
   },
   {
+    "brand_name":"Ayinger Festmärzen 5,8%",
+    "origin_country":"Německo",
+    "quantity":1
+  },
+  {
     "brand_name":"B13 Dark 5,5%",
     "origin_country":"Rumunsko",
     "quantity":1
@@ -248,11 +2733,6 @@
     "brand_name":"B13 Lager 5,3%",
     "origin_country":"Rumunsko",
     "quantity":1
-  },
-  {
-    "brand_name":"B13 Pils 4,5%",
-    "origin_country":"Rumunsko",
-    "quantity":2
   },
   {
     "brand_name":"Bad Flash 10°",
@@ -270,11 +2750,6 @@
     "quantity":1
   },
   {
-    "brand_name":"Bakalář 10°",
-    "origin_country":"Česká republika",
-    "quantity":6
-  },
-  {
     "brand_name":"Bakalář 10° Pražačka",
     "origin_country":"Česká republika",
     "quantity":1
@@ -290,16 +2765,6 @@
     "quantity":1
   },
   {
-    "brand_name":"Bakalář 11°",
-    "origin_country":"Česká republika",
-    "quantity":23
-  },
-  {
-    "brand_name":"Bakalář 11° Černovar Černé",
-    "origin_country":"Česká republika",
-    "quantity":2
-  },
-  {
     "brand_name":"Bakalář 11° Polotmavý",
     "origin_country":"Česká republika",
     "quantity":1
@@ -313,11 +2778,6 @@
     "brand_name":"Bakalář 12° Za studena chmelené",
     "origin_country":"Česká republika",
     "quantity":1
-  },
-  {
-    "brand_name":"Bakalář 14° Medový speciál",
-    "origin_country":"Česká republika",
-    "quantity":2
   },
   {
     "brand_name":"Baltika 0 Non-Alcoholic",
@@ -336,6 +2796,11 @@
   },
   {
     "brand_name":"Baltika 3 Classic",
+    "origin_country":"Ruská federace",
+    "quantity":1
+  },
+  {
+    "brand_name":"Baltika 4,7% Cooler",
     "origin_country":"Ruská federace",
     "quantity":1
   },
@@ -370,9 +2835,14 @@
     "quantity":1
   },
   {
-    "brand_name":"Bavaria",
-    "origin_country":"Nizozemsko",
-    "quantity":6
+    "brand_name":"Barn Beer 15° Reversion Cold IPA",
+    "origin_country":"Česká republika",
+    "quantity":1
+  },
+  {
+    "brand_name":"Bašta 12° Světlé",
+    "origin_country":"Česká republika",
+    "quantity":1
   },
   {
     "brand_name":"Beamish",
@@ -395,11 +2865,6 @@
     "quantity":1
   },
   {
-    "brand_name":"Beck's",
-    "origin_country":"Německo",
-    "quantity":3
-  },
-  {
     "brand_name":"Beck's Gold",
     "origin_country":"Německo",
     "quantity":1
@@ -415,9 +2880,24 @@
     "quantity":1
   },
   {
-    "brand_name":"Beránek 13° polotmavý",
+    "brand_name":"Benedikt 13° Fruit IPA",
     "origin_country":"Česká republika",
-    "quantity":11
+    "quantity":1
+  },
+  {
+    "brand_name":"Benediktiner Festbier",
+    "origin_country":"Německo",
+    "quantity":1
+  },
+  {
+    "brand_name":"Benediktiner Original Hell",
+    "origin_country":"Německo",
+    "quantity":1
+  },
+  {
+    "brand_name":"Beránek 12°",
+    "origin_country":"Česká republika",
+    "quantity":1
   },
   {
     "brand_name":"Berea Casei",
@@ -450,21 +2930,6 @@
     "quantity":1
   },
   {
-    "brand_name":"Bernard 10°",
-    "origin_country":"Česká republika",
-    "quantity":1266
-  },
-  {
-    "brand_name":"Bernard 10° Nefiltrované",
-    "origin_country":"Česká republika",
-    "quantity":3
-  },
-  {
-    "brand_name":"Bernard 11°",
-    "origin_country":"Česká republika",
-    "quantity":68
-  },
-  {
     "brand_name":"Bernard 11° Bezlepkový Ležák",
     "origin_country":"Česká republika",
     "quantity":1
@@ -475,44 +2940,14 @@
     "quantity":1
   },
   {
-    "brand_name":"Bernard 11° Nefiltrované",
-    "origin_country":"Česká republika",
-    "quantity":7
-  },
-  {
-    "brand_name":"Bernard 11° Polotmavý",
-    "origin_country":"Česká republika",
-    "quantity":2
-  },
-  {
     "brand_name":"Bernard 11º Kvasnicový Ležák",
     "origin_country":"Česká republika",
     "quantity":1
   },
   {
-    "brand_name":"Bernard 12°",
-    "origin_country":"Česká republika",
-    "quantity":27
-  },
-  {
-    "brand_name":"Bernard 12° Černé",
-    "origin_country":"Česká republika",
-    "quantity":1
-  },
-  {
-    "brand_name":"Bernard 12° Jantarový ležák",
-    "origin_country":"Česká republika",
-    "quantity":2
-  },
-  {
     "brand_name":"Bernard 12° Nefiltrovaný ležák",
     "origin_country":"Česká republika",
     "quantity":1
-  },
-  {
-    "brand_name":"Bernard 13° Speciální černé pivo",
-    "origin_country":"Česká republika",
-    "quantity":4
   },
   {
     "brand_name":"Bernard 14°",
@@ -545,12 +2980,17 @@
     "quantity":1
   },
   {
-    "brand_name":"Bertold 10°",
+    "brand_name":"Bertold 11°",
     "origin_country":"Česká republika",
-    "quantity":29
+    "quantity":1
   },
   {
-    "brand_name":"Bertold 11°",
+    "brand_name":"Beskydský pivovárek 11°",
+    "origin_country":"Česká republika",
+    "quantity":1
+  },
+  {
+    "brand_name":"Beskydský pivovárek 12° Velikonoční speciál",
     "origin_country":"Česká republika",
     "quantity":1
   },
@@ -575,29 +3015,14 @@
     "quantity":1
   },
   {
-    "brand_name":"Beznoska 9° Chmelová",
-    "origin_country":"Česká republika",
-    "quantity":2
-  },
-  {
     "brand_name":"Bia Saigon Lager",
     "origin_country":"Vietnam",
     "quantity":1
   },
   {
-    "brand_name":"Bingo Mango-Limetka",
-    "origin_country":"Česká republika",
-    "quantity":2
-  },
-  {
-    "brand_name":"Birell 0% Citronáda",
-    "origin_country":"Česká republika",
-    "quantity":6
-  },
-  {
-    "brand_name":"Birell 0% Červený pomeranč",
-    "origin_country":"Česká republika",
-    "quantity":4
+    "brand_name":"Biera Corsa Pietra",
+    "origin_country":"Francie",
+    "quantity":1
   },
   {
     "brand_name":"Birell 0% IPA",
@@ -610,39 +3035,9 @@
     "quantity":1
   },
   {
-    "brand_name":"Birell 0% Limetka & malina",
-    "origin_country":"Česká republika",
-    "quantity":9
-  },
-  {
-    "brand_name":"Birell 0% Malina",
-    "origin_country":"Česká republika",
-    "quantity":5
-  },
-  {
     "brand_name":"Birell 0% Mandarinka",
     "origin_country":"Česká republika",
     "quantity":1
-  },
-  {
-    "brand_name":"Birell 0% Polotmavý",
-    "origin_country":"Česká republika",
-    "quantity":2
-  },
-  {
-    "brand_name":"Birell 0% Polotmavý citron",
-    "origin_country":"Česká republika",
-    "quantity":2
-  },
-  {
-    "brand_name":"Birell 0% Pomelo & Grep",
-    "origin_country":"Česká republika",
-    "quantity":41
-  },
-  {
-    "brand_name":"Birell 0% Višeň & Ostružina",
-    "origin_country":"Česká republika",
-    "quantity":13
   },
   {
     "brand_name":"Birell 0% Zelený ječmen",
@@ -650,24 +3045,14 @@
     "quantity":1
   },
   {
-    "brand_name":"Birell Borůvka & Brusinka",
+    "brand_name":"Birell Active zelený čaj & broskev s kofeinem",
     "origin_country":"Česká republika",
-    "quantity":4
+    "quantity":1
   },
   {
-    "brand_name":"Birell Hruška & Kdoule",
+    "brand_name":"BirGo Cedrata",
     "origin_country":"Česká republika",
-    "quantity":4
-  },
-  {
-    "brand_name":"BirGo Citron Limetka",
-    "origin_country":"Česká republika",
-    "quantity":13
-  },
-  {
-    "brand_name":"BirGo Grapefruit",
-    "origin_country":"Česká republika",
-    "quantity":16
+    "quantity":1
   },
   {
     "brand_name":"BirGo Malina Ostružina",
@@ -680,34 +3065,24 @@
     "quantity":1
   },
   {
-    "brand_name":"Birra Moretti",
-    "origin_country":"Itálie",
-    "quantity":3
-  },
-  {
     "brand_name":"Birra Tirana",
     "origin_country":"Albánie",
     "quantity":1
   },
   {
-    "brand_name":"Biskupský pivovar polotmavý speciál 13°",
+    "brand_name":"Biskupický Gajdoš 11° Kvasnicový",
     "origin_country":"Česká republika",
-    "quantity":3
+    "quantity":1
   },
   {
-    "brand_name":"Biskupský pivovar U sv. Štěpána 10° Vikář",
+    "brand_name":"Biskupický Gajdoš 12°",
     "origin_country":"Česká republika",
-    "quantity":12
+    "quantity":1
   },
   {
     "brand_name":"Biskupský pivovar U sv. Štěpána 11° Děkan",
     "origin_country":"Česká republika",
     "quantity":1
-  },
-  {
-    "brand_name":"Biskupský pivovar U sv. Štěpána 12° Štěpán",
-    "origin_country":"Česká republika",
-    "quantity":3
   },
   {
     "brand_name":"Biskupský pivovar U sv. Štěpána 13° Polotmavý speciál",
@@ -725,13 +3100,43 @@
     "quantity":1
   },
   {
-    "brand_name":"Bofferding",
-    "origin_country":"Belgie",
+    "brand_name":"bofferding",
+    "origin_country":"Lucembursko",
     "quantity":1
   },
   {
     "brand_name":"Bohemia 11°",
     "origin_country":"Česká republika",
+    "quantity":1
+  },
+  {
+    "brand_name":"Bohemia Goose 11° Malinový",
+    "origin_country":"Česká republika",
+    "quantity":1
+  },
+  {
+    "brand_name":"Bohemia Goose 11° Pšenicné",
+    "origin_country":"Česká republika",
+    "quantity":1
+  },
+  {
+    "brand_name":"Bohemia Goose 12° Ležák",
+    "origin_country":"Česká republika",
+    "quantity":1
+  },
+  {
+    "brand_name":"Bohemia Goose 13° Tmavé",
+    "origin_country":"Česká republika",
+    "quantity":1
+  },
+  {
+    "brand_name":"Bohemia Goose Sezónní Speciál",
+    "origin_country":"Česká republika",
+    "quantity":1
+  },
+  {
+    "brand_name":"Boljarka Svetlo",
+    "origin_country":"Bulharsko",
     "quantity":1
   },
   {
@@ -750,16 +3155,6 @@
     "quantity":1
   },
   {
-    "brand_name":"Born 12° Dáma APA",
-    "origin_country":"Česká republika",
-    "quantity":3
-  },
-  {
-    "brand_name":"Born 12° Král",
-    "origin_country":"Česká republika",
-    "quantity":3
-  },
-  {
     "brand_name":"Born 14° Věž IPA",
     "origin_country":"Česká republika",
     "quantity":1
@@ -768,11 +3163,6 @@
     "brand_name":"Born 8° Osmička",
     "origin_country":"Česká republika",
     "quantity":1
-  },
-  {
-    "brand_name":"Born Garde Neipa 13°",
-    "origin_country":"Česká republika",
-    "quantity":2
   },
   {
     "brand_name":"Bornem Dubbel",
@@ -785,16 +3175,6 @@
     "quantity":1
   },
   {
-    "brand_name":"Borsodi Bivaly",
-    "origin_country":"Maďarsko",
-    "quantity":4
-  },
-  {
-    "brand_name":"Bosman Full",
-    "origin_country":"Polsko",
-    "quantity":3
-  },
-  {
     "brand_name":"Bosman Specjal",
     "origin_country":"Polsko",
     "quantity":1
@@ -805,34 +3185,9 @@
     "quantity":1
   },
   {
-    "brand_name":"Brackie",
-    "origin_country":"Polsko",
-    "quantity":3
-  },
-  {
-    "brand_name":"Braník 10°",
-    "origin_country":"Česká republika",
-    "quantity":710
-  },
-  {
     "brand_name":"Braník 10° Mikuláš Aleš",
     "origin_country":"Česká republika",
     "quantity":1
-  },
-  {
-    "brand_name":"Braník 11°",
-    "origin_country":"Česká republika",
-    "quantity":19
-  },
-  {
-    "brand_name":"Braník 12°",
-    "origin_country":"Česká republika",
-    "quantity":1
-  },
-  {
-    "brand_name":"Braník černý",
-    "origin_country":"Česká republika",
-    "quantity":3
   },
   {
     "brand_name":"Brauburger",
@@ -840,13 +3195,13 @@
     "quantity":1
   },
   {
-    "brand_name":"BrewDog Punk IPA",
-    "origin_country":"Spojené království",
-    "quantity":3
-  },
-  {
     "brand_name":"BrewDog Vagabond Pale Ale",
     "origin_country":"Spojené království",
+    "quantity":1
+  },
+  {
+    "brand_name":"Britos nakouřený",
+    "origin_country":"Bulharsko",
     "quantity":1
   },
   {
@@ -860,34 +3215,14 @@
     "quantity":1
   },
   {
-    "brand_name":"Bruncvík 10° výčepní",
-    "origin_country":"Česká republika",
-    "quantity":124
-  },
-  {
-    "brand_name":"Bruncvík Dark beer Tmavé",
-    "origin_country":"Česká republika",
-    "quantity":7
-  },
-  {
     "brand_name":"Bruncvík nealkoholické",
     "origin_country":"Česká republika",
     "quantity":1
   },
   {
-    "brand_name":"Bruncvík polotmavý ležák",
-    "origin_country":"Česká republika",
-    "quantity":3
-  },
-  {
     "brand_name":"Bruncvík Premium lager beer Ležák",
     "origin_country":"Česká republika",
     "quantity":1
-  },
-  {
-    "brand_name":"Břeclav 10° Delegát",
-    "origin_country":"Česká republika",
-    "quantity":2
   },
   {
     "brand_name":"Břeclav 10° Kanec",
@@ -900,12 +3235,17 @@
     "quantity":1
   },
   {
-    "brand_name":"Břeclav 12° Kanec",
+    "brand_name":"Břeclav 11° Podlužan",
     "origin_country":"Česká republika",
-    "quantity":4
+    "quantity":1
   },
   {
     "brand_name":"Břeclav 12° Kanec polotmavý",
+    "origin_country":"Česká republika",
+    "quantity":1
+  },
+  {
+    "brand_name":"Břevnov 12° Kopřivový Benedict",
     "origin_country":"Česká republika",
     "quantity":1
   },
@@ -915,17 +3255,27 @@
     "quantity":1
   },
   {
-    "brand_name":"Břevnovský Benedict 11° Tmavý ležák",
+    "brand_name":"Břevnovský Benedict 11° Nachmelený",
     "origin_country":"Česká republika",
     "quantity":1
   },
   {
-    "brand_name":"Břevnovský Benedict 12°",
+    "brand_name":"Břevnovský Benedict 13° Tmavá pšenice",
     "origin_country":"Česká republika",
     "quantity":1
   },
   {
-    "brand_name":"Břevnovský Benedict 15° Klášterní IPA",
+    "brand_name":"Břevnovský Benedikt 11° Kávový ležák",
+    "origin_country":"Česká republika",
+    "quantity":1
+  },
+  {
+    "brand_name":"Břevnovský Benedikt 14° West Coast IPA",
+    "origin_country":"Česká republika",
+    "quantity":1
+  },
+  {
+    "brand_name":"Břevnovský Benedikt 8° Adalbert ALE",
     "origin_country":"Česká republika",
     "quantity":1
   },
@@ -935,24 +3285,9 @@
     "quantity":1
   },
   {
-    "brand_name":"Březňák 10°",
+    "brand_name":"Březňák 14° Adventní",
     "origin_country":"Česká republika",
-    "quantity":706
-  },
-  {
-    "brand_name":"Březňák 10° Tmavý",
-    "origin_country":"Česká republika",
-    "quantity":2
-  },
-  {
-    "brand_name":"Březňák 11°",
-    "origin_country":"Česká republika",
-    "quantity":172
-  },
-  {
-    "brand_name":"Březňák 12°",
-    "origin_country":"Česká republika",
-    "quantity":7
+    "quantity":1
   },
   {
     "brand_name":"Břízkova 11° (Permon)",
@@ -965,34 +3300,9 @@
     "quantity":1
   },
   {
-    "brand_name":"Budějovický Budvar 10°",
-    "origin_country":"Česká republika",
-    "quantity":666
-  },
-  {
     "brand_name":"Budějovický Budvar 10° Redix",
     "origin_country":"Česká republika",
     "quantity":1
-  },
-  {
-    "brand_name":"Budějovický Budvar 11° Budvar 33",
-    "origin_country":"Česká republika",
-    "quantity":42
-  },
-  {
-    "brand_name":"Budějovický Budvar 12°",
-    "origin_country":"Česká republika",
-    "quantity":33
-  },
-  {
-    "brand_name":"Budějovický Budvar 12° Kroužkovaný",
-    "origin_country":"Česká republika",
-    "quantity":4
-  },
-  {
-    "brand_name":"Budějovický Budvar 12° Tmavé",
-    "origin_country":"Česká republika",
-    "quantity":9
   },
   {
     "brand_name":"Budějovický Budvar Na Pool",
@@ -1005,9 +3315,9 @@
     "quantity":1
   },
   {
-    "brand_name":"Buchťák 11° Buchťák na pomeranči",
+    "brand_name":"Budvar REDIX (0,5)",
     "origin_country":"Česká republika",
-    "quantity":2
+    "quantity":1
   },
   {
     "brand_name":"Buchťák 11° Višeň",
@@ -1040,24 +3350,9 @@
     "quantity":1
   },
   {
-    "brand_name":"Carlsberg Lager",
-    "origin_country":"Dánsko",
-    "quantity":14
-  },
-  {
-    "brand_name":"Césu light",
-    "origin_country":"Lotyšsko",
-    "quantity":6
-  },
-  {
-    "brand_name":"Ciuc 12°",
-    "origin_country":"Rumunsko",
-    "quantity":4
-  },
-  {
-    "brand_name":"Ciucaş",
-    "origin_country":"Rumunsko",
-    "quantity":7
+    "brand_name":"Clock 11° Anežka",
+    "origin_country":"Česká republika",
+    "quantity":1
   },
   {
     "brand_name":"Clock 11° Glee Gluten Free Pale Ale",
@@ -1065,12 +3360,17 @@
     "quantity":1
   },
   {
-    "brand_name":"Clock 15° Zlaté prasátko 2022 Kveik IPA",
+    "brand_name":"Clock 14° Twist American Red IPA",
     "origin_country":"Česká republika",
-    "quantity":2
+    "quantity":1
   },
   {
     "brand_name":"Cobolis 10° Předák",
+    "origin_country":"Česká republika",
+    "quantity":1
+  },
+  {
+    "brand_name":"Cobolis 11° Nevada Ale",
     "origin_country":"Česká republika",
     "quantity":1
   },
@@ -1081,6 +3381,11 @@
   },
   {
     "brand_name":"Cobolis 13° British Golden Ale",
+    "origin_country":"Česká republika",
+    "quantity":1
+  },
+  {
+    "brand_name":"Cobolis 13° Gulf Od Mexico",
     "origin_country":"Česká republika",
     "quantity":1
   },
@@ -1100,6 +3405,11 @@
     "quantity":1
   },
   {
+    "brand_name":"Cobolis 18° IPA Yellowstone",
+    "origin_country":"Česká republika",
+    "quantity":1
+  },
+  {
     "brand_name":"Cobolis 24° Russian Imperial Stout",
     "origin_country":"Česká republika",
     "quantity":1
@@ -1115,49 +3425,14 @@
     "quantity":1
   },
   {
-    "brand_name":"Corgoň 10°",
-    "origin_country":"Slovensko",
-    "quantity":8
-  },
-  {
-    "brand_name":"Corona Extra",
-    "origin_country":"Mexiko",
-    "quantity":1
-  },
-  {
     "brand_name":"Cosmarul lui Baiazid",
     "origin_country":"Rumunsko",
     "quantity":1
   },
   {
-    "brand_name":"Crius Blonde",
-    "origin_country":"Belgie",
-    "quantity":1
-  },
-  {
-    "brand_name":"Cvikov 10° Luž",
-    "origin_country":"Česká republika",
-    "quantity":10
-  },
-  {
-    "brand_name":"Cvikov 11° Hvozd",
-    "origin_country":"Česká republika",
-    "quantity":17
-  },
-  {
-    "brand_name":"Cvikov 12° Klíč",
-    "origin_country":"Česká republika",
-    "quantity":3
-  },
-  {
     "brand_name":"Cvikov 13° Sváteční polotmavý speciál",
     "origin_country":"Česká republika",
     "quantity":1
-  },
-  {
-    "brand_name":"Cvikov 8° Sklář",
-    "origin_country":"Česká republika",
-    "quantity":6
   },
   {
     "brand_name":"Čajka Černomorskaja",
@@ -1175,11 +3450,6 @@
     "quantity":1
   },
   {
-    "brand_name":"Černá Hora 12° Granát",
-    "origin_country":"Česká republika",
-    "quantity":1
-  },
-  {
     "brand_name":"Černá Hora 13° Medová",
     "origin_country":"Česká republika",
     "quantity":1
@@ -1190,23 +3460,58 @@
     "quantity":1
   },
   {
-    "brand_name":"Černá Hora Velen Pšeničné",
-    "origin_country":"Česká republika",
-    "quantity":3
+    "brand_name":"Černigivske 17° Micne",
+    "origin_country":"Ukrajina",
+    "quantity":1
   },
   {
-    "brand_name":"Černodolský ležák 10°",
-    "origin_country":"Česká republika",
-    "quantity":3
+    "brand_name":"Černigivské Fruter Lemon",
+    "origin_country":"Ukrajina",
+    "quantity":1
   },
   {
-    "brand_name":"Černý Orel 13°",
+    "brand_name":"Černý Orel 12° Dvanda",
     "origin_country":"Česká republika",
-    "quantity":3
+    "quantity":1
+  },
+  {
+    "brand_name":"Černý orel 12° Kombinátor",
+    "origin_country":"Česká republika",
+    "quantity":1
+  },
+  {
+    "brand_name":"Červený vlk 11° Bílý hranostaj",
+    "origin_country":"Česká republika",
+    "quantity":1
+  },
+  {
+    "brand_name":"Červený vlk 12° Božidarský jelen",
+    "origin_country":"Česká republika",
+    "quantity":1
+  },
+  {
+    "brand_name":"Červený vlk 13° Červený vlk",
+    "origin_country":"Česká republika",
+    "quantity":1
   },
   {
     "brand_name":"Červený Vlk 13° spodně kvašený ležák",
     "origin_country":"Česká republika",
+    "quantity":1
+  },
+  {
+    "brand_name":"Červený vlk 14° Nachmelený jezevec",
+    "origin_country":"Česká republika",
+    "quantity":1
+  },
+  {
+    "brand_name":"Červený vlk 9° Lehký střízlík",
+    "origin_country":"Česká republika",
+    "quantity":1
+  },
+  {
+    "brand_name":"DAB Pilsener",
+    "origin_country":"Německo",
     "quantity":1
   },
   {
@@ -1215,14 +3520,29 @@
     "quantity":1
   },
   {
-    "brand_name":"Dalešice 11°",
+    "brand_name":"Dalešice 10° Osvald",
     "origin_country":"Česká republika",
-    "quantity":16
+    "quantity":1
   },
   {
-    "brand_name":"Dalešice 11° Nefiltrované",
+    "brand_name":"Dalešice 12° Hořká",
     "origin_country":"Česká republika",
-    "quantity":2
+    "quantity":1
+  },
+  {
+    "brand_name":"Dalešice 13° Fledermaus",
+    "origin_country":"Česká republika",
+    "quantity":1
+  },
+  {
+    "brand_name":"Dalešice 13° Májový ležák",
+    "origin_country":"Česká republika",
+    "quantity":1
+  },
+  {
+    "brand_name":"Darguner Pilsener",
+    "origin_country":"Německo",
+    "quantity":1
   },
   {
     "brand_name":"Debowe Mocne",
@@ -1230,14 +3550,9 @@
     "quantity":1
   },
   {
-    "brand_name":"Děčín 10° Bukanýr",
+    "brand_name":"Děčín 10° Přístavní Ale",
     "origin_country":"Česká republika",
-    "quantity":110
-  },
-  {
-    "brand_name":"Děčín 11° Kapitán",
-    "origin_country":"Česká republika",
-    "quantity":32
+    "quantity":1
   },
   {
     "brand_name":"Děčín 12° Admirál",
@@ -1255,16 +3570,6 @@
     "quantity":1
   },
   {
-    "brand_name":"Deep 10°",
-    "origin_country":"Česká republika",
-    "quantity":2
-  },
-  {
-    "brand_name":"Deep 11°",
-    "origin_country":"Česká republika",
-    "quantity":2
-  },
-  {
     "brand_name":"Desperados Mojito",
     "origin_country":"Mexiko",
     "quantity":1
@@ -1280,7 +3585,42 @@
     "quantity":1
   },
   {
+    "brand_name":"Dobruška 10% MANDARIN & YUZU",
+    "origin_country":"Česká republika",
+    "quantity":1
+  },
+  {
     "brand_name":"Dobruška 11°",
+    "origin_country":"Česká republika",
+    "quantity":1
+  },
+  {
+    "brand_name":"Dobruška 12° Rampušák Kvasnicový",
+    "origin_country":"Česká republika",
+    "quantity":1
+  },
+  {
+    "brand_name":"Dobruška 13° Muderlant",
+    "origin_country":"Česká republika",
+    "quantity":1
+  },
+  {
+    "brand_name":"Dobruška 15° F. L. Věk",
+    "origin_country":"Česká republika",
+    "quantity":1
+  },
+  {
+    "brand_name":"Dobruška 15° Sváteční kokoska",
+    "origin_country":"Česká republika",
+    "quantity":1
+  },
+  {
+    "brand_name":"Dobruška 16° Meďour",
+    "origin_country":"Česká republika",
+    "quantity":1
+  },
+  {
+    "brand_name":"Dobruška Coffee Stoud",
     "origin_country":"Česká republika",
     "quantity":1
   },
@@ -1305,24 +3645,14 @@
     "quantity":1
   },
   {
-    "brand_name":"Dresdner Felsenkeller Pilsner",
-    "origin_country":"Německo",
-    "quantity":1
-  },
-  {
     "brand_name":"Duckstein original",
     "origin_country":"Německo",
     "quantity":1
   },
   {
-    "brand_name":"Dudák 11° Nektar",
+    "brand_name":"Dudák 11° Klostermann",
     "origin_country":"Česká republika",
-    "quantity":2
-  },
-  {
-    "brand_name":"Dudák 12° Premium",
-    "origin_country":"Česká republika",
-    "quantity":3
+    "quantity":1
   },
   {
     "brand_name":"Dudák 13° Klostermann",
@@ -1330,19 +3660,9 @@
     "quantity":1
   },
   {
-    "brand_name":"Dudák 13° Král Šumavy",
-    "origin_country":"Česká republika",
+    "brand_name":"Dungarvan Black Rock",
+    "origin_country":"Irsko",
     "quantity":1
-  },
-  {
-    "brand_name":"Duff Beer",
-    "origin_country":"Německo",
-    "quantity":6
-  },
-  {
-    "brand_name":"Dva Kohouti 10° Helles",
-    "origin_country":"Česká republika",
-    "quantity":2
   },
   {
     "brand_name":"Dva Kohouti 12° Místní",
@@ -1375,6 +3695,11 @@
     "quantity":1
   },
   {
+    "brand_name":"Eichbaum Premium",
+    "origin_country":"Německo",
+    "quantity":1
+  },
+  {
     "brand_name":"Eichhofener Helles",
     "origin_country":"Německo",
     "quantity":1
@@ -1383,11 +3708,6 @@
     "brand_name":"Einstök Icelandic Pale Ale",
     "origin_country":"Island",
     "quantity":1
-  },
-  {
-    "brand_name":"Elektra 11° Polotmavé",
-    "origin_country":"Česká republika",
-    "quantity":2
   },
   {
     "brand_name":"eMBe 10° Calypso Single Hop APA",
@@ -1425,16 +3745,6 @@
     "quantity":1
   },
   {
-    "brand_name":"Emeran 12° Kníže Nebes",
-    "origin_country":"Česká republika",
-    "quantity":2
-  },
-  {
-    "brand_name":"Emeran 12° Polotmavé medové",
-    "origin_country":"Česká republika",
-    "quantity":2
-  },
-  {
     "brand_name":"Engelszell Gregorius Trappistenbier",
     "origin_country":"Rakousko",
     "quantity":1
@@ -1470,9 +3780,9 @@
     "quantity":1
   },
   {
-    "brand_name":"Falkenstejn 9° Svižnej Emil",
-    "origin_country":"Česká republika",
-    "quantity":2
+    "brand_name":"Ettl Festbier 5,6°%",
+    "origin_country":"Německo",
+    "quantity":1
   },
   {
     "brand_name":"Falkenštejn 11° Světlý ležák",
@@ -1490,17 +3800,12 @@
     "quantity":1
   },
   {
-    "brand_name":"Faxe Extra Strong 10%",
-    "origin_country":"Dánsko",
-    "quantity":2
+    "brand_name":"Falkenštejn 14° Tropická bouře NEIPA",
+    "origin_country":"Česká republika",
+    "quantity":1
   },
   {
-    "brand_name":"Faxe Premium",
-    "origin_country":"Dánsko",
-    "quantity":2
-  },
-  {
-    "brand_name":"Feldschlösschen Pilsner",
+    "brand_name":"Falter Pichelsteiner Festbier 5,9%",
     "origin_country":"Německo",
     "quantity":1
   },
@@ -1510,19 +3815,9 @@
     "quantity":1
   },
   {
-    "brand_name":"Ferdinand 10°",
-    "origin_country":"Česká republika",
-    "quantity":3
-  },
-  {
     "brand_name":"Ferdinand 11°",
     "origin_country":"Česká republika",
     "quantity":1
-  },
-  {
-    "brand_name":"Ferdinand 11° Max",
-    "origin_country":"Česká republika",
-    "quantity":3
   },
   {
     "brand_name":"Ferdinand 11° Tmavý",
@@ -1555,9 +3850,9 @@
     "quantity":1
   },
   {
-    "brand_name":"Flekovský ležák 13°",
-    "origin_country":"Česká republika",
-    "quantity":11
+    "brand_name":"Fix Hellas",
+    "origin_country":"Řecko",
+    "quantity":1
   },
   {
     "brand_name":"Flekovský ležák 13° Světlý",
@@ -1595,44 +3890,54 @@
     "quantity":1
   },
   {
+    "brand_name":"Fuller's 1845",
+    "origin_country":"Spojené království",
+    "quantity":1
+  },
+  {
+    "brand_name":"Fuller's Black Cab Stout",
+    "origin_country":"Spojené království",
+    "quantity":1
+  },
+  {
+    "brand_name":"Fuller's Golden Pride",
+    "origin_country":"Spojené království",
+    "quantity":1
+  },
+  {
+    "brand_name":"Fuller's India Pale Ale",
+    "origin_country":"Spojené království",
+    "quantity":1
+  },
+  {
     "brand_name":"Fuller's London Pride",
     "origin_country":"Spojené království",
     "quantity":1
   },
   {
-    "brand_name":"Gambrinus 10°",
+    "brand_name":"FUZE 10° DisFUZE",
     "origin_country":"Česká republika",
-    "quantity":8052
+    "quantity":1
   },
   {
-    "brand_name":"Gambrinus 10° Nepasterizovaný",
+    "brand_name":"FUZE 12° TransFUZE",
     "origin_country":"Česká republika",
-    "quantity":41
+    "quantity":1
   },
   {
-    "brand_name":"Gambrinus 11° Excelent",
+    "brand_name":"FUZE 13° FUZEnáč Polotmavý",
     "origin_country":"Česká republika",
-    "quantity":337
+    "quantity":1
+  },
+  {
+    "brand_name":"FUZE 14° inFUZE IPA",
+    "origin_country":"Česká republika",
+    "quantity":1
   },
   {
     "brand_name":"Gambrinus 11° Nepasterizovaná",
     "origin_country":"Česká republika",
     "quantity":1
-  },
-  {
-    "brand_name":"Gambrinus 12°",
-    "origin_country":"Česká republika",
-    "quantity":79
-  },
-  {
-    "brand_name":"Gambrinus 12° Nefiltrovaný",
-    "origin_country":"Česká republika",
-    "quantity":2
-  },
-  {
-    "brand_name":"Gambrinus 12° Nepasterizovaná",
-    "origin_country":"Česká republika",
-    "quantity":2
   },
   {
     "brand_name":"Gambrinus 12° Patron",
@@ -1675,14 +3980,39 @@
     "quantity":1
   },
   {
+    "brand_name":"Gočár 11° tmavý ležák",
+    "origin_country":"Česká republika",
+    "quantity":1
+  },
+  {
     "brand_name":"Golden Bräu",
     "origin_country":"Rumunsko",
     "quantity":1
   },
   {
-    "brand_name":"Gösser Gold",
+    "brand_name":"Gordon Gold",
+    "origin_country":"Belgie",
+    "quantity":1
+  },
+  {
+    "brand_name":"Gösser Märzen",
     "origin_country":"Rakousko",
-    "quantity":2
+    "quantity":1
+  },
+  {
+    "brand_name":"Gösser Natur Radler",
+    "origin_country":"Rakousko",
+    "quantity":1
+  },
+  {
+    "brand_name":"Grantler Festmärzen 5,6%",
+    "origin_country":"Německo",
+    "quantity":1
+  },
+  {
+    "brand_name":"Grimbergen Blonde",
+    "origin_country":"Belgie",
+    "quantity":1
   },
   {
     "brand_name":"Grolsch",
@@ -1690,19 +4020,9 @@
     "quantity":1
   },
   {
-    "brand_name":"Guinness",
-    "origin_country":"Irsko",
-    "quantity":45
-  },
-  {
-    "brand_name":"Guinness Draught",
-    "origin_country":"Irsko",
-    "quantity":10
-  },
-  {
-    "brand_name":"Guinness Extra Stout",
-    "origin_country":"Irsko",
-    "quantity":10
+    "brand_name":"Guinness 0.0%",
+    "origin_country":"Česká republika",
+    "quantity":1
   },
   {
     "brand_name":"Gulden Draak",
@@ -1725,29 +4045,14 @@
     "quantity":1
   },
   {
-    "brand_name":"Hák 10°",
-    "origin_country":"Česká republika",
-    "quantity":3
-  },
-  {
-    "brand_name":"Hák 10° Pampeliška",
+    "brand_name":"Hák 11° Mango Sour",
     "origin_country":"Česká republika",
     "quantity":1
-  },
-  {
-    "brand_name":"Hák 11°",
-    "origin_country":"Česká republika",
-    "quantity":4
   },
   {
     "brand_name":"Hák 12° Red Ale",
     "origin_country":"Česká republika",
     "quantity":1
-  },
-  {
-    "brand_name":"Hák 13° Černé",
-    "origin_country":"Česká republika",
-    "quantity":2
   },
   {
     "brand_name":"Hák 14° NEIPA",
@@ -1760,8 +4065,63 @@
     "quantity":1
   },
   {
+    "brand_name":"Hák 9° Malina",
+    "origin_country":"Česká republika",
+    "quantity":1
+  },
+  {
+    "brand_name":"Haksna 11° Sour Kyseláč",
+    "origin_country":"Česká republika",
+    "quantity":1
+  },
+  {
+    "brand_name":"Haksna 18° Enjoy the Feeling",
+    "origin_country":"Česká republika",
+    "quantity":1
+  },
+  {
     "brand_name":"Halne mocne 7%",
     "origin_country":"Polsko",
+    "quantity":1
+  },
+  {
+    "brand_name":"Hangár 11° Sršeň na černém rybízu",
+    "origin_country":"Česká republika",
+    "quantity":1
+  },
+  {
+    "brand_name":"Harboe Bear Beer IPA 5,6%",
+    "origin_country":"Dánsko",
+    "quantity":1
+  },
+  {
+    "brand_name":"Harboe Gold",
+    "origin_country":"Dánsko",
+    "quantity":1
+  },
+  {
+    "brand_name":"Harboe Pilsner",
+    "origin_country":"Dánsko",
+    "quantity":1
+  },
+  {
+    "brand_name":"Harley Pub 11° Electra višeň",
+    "origin_country":"Česká republika",
+    "quantity":1
+  },
+  {
+    "brand_name":"Harley Pub 11° Panhead polotmavé",
+    "origin_country":"Česká republika",
+    "quantity":1
+  },
+  {
+    "brand_name":"Harley Pub 11° Pomerančová",
+    "origin_country":"Česká republika",
+    "quantity":1
+  },
+  {
+    "brand_name":"Harley Pub 11° Scat",
+    "origin_country":"Česká republika",
     "quantity":1
   },
   {
@@ -1770,34 +4130,34 @@
     "quantity":1
   },
   {
-    "brand_name":"Harrach 10°",
-    "origin_country":"Česká republika",
-    "quantity":3
-  },
-  {
-    "brand_name":"Harrach 12° Světlé",
-    "origin_country":"Česká republika",
-    "quantity":11
-  },
-  {
-    "brand_name":"Harrachov 12° Čertovské pivo",
-    "origin_country":"Česká republika",
-    "quantity":4
-  },
-  {
-    "brand_name":"Harrachov 12° Františkův ležák",
+    "brand_name":"Harry 11° Born",
     "origin_country":"Česká republika",
     "quantity":1
   },
   {
-    "brand_name":"Harrachov 8° Huťské výčepní",
+    "brand_name":"Harry 12° Blek",
     "origin_country":"Česká republika",
-    "quantity":11
+    "quantity":1
   },
   {
-    "brand_name":"Heineken",
-    "origin_country":"Nizozemsko",
-    "quantity":45
+    "brand_name":"Harry 15° Martina NEIPA",
+    "origin_country":"Česká republika",
+    "quantity":1
+  },
+  {
+    "brand_name":"Hasseröder Premium Pils",
+    "origin_country":"Německo",
+    "quantity":1
+  },
+  {
+    "brand_name":"Hauskrecht 11° Brněnská 11",
+    "origin_country":"Česká republika",
+    "quantity":1
+  },
+  {
+    "brand_name":"Hauskrecht 12° Brněnská 12",
+    "origin_country":"Česká republika",
+    "quantity":1
   },
   {
     "brand_name":"Heineken 0.0 Beer",
@@ -1808,11 +4168,6 @@
     "brand_name":"Helene 11° APA",
     "origin_country":"Česká republika",
     "quantity":1
-  },
-  {
-    "brand_name":"Helene 11° Stoud",
-    "origin_country":"Česká republika",
-    "quantity":2
   },
   {
     "brand_name":"Helene 12° Adonis polotmavé",
@@ -1850,24 +4205,29 @@
     "quantity":1
   },
   {
-    "brand_name":"Herold 14° Polotmavé",
-    "origin_country":"Česká republika",
+    "brand_name":"Hirter Privat Pils",
+    "origin_country":"Rakousko",
     "quantity":1
   },
   {
-    "brand_name":"Hoegaarden Rosée",
+    "brand_name":"Hoegaarden",
     "origin_country":"Belgie",
     "quantity":1
   },
   {
-    "brand_name":"Holba 10° Classic",
-    "origin_country":"Česká republika",
-    "quantity":23
+    "brand_name":"Hofbräu Lager",
+    "origin_country":"Německo",
+    "quantity":1
   },
   {
-    "brand_name":"Holba 11° Šerák",
+    "brand_name":"Hohenthanner MärzenFestbier 5,6%",
+    "origin_country":"Německo",
+    "quantity":1
+  },
+  {
+    "brand_name":"Holba 12° Keprník",
     "origin_country":"Česká republika",
-    "quantity":285
+    "quantity":1
   },
   {
     "brand_name":"Holba 12° Premium",
@@ -1885,11 +4245,6 @@
     "quantity":1
   },
   {
-    "brand_name":"Holsten Pils",
-    "origin_country":"Německo",
-    "quantity":3
-  },
-  {
     "brand_name":"Hopfe Pilsener",
     "origin_country":"Německo",
     "quantity":1
@@ -1905,19 +4260,64 @@
     "quantity":1
   },
   {
-    "brand_name":"HORAL 1860 světlý ležák 11°",
-    "origin_country":"Česká republika",
-    "quantity":2
-  },
-  {
     "brand_name":"Hostinská 12°",
     "origin_country":"Slovensko",
     "quantity":1
   },
   {
-    "brand_name":"Hrdelák 12° světlá",
+    "brand_name":"Hostivar 10° ALE jednochmel",
     "origin_country":"Česká republika",
-    "quantity":2
+    "quantity":1
+  },
+  {
+    "brand_name":"Hostivar 11° Gose Yuzu-Limetka",
+    "origin_country":"Česká republika",
+    "quantity":1
+  },
+  {
+    "brand_name":"Hostivar 13°",
+    "origin_country":"Česká republika",
+    "quantity":1
+  },
+  {
+    "brand_name":"Hostivar 14° Black Ale",
+    "origin_country":"Česká republika",
+    "quantity":1
+  },
+  {
+    "brand_name":"Hostivar 15° H-Ale",
+    "origin_country":"Česká republika",
+    "quantity":1
+  },
+  {
+    "brand_name":"Hostivar 9° Kyseláč ananas speciál",
+    "origin_country":"Česká republika",
+    "quantity":1
+  },
+  {
+    "brand_name":"Hradecký Klenot 10° SOUR ALE Mango&Broskev",
+    "origin_country":"Česká republika",
+    "quantity":1
+  },
+  {
+    "brand_name":"Hradecký Klenot 11° Ale",
+    "origin_country":"Česká republika",
+    "quantity":1
+  },
+  {
+    "brand_name":"Hradecký Klenot 11° Kazbek Nefiltrovaný za studena chmelený",
+    "origin_country":"Česká republika",
+    "quantity":1
+  },
+  {
+    "brand_name":"Hradecký Klenot 13° Brut IPA",
+    "origin_country":"Česká republika",
+    "quantity":1
+  },
+  {
+    "brand_name":"Hradecký Klenot 14° NEIPA",
+    "origin_country":"Česká republika",
+    "quantity":1
   },
   {
     "brand_name":"Hubertus Kácov 10°",
@@ -1950,9 +4350,9 @@
     "quantity":1
   },
   {
-    "brand_name":"Chang",
-    "origin_country":"Thajsko",
-    "quantity":2
+    "brand_name":"Charlie's beer 11° Nefiltrované",
+    "origin_country":"Česká republika",
+    "quantity":1
   },
   {
     "brand_name":"Chimay Blanche",
@@ -1960,19 +4360,24 @@
     "quantity":1
   },
   {
-    "brand_name":"Chmelař 10°",
-    "origin_country":"Česká republika",
-    "quantity":45
+    "brand_name":"Chimay Blond",
+    "origin_country":"Belgie",
+    "quantity":1
+  },
+  {
+    "brand_name":"Chimay Brown",
+    "origin_country":"Belgie",
+    "quantity":1
+  },
+  {
+    "brand_name":"Chimay Triple",
+    "origin_country":"Belgie",
+    "quantity":1
   },
   {
     "brand_name":"Chmeloun 10° Ochmelka",
     "origin_country":"Česká republika",
     "quantity":1
-  },
-  {
-    "brand_name":"Chmeloun 12° KraluPol Polotmavé",
-    "origin_country":"Česká republika",
-    "quantity":2
   },
   {
     "brand_name":"Chodovar 0% Nealkoholické",
@@ -1988,11 +4393,6 @@
     "brand_name":"Chodovar 10° Černé",
     "origin_country":"Česká republika",
     "quantity":1
-  },
-  {
-    "brand_name":"Chodovar 11°",
-    "origin_country":"Česká republika",
-    "quantity":20
   },
   {
     "brand_name":"Chodovar 11°  Kvasnicový speciál světlý",
@@ -2015,11 +4415,6 @@
     "quantity":1
   },
   {
-    "brand_name":"Chodovar 12° Skalní polotmavé kvasnicové",
-    "origin_country":"Česká republika",
-    "quantity":2
-  },
-  {
     "brand_name":"Chodovar 13° Zámecký speciál",
     "origin_country":"Česká republika",
     "quantity":1
@@ -2030,19 +4425,9 @@
     "quantity":1
   },
   {
-    "brand_name":"Chomout 13,3° Něžná Bára",
-    "origin_country":"Česká republika",
-    "quantity":2
-  },
-  {
     "brand_name":"Chotěboř 10°",
     "origin_country":"Česká republika",
     "quantity":1
-  },
-  {
-    "brand_name":"Chotěboř 12°",
-    "origin_country":"Česká republika",
-    "quantity":2
   },
   {
     "brand_name":"Chrášťan polotmavý 13°",
@@ -2056,6 +4441,11 @@
   },
   {
     "brand_name":"Chroust 12° Štědrý ležák",
+    "origin_country":"Česká republika",
+    "quantity":1
+  },
+  {
+    "brand_name":"Chroust 12° Vitamin Pill",
     "origin_country":"Česká republika",
     "quantity":1
   },
@@ -2080,16 +4470,6 @@
     "quantity":1
   },
   {
-    "brand_name":"IKEA Öl Ljus Lager",
-    "origin_country":"Švédsko",
-    "quantity":2
-  },
-  {
-    "brand_name":"IKEA Öl Mörk Lager",
-    "origin_country":"Švédsko",
-    "quantity":2
-  },
-  {
     "brand_name":"Jacob Weissbier",
     "origin_country":"Německo",
     "quantity":1
@@ -2100,24 +4480,19 @@
     "quantity":1
   },
   {
-    "brand_name":"Jánošík polotmavý 11°",
+    "brand_name":"Jantar 4,2 % světlé",
+    "origin_country":"Ukrajina",
+    "quantity":1
+  },
+  {
+    "brand_name":"Jezevec 12° Světlý ležák",
     "origin_country":"Česká republika",
-    "quantity":2
+    "quantity":1
   },
   {
-    "brand_name":"Jelen",
-    "origin_country":"Srbsko",
-    "quantity":2
-  },
-  {
-    "brand_name":"Jever Pilsener",
-    "origin_country":"Německo",
-    "quantity":2
-  },
-  {
-    "brand_name":"Ježek 11°",
+    "brand_name":"Jezevec 13° ALE speciál",
     "origin_country":"Česká republika",
-    "quantity":6
+    "quantity":1
   },
   {
     "brand_name":"Ježek 13° Jihlavský Altbier",
@@ -2140,12 +4515,12 @@
     "quantity":1
   },
   {
-    "brand_name":"Jupiler",
-    "origin_country":"Belgie",
-    "quantity":2
+    "brand_name":"Kácov 11° Maskáč",
+    "origin_country":"Česká republika",
+    "quantity":1
   },
   {
-    "brand_name":"Kácov 11° Maskáč",
+    "brand_name":"Kahan 11° Canabis",
     "origin_country":"Česká republika",
     "quantity":1
   },
@@ -2163,11 +4538,6 @@
     "brand_name":"Kamenice nad Lipou 10° Kamenická",
     "origin_country":"Česká republika",
     "quantity":1
-  },
-  {
-    "brand_name":"Kamenice nad Lipou 11° Kamenická",
-    "origin_country":"Česká republika",
-    "quantity":6
   },
   {
     "brand_name":"Kamenice nad Lipou 13° Kamenická Polotmavá",
@@ -2190,19 +4560,19 @@
     "quantity":1
   },
   {
-    "brand_name":"Karel IV. 11°",
+    "brand_name":"Karásek a Stülpner 11° Summer ALE",
     "origin_country":"Česká republika",
-    "quantity":4
+    "quantity":1
   },
   {
-    "brand_name":"Karel IV. 12° Polotmavé",
+    "brand_name":"Karásek a Stülpner 12° Novosvětská",
     "origin_country":"Česká republika",
-    "quantity":2
+    "quantity":1
   },
   {
-    "brand_name":"Karel IV. 12° Pšeničné",
+    "brand_name":"Karásek a Stülpner 12° Stülpnerová polotmavá",
     "origin_country":"Česká republika",
-    "quantity":3
+    "quantity":1
   },
   {
     "brand_name":"Karel IV. 13° Tmavé",
@@ -2215,18 +4585,13 @@
     "quantity":1
   },
   {
-    "brand_name":"Karlovačko",
-    "origin_country":"Chorvatsko",
-    "quantity":33
-  },
-  {
-    "brand_name":"Karlovačko Crno",
+    "brand_name":"Karlovačko Radler",
     "origin_country":"Chorvatsko",
     "quantity":1
   },
   {
-    "brand_name":"Karlovačko Radler",
-    "origin_country":"Chorvatsko",
+    "brand_name":"Karlsbader Weberbräu 12° polotmavy Ležák",
+    "origin_country":"Česká republika",
     "quantity":1
   },
   {
@@ -2241,6 +4606,11 @@
   },
   {
     "brand_name":"Kasteel Rouge",
+    "origin_country":"Belgie",
+    "quantity":1
+  },
+  {
+    "brand_name":"Kasteel Tropical 14°",
     "origin_country":"Belgie",
     "quantity":1
   },
@@ -2275,29 +4645,9 @@
     "quantity":1
   },
   {
-    "brand_name":"Keller Bier",
-    "origin_country":"Německo",
-    "quantity":2
-  },
-  {
-    "brand_name":"Kelt 10°",
-    "origin_country":"Slovensko",
-    "quantity":2
-  },
-  {
-    "brand_name":"Keltské dědictví",
-    "origin_country":"Česká republika",
-    "quantity":2
-  },
-  {
     "brand_name":"Keras 10°",
     "origin_country":"Česká republika",
     "quantity":1
-  },
-  {
-    "brand_name":"Keras 10° Výčepní světlé",
-    "origin_country":"Česká republika",
-    "quantity":2
   },
   {
     "brand_name":"Kijowskie 11°",
@@ -2330,24 +4680,29 @@
     "quantity":1
   },
   {
+    "brand_name":"Kingfisher",
+    "origin_country":"Indie",
+    "quantity":1
+  },
+  {
     "brand_name":"Kirin Ichiban",
     "origin_country":"Japonsko",
     "quantity":1
   },
   {
-    "brand_name":"Klasik 10°",
+    "brand_name":"Kladno Kročehlavy 10° Kladenské světlé",
     "origin_country":"Česká republika",
-    "quantity":9
+    "quantity":1
   },
   {
-    "brand_name":"Klášter 10°",
+    "brand_name":"Kladno Kročehlavy 12° Kladenský ležák",
     "origin_country":"Česká republika",
-    "quantity":7
+    "quantity":1
   },
   {
-    "brand_name":"Klášter 11°",
+    "brand_name":"Kladno Kročehlavy 8° Poldi",
     "origin_country":"Česká republika",
-    "quantity":4
+    "quantity":1
   },
   {
     "brand_name":"Klášter 12° Premium",
@@ -2360,14 +4715,24 @@
     "quantity":1
   },
   {
-    "brand_name":"Knajzl 11°",
+    "brand_name":"KMP 12° ležák",
     "origin_country":"Česká republika",
     "quantity":1
   },
   {
-    "brand_name":"Knajzl 12°",
+    "brand_name":"Knajzl 10°",
     "origin_country":"Česká republika",
-    "quantity":3
+    "quantity":1
+  },
+  {
+    "brand_name":"Knajzl 11% ale",
+    "origin_country":"Česká republika",
+    "quantity":1
+  },
+  {
+    "brand_name":"Knajzl 11°",
+    "origin_country":"Česká republika",
+    "quantity":1
   },
   {
     "brand_name":"Kňour 12° tmavý ležak",
@@ -2385,22 +4750,17 @@
     "quantity":1
   },
   {
-    "brand_name":"Kocour 12°",
-    "origin_country":"Česká republika",
-    "quantity":3
-  },
-  {
     "brand_name":"Kocour 12° Višňový ležák",
     "origin_country":"Česká republika",
     "quantity":1
   },
   {
-    "brand_name":"Kocour 14° Jahodový Porter",
+    "brand_name":"Kocour 14° Samuraj American IPA",
     "origin_country":"Česká republika",
-    "quantity":2
+    "quantity":1
   },
   {
-    "brand_name":"Kocour 14° Samuraj American IPA",
+    "brand_name":"Kojetín 12° Kočkodan",
     "origin_country":"Česká republika",
     "quantity":1
   },
@@ -2425,29 +4785,9 @@
     "quantity":1
   },
   {
-    "brand_name":"Koliba 10° Kousek",
-    "origin_country":"Česká republika",
-    "quantity":4
-  },
-  {
     "brand_name":"Koliba 11°Kousek",
     "origin_country":"Česká republika",
     "quantity":1
-  },
-  {
-    "brand_name":"Koliba 12° Kousek světlý ležák",
-    "origin_country":"Česká republika",
-    "quantity":4
-  },
-  {
-    "brand_name":"Koliba 12° Kousek světlý ležák",
-    "origin_country":"Česká republika",
-    "quantity":2
-  },
-  {
-    "brand_name":"Koliba 12° medová",
-    "origin_country":"Česká republika",
-    "quantity":4
   },
   {
     "brand_name":"Kolkovna 12 Ale",
@@ -2458,11 +4798,6 @@
     "brand_name":"Kolkovna 12°",
     "origin_country":"Česká republika",
     "quantity":1
-  },
-  {
-    "brand_name":"Kolkovna 12° Red Lager",
-    "origin_country":"Česká republika",
-    "quantity":2
   },
   {
     "brand_name":"Kolkovna Lager 12°",
@@ -2480,26 +4815,6 @@
     "quantity":1
   },
   {
-    "brand_name":"König Pilsener",
-    "origin_country":"Německo",
-    "quantity":4
-  },
-  {
-    "brand_name":"Königsbacher Pils",
-    "origin_country":"Německo",
-    "quantity":2
-  },
-  {
-    "brand_name":"Konrad 10°",
-    "origin_country":"Česká republika",
-    "quantity":2
-  },
-  {
-    "brand_name":"Konrad 11°",
-    "origin_country":"Česká republika",
-    "quantity":3
-  },
-  {
     "brand_name":"Konrad 11° Eso",
     "origin_country":"Česká republika",
     "quantity":1
@@ -2510,17 +4825,12 @@
     "quantity":1
   },
   {
-    "brand_name":"Konrad 11° Tmavý",
-    "origin_country":"Česká republika",
-    "quantity":3
-  },
-  {
-    "brand_name":"Konrad 11° Vratislavický ležák",
-    "origin_country":"Česká republika",
-    "quantity":2
-  },
-  {
     "brand_name":"Konrad 12°",
+    "origin_country":"Česká republika",
+    "quantity":1
+  },
+  {
+    "brand_name":"Konrad 14° Jocker",
     "origin_country":"Česká republika",
     "quantity":1
   },
@@ -2530,23 +4840,18 @@
     "quantity":1
   },
   {
-    "brand_name":"Konrad 16° Bizon Black Ale",
-    "origin_country":"Česká republika",
-    "quantity":2
-  },
-  {
-    "brand_name":"Konrad Chytrón",
-    "origin_country":"Česká republika",
-    "quantity":23
-  },
-  {
-    "brand_name":"Korça Pils",
-    "origin_country":"Albánie",
-    "quantity":3
+    "brand_name":"Köstritzer Kellerbier",
+    "origin_country":"Německo",
+    "quantity":1
   },
   {
     "brand_name":"Košickí majstri 10°",
     "origin_country":"Slovensko",
+    "quantity":1
+  },
+  {
+    "brand_name":"Kotěra 12°",
+    "origin_country":"Česká republika",
     "quantity":1
   },
   {
@@ -2570,44 +4875,9 @@
     "quantity":1
   },
   {
-    "brand_name":"Kozel 10°",
-    "origin_country":"Česká republika",
-    "quantity":3801
-  },
-  {
-    "brand_name":"Kozel 10° Černý",
-    "origin_country":"Česká republika",
-    "quantity":39
-  },
-  {
-    "brand_name":"Kozel 11°",
-    "origin_country":"Česká republika",
-    "quantity":791
-  },
-  {
-    "brand_name":"Kozel 11° Řezaný",
-    "origin_country":"Česká republika",
-    "quantity":3
-  },
-  {
-    "brand_name":"Kozel 12°",
-    "origin_country":"Česká republika",
-    "quantity":6
-  },
-  {
     "brand_name":"Kozel 12° Mistrův Kaštanový",
     "origin_country":"Česká republika",
     "quantity":1
-  },
-  {
-    "brand_name":"Kozel 12° Mistrův Ležák",
-    "origin_country":"Česká republika",
-    "quantity":4
-  },
-  {
-    "brand_name":"Kozel Medový",
-    "origin_country":"Česká republika",
-    "quantity":5
   },
   {
     "brand_name":"Kozel Mistrův pšeničný",
@@ -2625,24 +4895,9 @@
     "quantity":1
   },
   {
-    "brand_name":"Krakonoš 10°",
-    "origin_country":"Česká republika",
-    "quantity":3
-  },
-  {
     "brand_name":"Krakonoš 10° Tmavé",
     "origin_country":"Česká republika",
     "quantity":1
-  },
-  {
-    "brand_name":"Krakonoš 11°",
-    "origin_country":"Česká republika",
-    "quantity":16
-  },
-  {
-    "brand_name":"Krakonoš 12°",
-    "origin_country":"Česká republika",
-    "quantity":2
   },
   {
     "brand_name":"Krakonoš 14°",
@@ -2660,11 +4915,6 @@
     "quantity":1
   },
   {
-    "brand_name":"Krombacher Pils",
-    "origin_country":"Německo",
-    "quantity":6
-  },
-  {
     "brand_name":"Krombacher Radler Alkoholfrei",
     "origin_country":"Německo",
     "quantity":1
@@ -2675,39 +4925,14 @@
     "quantity":1
   },
   {
-    "brand_name":"Kronl 11° Sarka Farka",
-    "origin_country":"Česká republika",
-    "quantity":2
+    "brand_name":"Kronenbourg 1664 Blanc",
+    "origin_country":"Francie",
+    "quantity":1
   },
   {
     "brand_name":"Kruk ciemne 5,5%",
     "origin_country":"Polsko",
     "quantity":1
-  },
-  {
-    "brand_name":"Krušnohor 11°",
-    "origin_country":"Česká republika",
-    "quantity":2
-  },
-  {
-    "brand_name":"Krušnohor 12°",
-    "origin_country":"Česká republika",
-    "quantity":2
-  },
-  {
-    "brand_name":"Krušnohor 13° Meďák",
-    "origin_country":"Česká republika",
-    "quantity":2
-  },
-  {
-    "brand_name":"Krušnohor 13° polotmavé",
-    "origin_country":"Česká republika",
-    "quantity":3
-  },
-  {
-    "brand_name":"Krušnohor 14° tmavé",
-    "origin_country":"Česká republika",
-    "quantity":2
   },
   {
     "brand_name":"Krušnohor 8° Sabro",
@@ -2716,31 +4941,6 @@
   },
   {
     "brand_name":"Krušnohor Eclipse Kick 12° IPL",
-    "origin_country":"Česká republika",
-    "quantity":1
-  },
-  {
-    "brand_name":"Krušovice 10°",
-    "origin_country":"Česká republika",
-    "quantity":54
-  },
-  {
-    "brand_name":"Krušovice 10° Černé",
-    "origin_country":"Česká republika",
-    "quantity":18
-  },
-  {
-    "brand_name":"Krušovice 11° Mušketýr",
-    "origin_country":"Česká republika",
-    "quantity":17
-  },
-  {
-    "brand_name":"Krušovice 12°",
-    "origin_country":"Česká republika",
-    "quantity":12
-  },
-  {
-    "brand_name":"Krušovice Bohém",
     "origin_country":"Česká republika",
     "quantity":1
   },
@@ -2755,19 +4955,9 @@
     "quantity":1
   },
   {
-    "brand_name":"Książęce",
-    "origin_country":"Polsko",
-    "quantity":2
-  },
-  {
     "brand_name":"Książęce IPA",
     "origin_country":"Polsko",
     "quantity":1
-  },
-  {
-    "brand_name":"Książęce Złote Pszeniczne",
-    "origin_country":"Polsko",
-    "quantity":2
   },
   {
     "brand_name":"Kuflowe mocne 7,2%",
@@ -2776,6 +4966,16 @@
   },
   {
     "brand_name":"Kuchlbauer Alte Liebe Dunkle Weisse",
+    "origin_country":"Německo",
+    "quantity":1
+  },
+  {
+    "brand_name":"Kuchlbauer Gillamoos-Bier 5,6%",
+    "origin_country":"Německo",
+    "quantity":1
+  },
+  {
+    "brand_name":"Kulmbacher Mönchshof Hell",
     "origin_country":"Německo",
     "quantity":1
   },
@@ -2830,11 +5030,6 @@
     "quantity":1
   },
   {
-    "brand_name":"Kyjovský pivovar 10° Kyjovská Desítka",
-    "origin_country":"Česká republika",
-    "quantity":8
-  },
-  {
     "brand_name":"Kynšperský Zajíc 10°",
     "origin_country":"Česká republika",
     "quantity":1
@@ -2885,6 +5080,11 @@
     "quantity":1
   },
   {
+    "brand_name":"La Verte 15°",
+    "origin_country":"Francie",
+    "quantity":1
+  },
+  {
     "brand_name":"Labuť Litoměřice 10°",
     "origin_country":"Česká republika",
     "quantity":1
@@ -2900,39 +5100,14 @@
     "quantity":1
   },
   {
-    "brand_name":"Labuť Litoměřice 11º Světlá",
-    "origin_country":"Česká republika",
-    "quantity":5
-  },
-  {
     "brand_name":"Labuť Litoměřice 12° polotmavé",
     "origin_country":"Česká republika",
     "quantity":1
   },
   {
-    "brand_name":"Labuť Litoměřice 12° Žák světlé",
-    "origin_country":"Česká republika",
-    "quantity":28
-  },
-  {
     "brand_name":"Lambáda Imperial Stoud 21°",
     "origin_country":"Česká republika",
     "quantity":1
-  },
-  {
-    "brand_name":"Lanýž 10°",
-    "origin_country":"Česká republika",
-    "quantity":7
-  },
-  {
-    "brand_name":"Lanýž 11° Polotmavý",
-    "origin_country":"Česká republika",
-    "quantity":2
-  },
-  {
-    "brand_name":"Lanýž 12°",
-    "origin_country":"Česká republika",
-    "quantity":2
   },
   {
     "brand_name":"Lanýž 14° RED IPA",
@@ -2965,11 +5140,6 @@
     "quantity":1
   },
   {
-    "brand_name":"Leffe Bruin",
-    "origin_country":"Belgie",
-    "quantity":3
-  },
-  {
     "brand_name":"Lehár 10°",
     "origin_country":"Slovensko",
     "quantity":1
@@ -2995,11 +5165,6 @@
     "quantity":1
   },
   {
-    "brand_name":"Leon Steiner 0%",
-    "origin_country":"Polsko",
-    "quantity":3
-  },
-  {
     "brand_name":"Leon Steiner Lager",
     "origin_country":"Polsko",
     "quantity":1
@@ -3017,6 +5182,11 @@
   {
     "brand_name":"Letra 12° B Bohemian Pilsner",
     "origin_country":"Portugalsko",
+    "quantity":1
+  },
+  {
+    "brand_name":"Libertas 14° IPA",
+    "origin_country":"Česká republika",
     "quantity":1
   },
   {
@@ -3055,11 +5225,6 @@
     "quantity":1
   },
   {
-    "brand_name":"Lidskoe Klasičnoe světloe",
-    "origin_country":"Bělorusko",
-    "quantity":3
-  },
-  {
     "brand_name":"Lidskoe Premium",
     "origin_country":"Bělorusko",
     "quantity":1
@@ -3071,6 +5236,11 @@
   },
   {
     "brand_name":"Lindemans Cassis",
+    "origin_country":"Belgie",
+    "quantity":1
+  },
+  {
+    "brand_name":"Lindemans Framboise",
     "origin_country":"Belgie",
     "quantity":1
   },
@@ -3125,54 +5295,14 @@
     "quantity":1
   },
   {
-    "brand_name":"Lisý dědek 12°",
-    "origin_country":"Česká republika",
-    "quantity":2
-  },
-  {
-    "brand_name":"Litoměřice Černý orel 13°",
-    "origin_country":"Česká republika",
-    "quantity":2
-  },
-  {
-    "brand_name":"Litoměřice Fořt 12°",
-    "origin_country":"Česká republika",
-    "quantity":4
-  },
-  {
-    "brand_name":"Litoměřice Kalich 10°",
-    "origin_country":"Česká republika",
-    "quantity":2192
-  },
-  {
-    "brand_name":"Litoměřice Kalich 11°",
-    "origin_country":"Česká republika",
-    "quantity":311
-  },
-  {
     "brand_name":"Litovel 0% Free Pomelo",
     "origin_country":"Česká republika",
     "quantity":1
   },
   {
-    "brand_name":"Litovel 0% Řezaný citron",
+    "brand_name":"Litovel 11° Patrik zelený ležák",
     "origin_country":"Česká republika",
     "quantity":1
-  },
-  {
-    "brand_name":"Litovel 10°",
-    "origin_country":"Česká republika",
-    "quantity":32
-  },
-  {
-    "brand_name":"Litovel 11°",
-    "origin_country":"Česká republika",
-    "quantity":2
-  },
-  {
-    "brand_name":"Litovel 11° Moravan",
-    "origin_country":"Česká republika",
-    "quantity":24
   },
   {
     "brand_name":"Litovel 12° Premium",
@@ -3195,16 +5325,6 @@
     "quantity":1
   },
   {
-    "brand_name":"Lobkowicz 10°",
-    "origin_country":"Česká republika",
-    "quantity":6
-  },
-  {
-    "brand_name":"Lobkowicz 11°",
-    "origin_country":"Česká republika",
-    "quantity":2
-  },
-  {
     "brand_name":"Lobkowicz 12° Démon Světlý ležák",
     "origin_country":"Česká republika",
     "quantity":1
@@ -3215,11 +5335,6 @@
     "quantity":1
   },
   {
-    "brand_name":"Lobkowicz Démon 13°",
-    "origin_country":"Česká republika",
-    "quantity":2
-  },
-  {
     "brand_name":"Lobkowicz IPA Flying Cloud",
     "origin_country":"Česká republika",
     "quantity":1
@@ -3228,11 +5343,6 @@
     "brand_name":"Lobkowicz Premium 0% Nealko",
     "origin_country":"Česká republika",
     "quantity":1
-  },
-  {
-    "brand_name":"Lobkowicz Premium 12°",
-    "origin_country":"Česká republika",
-    "quantity":26
   },
   {
     "brand_name":"Lobkowicz Premium 12° Černý",
@@ -3250,14 +5360,34 @@
     "quantity":1
   },
   {
+    "brand_name":"Lobkowicz Summer Ale",
+    "origin_country":"Česká republika",
+    "quantity":1
+  },
+  {
     "brand_name":"Lobkowicz Svatomartinský speciál",
     "origin_country":"Česká republika",
     "quantity":1
   },
   {
-    "brand_name":"Lomza Export",
-    "origin_country":"Polsko",
-    "quantity":2
+    "brand_name":"Loď 10° Legie",
+    "origin_country":"Česká republika",
+    "quantity":1
+  },
+  {
+    "brand_name":"Loď 12° Bohemia",
+    "origin_country":"Česká republika",
+    "quantity":1
+  },
+  {
+    "brand_name":"Loď 12° Republika",
+    "origin_country":"Česká republika",
+    "quantity":1
+  },
+  {
+    "brand_name":"Loď 13° Monarchie",
+    "origin_country":"Česká republika",
+    "quantity":1
   },
   {
     "brand_name":"Lomza Export Niefiltrowane",
@@ -3300,29 +5430,9 @@
     "quantity":1
   },
   {
-    "brand_name":"Lounský žejdlík 13° Tmavá",
-    "origin_country":"Česká republika",
-    "quantity":3
-  },
-  {
     "brand_name":"Lounský žejdlík řezané",
     "origin_country":"Česká republika",
     "quantity":1
-  },
-  {
-    "brand_name":"Louny 10°",
-    "origin_country":"Česká republika",
-    "quantity":12
-  },
-  {
-    "brand_name":"Louny 12°",
-    "origin_country":"Česká republika",
-    "quantity":1
-  },
-  {
-    "brand_name":"Löwenbräu Original",
-    "origin_country":"Německo",
-    "quantity":17
   },
   {
     "brand_name":"Lübzer Naturradler Grapefruit",
@@ -3358,11 +5468,6 @@
     "brand_name":"Lvivske 11,5° 1715",
     "origin_country":"Ukrajina",
     "quantity":1
-  },
-  {
-    "brand_name":"Lvivske Lev pšenične",
-    "origin_country":"Ukrajina",
-    "quantity":2
   },
   {
     "brand_name":"Lvivske Lev Temne",
@@ -3415,9 +5520,9 @@
     "quantity":1
   },
   {
-    "brand_name":"Maes Pils",
-    "origin_country":"Belgie",
-    "quantity":2
+    "brand_name":"Madrí Excepcional",
+    "origin_country":"Rumunsko",
+    "quantity":1
   },
   {
     "brand_name":"Maisel's Weisse",
@@ -3425,24 +5530,9 @@
     "quantity":1
   },
   {
-    "brand_name":"Malastrana 11° Original Pils",
-    "origin_country":"Česká republika",
-    "quantity":2
-  },
-  {
-    "brand_name":"Malastrana 18° Imperial Pils",
-    "origin_country":"Česká republika",
-    "quantity":2
-  },
-  {
-    "brand_name":"Malastrana Dark Lager",
-    "origin_country":"Česká republika",
-    "quantity":2
-  },
-  {
-    "brand_name":"Malastrana Strong Bock",
-    "origin_country":"Česká republika",
-    "quantity":2
+    "brand_name":"Maisel's Weisse Dunkel",
+    "origin_country":"Německo",
+    "quantity":1
   },
   {
     "brand_name":"Malý Janek 11° Blondýna z Bazénu Ale",
@@ -3465,12 +5555,12 @@
     "quantity":1
   },
   {
-    "brand_name":"Master 18° Tmavé",
+    "brand_name":"Master Brut IPA",
     "origin_country":"Česká republika",
-    "quantity":2
+    "quantity":1
   },
   {
-    "brand_name":"Master Brut IPA",
+    "brand_name":"Matuška 10° Desítka",
     "origin_country":"Česká republika",
     "quantity":1
   },
@@ -3478,16 +5568,6 @@
     "brand_name":"Matuška 11° Road to Tokyo",
     "origin_country":"Česká republika",
     "quantity":1
-  },
-  {
-    "brand_name":"Matuška 12° California",
-    "origin_country":"Česká republika",
-    "quantity":2
-  },
-  {
-    "brand_name":"Matuška 12° světlý ležák",
-    "origin_country":"Česká republika",
-    "quantity":2
   },
   {
     "brand_name":"Matuška 14° Speciální tmavé - černé",
@@ -3535,7 +5615,17 @@
     "quantity":1
   },
   {
+    "brand_name":"Mlýn 11° NIPL",
+    "origin_country":"Česká republika",
+    "quantity":1
+  },
+  {
     "brand_name":"Mlýn 11° polotmavé",
+    "origin_country":"Česká republika",
+    "quantity":1
+  },
+  {
+    "brand_name":"Mlýn 12° pšeničné",
     "origin_country":"Česká republika",
     "quantity":1
   },
@@ -3550,12 +5640,12 @@
     "quantity":1
   },
   {
-    "brand_name":"Mlýn Cyklistické 10°",
+    "brand_name":"Mlýn 9° Soft porno",
     "origin_country":"Česká republika",
     "quantity":1
   },
   {
-    "brand_name":"Mlýn Ležák 12°",
+    "brand_name":"Mlýn Cyklistické 10°",
     "origin_country":"Česká republika",
     "quantity":1
   },
@@ -3590,22 +5680,7 @@
     "quantity":1
   },
   {
-    "brand_name":"Morava 11° Polotmavé",
-    "origin_country":"Česká republika",
-    "quantity":3
-  },
-  {
-    "brand_name":"Moravcova jedenáctka 11°",
-    "origin_country":"Česká republika",
-    "quantity":4
-  },
-  {
-    "brand_name":"Mordýř 11° Kuněrtický Kastelán",
-    "origin_country":"Česká republika",
-    "quantity":2
-  },
-  {
-    "brand_name":"Mordýř 11° Světlý ležák",
+    "brand_name":"Mordýř 11° Zelené",
     "origin_country":"Česká republika",
     "quantity":1
   },
@@ -3613,11 +5688,6 @@
     "brand_name":"Mordýř 12° Líný Čert",
     "origin_country":"Česká republika",
     "quantity":1
-  },
-  {
-    "brand_name":"Moritz 11 polotmavé",
-    "origin_country":"Česká republika",
-    "quantity":3
   },
   {
     "brand_name":"Moritz 11°",
@@ -3680,24 +5750,24 @@
     "quantity":1
   },
   {
-    "brand_name":"Mount Eagle",
-    "origin_country":"Spojené státy",
-    "quantity":2
-  },
-  {
     "brand_name":"Muflon 11°",
     "origin_country":"Česká republika",
     "quantity":1
   },
   {
-    "brand_name":"Muflon 12° Chmel",
+    "brand_name":"Muflon 13° Red ALE",
     "origin_country":"Česká republika",
-    "quantity":2
+    "quantity":1
   },
   {
-    "brand_name":"Muflon 12° Polotmavé",
+    "brand_name":"Muflon 9° Summer ALE",
     "origin_country":"Česká republika",
-    "quantity":2
+    "quantity":1
+  },
+  {
+    "brand_name":"Murauer Märzen",
+    "origin_country":"Rakousko",
+    "quantity":1
   },
   {
     "brand_name":"Mythos",
@@ -3735,11 +5805,6 @@
     "quantity":1
   },
   {
-    "brand_name":"Na Rychtě 12° Vojtěch",
-    "origin_country":"Česká republika",
-    "quantity":3
-  },
-  {
     "brand_name":"Na Rychtě 16° Porter tmavý",
     "origin_country":"Česká republika",
     "quantity":1
@@ -3753,11 +5818,6 @@
     "brand_name":"Nachmelená Opice 14° IPA",
     "origin_country":"Česká republika",
     "quantity":1
-  },
-  {
-    "brand_name":"Namysłów Pils",
-    "origin_country":"Polsko",
-    "quantity":2
   },
   {
     "brand_name":"Nazdar",
@@ -3805,14 +5865,9 @@
     "quantity":1
   },
   {
-    "brand_name":"Nikšićko Pivo",
-    "origin_country":"Černá Hora",
-    "quantity":18
-  },
-  {
-    "brand_name":"Nikšićko Tamno",
-    "origin_country":"Černá Hora",
-    "quantity":2
+    "brand_name":"Nomád 11° Dnes neumírej",
+    "origin_country":"Česká republika",
+    "quantity":1
   },
   {
     "brand_name":"Nomád 12° Céčka APA",
@@ -3845,9 +5900,9 @@
     "quantity":1
   },
   {
-    "brand_name":"Novopacké pivo 10° Brouček",
+    "brand_name":"Novopacké pivo 11° Hemp Valley Beer",
     "origin_country":"Česká republika",
-    "quantity":16
+    "quantity":1
   },
   {
     "brand_name":"Novopacké pivo 11° Kryštof",
@@ -3870,11 +5925,6 @@
     "quantity":1
   },
   {
-    "brand_name":"Novopacké pivo 12° Vodnický ležák",
-    "origin_country":"Česká republika",
-    "quantity":3
-  },
-  {
     "brand_name":"Novopacké pivo 13° Podkrkonošský speciál světlý",
     "origin_country":"Česká republika",
     "quantity":1
@@ -3895,23 +5945,8 @@
     "quantity":1
   },
   {
-    "brand_name":"Novosad 12° František",
-    "origin_country":"Česká republika",
-    "quantity":2
-  },
-  {
-    "brand_name":"Oboloň 11°",
-    "origin_country":"Ukrajina",
-    "quantity":2
-  },
-  {
-    "brand_name":"Oboloň Premium",
-    "origin_country":"Ukrajina",
-    "quantity":2
-  },
-  {
-    "brand_name":"Oettinger Pils",
-    "origin_country":"Německo",
+    "brand_name":"O'Hara's Irish Pale Ale",
+    "origin_country":"Irsko",
     "quantity":1
   },
   {
@@ -3920,8 +5955,13 @@
     "quantity":1
   },
   {
-    "brand_name":"O'Hara's Irish Stout",
-    "origin_country":"Irsko",
+    "brand_name":"Oettinger Pils",
+    "origin_country":"Německo",
+    "quantity":1
+  },
+  {
+    "brand_name":"Ogar 11°",
+    "origin_country":"Česká republika",
     "quantity":1
   },
   {
@@ -3960,9 +6000,9 @@
     "quantity":1
   },
   {
-    "brand_name":"Opat 12°",
+    "brand_name":"Opat 12° Benediktin",
     "origin_country":"Česká republika",
-    "quantity":2
+    "quantity":1
   },
   {
     "brand_name":"Opat 12° Medový",
@@ -3975,19 +6015,34 @@
     "quantity":1
   },
   {
-    "brand_name":"Original Ritterguts Gose",
-    "origin_country":"Německo",
+    "brand_name":"Opat 13° Čokoládový",
+    "origin_country":"Česká republika",
     "quantity":1
   },
   {
-    "brand_name":"Orlovský pivovar 12° Dvanda",
+    "brand_name":"Opat Bitter",
     "origin_country":"Česká republika",
-    "quantity":2
+    "quantity":1
   },
   {
-    "brand_name":"Orlovský pivovar 12° Kombinátor",
+    "brand_name":"Opatovický poklad 11° Fruir Ale",
     "origin_country":"Česká republika",
-    "quantity":2
+    "quantity":1
+  },
+  {
+    "brand_name":"Opatovický poklad 12°",
+    "origin_country":"Česká republika",
+    "quantity":1
+  },
+  {
+    "brand_name":"Opatovický poklad 13° Brut Ipa",
+    "origin_country":"Česká republika",
+    "quantity":1
+  },
+  {
+    "brand_name":"Original Ritterguts Gose",
+    "origin_country":"Německo",
+    "quantity":1
   },
   {
     "brand_name":"Ossegg 10°",
@@ -4000,16 +6055,6 @@
     "quantity":1
   },
   {
-    "brand_name":"Ossegg 11° Ruthard",
-    "origin_country":"Česká republika",
-    "quantity":2
-  },
-  {
-    "brand_name":"Ossegg 12° Philipp",
-    "origin_country":"Česká republika",
-    "quantity":2
-  },
-  {
     "brand_name":"Ossegg 12° Vídeňský ležák",
     "origin_country":"Česká republika",
     "quantity":1
@@ -4020,9 +6065,14 @@
     "quantity":1
   },
   {
-    "brand_name":"Ossegg 13° Tomáš černé",
+    "brand_name":"Ossegg 13° Svatováclavské",
     "origin_country":"Česká republika",
-    "quantity":3
+    "quantity":1
+  },
+  {
+    "brand_name":"Ossegg 13° Tomáš",
+    "origin_country":"Česká republika",
+    "quantity":1
   },
   {
     "brand_name":"Ossegg 14° Sv. Martin IPA",
@@ -4035,27 +6085,17 @@
     "quantity":1
   },
   {
-    "brand_name":"Ostravar 10°",
+    "brand_name":"Ostravar 12° Mustang hořký",
     "origin_country":"Česká republika",
-    "quantity":2
-  },
-  {
-    "brand_name":"Ostravar 11° Mustang",
-    "origin_country":"Česká republika",
-    "quantity":2
-  },
-  {
-    "brand_name":"Ostravar 12°",
-    "origin_country":"Česká republika",
-    "quantity":3
-  },
-  {
-    "brand_name":"Ostravar 13° Černá Barbora",
-    "origin_country":"Česká republika",
-    "quantity":3
+    "quantity":1
   },
   {
     "brand_name":"Ottakringer Helles",
+    "origin_country":"Rakousko",
+    "quantity":1
+  },
+  {
+    "brand_name":"Ottakringer Wiener Original",
     "origin_country":"Rakousko",
     "quantity":1
   },
@@ -4065,14 +6105,14 @@
     "quantity":1
   },
   {
-    "brand_name":"Ovipistán 15° Tajemník",
+    "brand_name":"Ovipistán 15° Rudý tajemník",
     "origin_country":"Česká republika",
     "quantity":1
   },
   {
-    "brand_name":"Ožujsko",
-    "origin_country":"Chorvatsko",
-    "quantity":77
+    "brand_name":"Ovipistán 15° Tajemník",
+    "origin_country":"Česká republika",
+    "quantity":1
   },
   {
     "brand_name":"Ožujsko Amber",
@@ -4100,16 +6140,6 @@
     "quantity":1
   },
   {
-    "brand_name":"PAN Lager",
-    "origin_country":"Chorvatsko",
-    "quantity":2
-  },
-  {
-    "brand_name":"PAN Zlatni",
-    "origin_country":"Chorvatsko",
-    "quantity":2
-  },
-  {
     "brand_name":"Panaczech 13° Freya",
     "origin_country":"Česká republika",
     "quantity":1
@@ -4120,19 +6150,14 @@
     "quantity":1
   },
   {
-    "brand_name":"Pardál 10°",
-    "origin_country":"Česká republika",
-    "quantity":6
-  },
-  {
     "brand_name":"Pardál 11° Echt",
     "origin_country":"Česká republika",
     "quantity":1
   },
   {
-    "brand_name":"Paulaner Hefe-Weißbier Naturtrüb",
+    "brand_name":"Paulaner Alkoholfrei Zitrone",
     "origin_country":"Německo",
-    "quantity":2
+    "quantity":1
   },
   {
     "brand_name":"Paulaner Original Münchner Dunkel",
@@ -4140,23 +6165,18 @@
     "quantity":1
   },
   {
-    "brand_name":"Paulaner Premium Pils",
-    "origin_country":"Německo",
-    "quantity":3
-  },
-  {
     "brand_name":"Paulaner Salvator",
     "origin_country":"Německo",
     "quantity":1
   },
   {
-    "brand_name":"Peja",
-    "origin_country":"Kosovo",
-    "quantity":2
+    "brand_name":"Pegas 13° Oatmeal Stout",
+    "origin_country":"Česká republika",
+    "quantity":1
   },
   {
-    "brand_name":"Perła Chmielowa",
-    "origin_country":"Polsko",
+    "brand_name":"Pegas 16° Gold",
+    "origin_country":"Česká republika",
     "quantity":1
   },
   {
@@ -4178,11 +6198,6 @@
     "brand_name":"Perlenbacher Bavarian Lager Beer",
     "origin_country":"Německo",
     "quantity":1
-  },
-  {
-    "brand_name":"Perlenbacher Beer & Lemonade",
-    "origin_country":"Německo",
-    "quantity":13
   },
   {
     "brand_name":"Perlenbacher Festbier",
@@ -4215,9 +6230,9 @@
     "quantity":1
   },
   {
-    "brand_name":"Permon 10° Summer Ale",
-    "origin_country":"Česká republika",
-    "quantity":2
+    "brand_name":"Perła Chmielowa",
+    "origin_country":"Polsko",
+    "quantity":1
   },
   {
     "brand_name":"Permon 11° Session hazy IPA",
@@ -4225,7 +6240,12 @@
     "quantity":1
   },
   {
-    "brand_name":"Permon 12°",
+    "brand_name":"Permon 11° Těhotná",
+    "origin_country":"Česká republika",
+    "quantity":1
+  },
+  {
+    "brand_name":"Permon 11° Zelený Chmel",
     "origin_country":"Česká republika",
     "quantity":1
   },
@@ -4233,11 +6253,6 @@
     "brand_name":"Permon 12° Polotmavé",
     "origin_country":"Česká republika",
     "quantity":1
-  },
-  {
-    "brand_name":"Permon 12° Stout",
-    "origin_country":"Česká republika",
-    "quantity":2
   },
   {
     "brand_name":"Permon 12° Šachta",
@@ -4275,26 +6290,6 @@
     "quantity":1
   },
   {
-    "brand_name":"Pernštejn 10°",
-    "origin_country":"Česká republika",
-    "quantity":8
-  },
-  {
-    "brand_name":"Pernštejn 10° Arnoštova hořká",
-    "origin_country":"Česká republika",
-    "quantity":2
-  },
-  {
-    "brand_name":"Pernštejn 11° Vilém",
-    "origin_country":"Česká republika",
-    "quantity":9
-  },
-  {
-    "brand_name":"Pernštejn 12°",
-    "origin_country":"Česká republika",
-    "quantity":16
-  },
-  {
     "brand_name":"Pernštejn 12° Hořká dvanáctka ze sklepa",
     "origin_country":"Česká republika",
     "quantity":1
@@ -4310,9 +6305,9 @@
     "quantity":1
   },
   {
-    "brand_name":"Peroni Nastro Azzurro",
-    "origin_country":"Itálie",
-    "quantity":4
+    "brand_name":"Perša 10°",
+    "origin_country":"Ukrajina",
+    "quantity":1
   },
   {
     "brand_name":"Petrus Aged Pale",
@@ -4365,11 +6360,6 @@
     "quantity":1
   },
   {
-    "brand_name":"Pioneer Beer 11° Rezident",
-    "origin_country":"Česká republika",
-    "quantity":2
-  },
-  {
     "brand_name":"Piraat",
     "origin_country":"Belgie",
     "quantity":1
@@ -4380,9 +6370,9 @@
     "quantity":1
   },
   {
-    "brand_name":"Písecký hradební pivovar 10° Florián",
-    "origin_country":"Česká republika",
-    "quantity":2
+    "brand_name":"Pirinsko Svetlo",
+    "origin_country":"Bulharsko",
+    "quantity":1
   },
   {
     "brand_name":"Písecký hradební pivovar 11° Písecký ležák",
@@ -4420,9 +6410,29 @@
     "quantity":1
   },
   {
-    "brand_name":"Pivovar Děčín 14° Vánoční speciál",
+    "brand_name":"Pivovar 66 12° Carbon Race",
     "origin_country":"Česká republika",
-    "quantity":3
+    "quantity":1
+  },
+  {
+    "brand_name":"Pivovar Bubeneč 11°",
+    "origin_country":"Česká republika",
+    "quantity":1
+  },
+  {
+    "brand_name":"Pivovar Bubeneč 12° Stout",
+    "origin_country":"Česká republika",
+    "quantity":1
+  },
+  {
+    "brand_name":"Pivovar Bubeneč 13° Gose",
+    "origin_country":"Česká republika",
+    "quantity":1
+  },
+  {
+    "brand_name":"Pivovar Bubeneč 14° Brut IPA",
+    "origin_country":"Česká republika",
+    "quantity":1
   },
   {
     "brand_name":"Pivovar Mikuláš 12° Kracherl",
@@ -4445,29 +6455,19 @@
     "quantity":1
   },
   {
-    "brand_name":"Plasy 13° Felčar polotmavé",
-    "origin_country":"Česká republika",
-    "quantity":2
-  },
-  {
-    "brand_name":"Platan 10°",
-    "origin_country":"Česká republika",
-    "quantity":14
-  },
-  {
-    "brand_name":"Platan 11°",
+    "brand_name":"Pivovarský dům Benedict 14° West Coast IPA",
     "origin_country":"Česká republika",
     "quantity":1
   },
   {
-    "brand_name":"Plzeňský Prazdroj 12°",
+    "brand_name":"Pivovarský dům Benedict 15° Cocoa Stout",
     "origin_country":"Česká republika",
-    "quantity":122
+    "quantity":1
   },
   {
-    "brand_name":"Pod Lípou 10° Čeledín",
+    "brand_name":"Plzeň Purpurový kořeněný ALE",
     "origin_country":"Česká republika",
-    "quantity":3
+    "quantity":1
   },
   {
     "brand_name":"Pod Lípou 11° Mouřenín polotmavý",
@@ -4480,11 +6480,6 @@
     "quantity":1
   },
   {
-    "brand_name":"Podkováň 10°",
-    "origin_country":"Česká republika",
-    "quantity":22
-  },
-  {
     "brand_name":"Podkováň 10° Tmavé",
     "origin_country":"Česká republika",
     "quantity":1
@@ -4495,7 +6490,42 @@
     "quantity":1
   },
   {
+    "brand_name":"Podkováň 12° Kvasnicové",
+    "origin_country":"Česká republika",
+    "quantity":1
+  },
+  {
     "brand_name":"Podlesí 12° Thomas Brut IPA",
+    "origin_country":"Česká republika",
+    "quantity":1
+  },
+  {
+    "brand_name":"Podřipské pivo 10°",
+    "origin_country":"Česká republika",
+    "quantity":1
+  },
+  {
+    "brand_name":"Podřipské pivo 10° Summer Ale",
+    "origin_country":"Česká republika",
+    "quantity":1
+  },
+  {
+    "brand_name":"Podřipské pivo 10° Tropico Sour",
+    "origin_country":"Česká republika",
+    "quantity":1
+  },
+  {
+    "brand_name":"Podřipské pivo 11°",
+    "origin_country":"Česká republika",
+    "quantity":1
+  },
+  {
+    "brand_name":"Podřipské pivo 12° Red Ale",
+    "origin_country":"Česká republika",
+    "quantity":1
+  },
+  {
+    "brand_name":"Podřipský Summer Ale 10°",
     "origin_country":"Česká republika",
     "quantity":1
   },
@@ -4520,11 +6550,6 @@
     "quantity":1
   },
   {
-    "brand_name":"Polička 11° Otakar",
-    "origin_country":"Česká republika",
-    "quantity":5
-  },
-  {
     "brand_name":"Polička 11° Otakar Kvasnicové",
     "origin_country":"Česká republika",
     "quantity":1
@@ -4543,26 +6568,6 @@
     "brand_name":"Postřižiny 0% Střízlík",
     "origin_country":"Česká republika",
     "quantity":1
-  },
-  {
-    "brand_name":"Postřižiny 10° Nymburk Lager Beer",
-    "origin_country":"Česká republika",
-    "quantity":4
-  },
-  {
-    "brand_name":"Postřižiny 10° Pepinova desítka",
-    "origin_country":"Česká republika",
-    "quantity":10
-  },
-  {
-    "brand_name":"Postřižiny 11° Jedenáctka",
-    "origin_country":"Česká republika",
-    "quantity":3
-  },
-  {
-    "brand_name":"Postřižiny 11° Tmavý ležák",
-    "origin_country":"Česká republika",
-    "quantity":2
   },
   {
     "brand_name":"Postřižiny 12° Francinův ležák",
@@ -4585,14 +6590,29 @@
     "quantity":1
   },
   {
-    "brand_name":"Poutník 12°",
+    "brand_name":"Poupě 10° Gose",
     "origin_country":"Česká republika",
     "quantity":1
   },
   {
-    "brand_name":"Poutník 12° Kvasnicový",
+    "brand_name":"Poupě 11° Poupětův Američan",
     "origin_country":"Česká republika",
-    "quantity":2
+    "quantity":1
+  },
+  {
+    "brand_name":"Poupě 13° DDH IPA",
+    "origin_country":"Česká republika",
+    "quantity":1
+  },
+  {
+    "brand_name":"Poutník 11°",
+    "origin_country":"Česká republika",
+    "quantity":1
+  },
+  {
+    "brand_name":"Poutník 12°",
+    "origin_country":"Česká republika",
+    "quantity":1
   },
   {
     "brand_name":"Poutník 14°",
@@ -4600,9 +6620,9 @@
     "quantity":1
   },
   {
-    "brand_name":"Primátor 10°",
-    "origin_country":"Česká republika",
-    "quantity":3
+    "brand_name":"Presidente",
+    "origin_country":"Dominikánská republika",
+    "quantity":1
   },
   {
     "brand_name":"Primátor 10° Antonín",
@@ -4620,11 +6640,6 @@
     "quantity":1
   },
   {
-    "brand_name":"Primátor 12° Premium",
-    "origin_country":"Česká republika",
-    "quantity":3
-  },
-  {
     "brand_name":"Primátor 13° Polotmavý",
     "origin_country":"Česká republika",
     "quantity":1
@@ -4640,9 +6655,9 @@
     "quantity":1
   },
   {
-    "brand_name":"Primátor American Pale Ale",
+    "brand_name":"Primátor 24° Double",
     "origin_country":"Česká republika",
-    "quantity":2
+    "quantity":1
   },
   {
     "brand_name":"Primátor English Pale Ale",
@@ -4650,12 +6665,12 @@
     "quantity":1
   },
   {
-    "brand_name":"Primátor Chipper Grapefruit Beer",
+    "brand_name":"Primátor IPA",
     "origin_country":"Česká republika",
-    "quantity":4
+    "quantity":1
   },
   {
-    "brand_name":"Primátor IPA",
+    "brand_name":"Primátor Jarní zelené",
     "origin_country":"Česká republika",
     "quantity":1
   },
@@ -4665,34 +6680,44 @@
     "quantity":1
   },
   {
-    "brand_name":"Primátor Stout",
+    "brand_name":"Prokopák 10° Kluk",
     "origin_country":"Česká republika",
-    "quantity":3
+    "quantity":1
   },
   {
-    "brand_name":"Primátor Tchyně IPL",
+    "brand_name":"Prokopák 12° Číhačka",
     "origin_country":"Česká republika",
-    "quantity":2
+    "quantity":1
   },
   {
-    "brand_name":"Primátor Weizenbier",
+    "brand_name":"Prokopák 12° Milostpaní ALE",
     "origin_country":"Česká republika",
-    "quantity":2
+    "quantity":1
   },
   {
-    "brand_name":"Primus 10°",
+    "brand_name":"Prokopák 12° Panímáma polotmavá",
     "origin_country":"Česká republika",
-    "quantity":116
+    "quantity":1
+  },
+  {
+    "brand_name":"Prokopák 12° Tatín",
+    "origin_country":"Česká republika",
+    "quantity":1
+  },
+  {
+    "brand_name":"Prokopák 13° Děvenka NEIPA",
+    "origin_country":"Česká republika",
+    "quantity":1
+  },
+  {
+    "brand_name":"Prokopák 13° Pantáta",
+    "origin_country":"Česká republika",
+    "quantity":1
   },
   {
     "brand_name":"Proud 10° TheMže",
     "origin_country":"Česká republika",
     "quantity":1
-  },
-  {
-    "brand_name":"Proud 12° Ležák",
-    "origin_country":"Česká republika",
-    "quantity":3
   },
   {
     "brand_name":"Proud Ventil 11°",
@@ -4705,14 +6730,34 @@
     "quantity":1
   },
   {
-    "brand_name":"Račice 11°",
+    "brand_name":"Puntigamer",
+    "origin_country":"Rakousko",
+    "quantity":1
+  },
+  {
+    "brand_name":"Purkmistr 12°",
     "origin_country":"Česká republika",
     "quantity":1
   },
   {
-    "brand_name":"Račice 12° polotmavé",
+    "brand_name":"Purkmistr 12° Polotmavý",
     "origin_country":"Česká republika",
-    "quantity":2
+    "quantity":1
+  },
+  {
+    "brand_name":"Purkmistr 12° Tmavý",
+    "origin_country":"Česká republika",
+    "quantity":1
+  },
+  {
+    "brand_name":"Purkmistr 15° NEIPA",
+    "origin_country":"Česká republika",
+    "quantity":1
+  },
+  {
+    "brand_name":"Račice 11°",
+    "origin_country":"Česká republika",
+    "quantity":1
   },
   {
     "brand_name":"Radeberger Pillsner 0%",
@@ -4720,44 +6765,9 @@
     "quantity":1
   },
   {
-    "brand_name":"Radeberger Pilsner",
-    "origin_country":"Německo",
-    "quantity":3
-  },
-  {
     "brand_name":"Radeberger Zwickelbier",
     "origin_country":"Německo",
     "quantity":1
-  },
-  {
-    "brand_name":"Radegast 0% Birell",
-    "origin_country":"Česká republika",
-    "quantity":2
-  },
-  {
-    "brand_name":"Radegast 0% Birell Pomelo & Grep",
-    "origin_country":"Česká republika",
-    "quantity":2
-  },
-  {
-    "brand_name":"Radegast 10°",
-    "origin_country":"Česká republika",
-    "quantity":285
-  },
-  {
-    "brand_name":"Radegast 10° Ratar",
-    "origin_country":"Česká republika",
-    "quantity":2
-  },
-  {
-    "brand_name":"Radegast 12°",
-    "origin_country":"Česká republika",
-    "quantity":8
-  },
-  {
-    "brand_name":"Radegast 12° Ryze hořká",
-    "origin_country":"Česká republika",
-    "quantity":2
   },
   {
     "brand_name":"Radegast 12° Temně hořký",
@@ -4765,17 +6775,17 @@
     "quantity":1
   },
   {
-    "brand_name":"Radegast 15° Extra hořká",
-    "origin_country":"Česká republika",
-    "quantity":2
-  },
-  {
-    "brand_name":"Radegast 15° Hutná",
-    "origin_country":"Česká republika",
-    "quantity":3
-  },
-  {
     "brand_name":"Radegast Rog IPA",
+    "origin_country":"Česká republika",
+    "quantity":1
+  },
+  {
+    "brand_name":"Radobyčice 12° Pšenice",
+    "origin_country":"Česká republika",
+    "quantity":1
+  },
+  {
+    "brand_name":"Radobyčice 13° Bavorský speciál",
     "origin_country":"Česká republika",
     "quantity":1
   },
@@ -4810,11 +6820,6 @@
     "quantity":1
   },
   {
-    "brand_name":"Rastinger světlé výčepní",
-    "origin_country":"Česká republika",
-    "quantity":2
-  },
-  {
     "brand_name":"Ratsherrn Pilsener",
     "origin_country":"Německo",
     "quantity":1
@@ -4835,11 +6840,6 @@
     "quantity":1
   },
   {
-    "brand_name":"Rebel 10°",
-    "origin_country":"Česká republika",
-    "quantity":2
-  },
-  {
     "brand_name":"Rebel 11° Hořká",
     "origin_country":"Česká republika",
     "quantity":1
@@ -4858,21 +6858,6 @@
     "brand_name":"Red Stripe",
     "origin_country":"Jamajka",
     "quantity":1
-  },
-  {
-    "brand_name":"Regent 10°",
-    "origin_country":"Česká republika",
-    "quantity":12
-  },
-  {
-    "brand_name":"Regent 11°",
-    "origin_country":"Česká republika",
-    "quantity":2
-  },
-  {
-    "brand_name":"Regent 12°",
-    "origin_country":"Česká republika",
-    "quantity":2
   },
   {
     "brand_name":"Regent 13,9° Escobeer",
@@ -4915,13 +6900,13 @@
     "quantity":1
   },
   {
-    "brand_name":"Richtár Jakub 12°",
-    "origin_country":"Slovensko",
-    "quantity":2
-  },
-  {
     "brand_name":"Ringnes",
     "origin_country":"Norsko",
+    "quantity":1
+  },
+  {
+    "brand_name":"Rittmayer Annafest Bier 5,6%",
+    "origin_country":"Německo",
     "quantity":1
   },
   {
@@ -4940,29 +6925,14 @@
     "quantity":1
   },
   {
-    "brand_name":"Rohozec 10° Ypsilon",
-    "origin_country":"Česká republika",
-    "quantity":2
-  },
-  {
     "brand_name":"Rohozec 11° Cecilia bezlepkový ležák",
     "origin_country":"Česká republika",
     "quantity":1
   },
   {
-    "brand_name":"Rohozec 11° polotmavé",
+    "brand_name":"Rohozec 12° Prometheus",
     "origin_country":"Česká republika",
-    "quantity":3
-  },
-  {
-    "brand_name":"Rohozec 11° Skalák",
-    "origin_country":"Česká republika",
-    "quantity":3
-  },
-  {
-    "brand_name":"Rohozec 11° Skalák řezané",
-    "origin_country":"Česká republika",
-    "quantity":2
+    "quantity":1
   },
   {
     "brand_name":"Rohozec 12° Skalák Premium",
@@ -4980,9 +6950,14 @@
     "quantity":1
   },
   {
-    "brand_name":"Rožnov 12,9° Rothschild",
+    "brand_name":"Roudenská 10° Roudeňák",
     "origin_country":"Česká republika",
-    "quantity":2
+    "quantity":1
+  },
+  {
+    "brand_name":"Roudeňská 12° Maršoun",
+    "origin_country":"Česká republika",
+    "quantity":1
   },
   {
     "brand_name":"Rožnov Silák 13°",
@@ -4990,9 +6965,29 @@
     "quantity":1
   },
   {
-    "brand_name":"Rudohor 10° Groš",
+    "brand_name":"Rudohor 11° Tolar",
     "origin_country":"Česká republika",
-    "quantity":2
+    "quantity":1
+  },
+  {
+    "brand_name":"Rudohor 12° Dukát",
+    "origin_country":"Česká republika",
+    "quantity":1
+  },
+  {
+    "brand_name":"Rudohor 13° Grešle",
+    "origin_country":"Česká republika",
+    "quantity":1
+  },
+  {
+    "brand_name":"Rudohor 14° Rüpya IPA",
+    "origin_country":"Česká republika",
+    "quantity":1
+  },
+  {
+    "brand_name":"Ruxusní ležák 12°",
+    "origin_country":"Česká republika",
+    "quantity":1
   },
   {
     "brand_name":"Ryevolution 12,7°",
@@ -5000,34 +6995,74 @@
     "quantity":1
   },
   {
-    "brand_name":"Rychtář 11°",
-    "origin_country":"Česká republika",
-    "quantity":2
-  },
-  {
     "brand_name":"Rychtář 12° Premium",
     "origin_country":"Česká republika",
     "quantity":1
   },
   {
-    "brand_name":"Saaz shine 10° výčepní",
+    "brand_name":"Řeporyje 10° Vilda",
     "origin_country":"Česká republika",
-    "quantity":2
+    "quantity":1
   },
   {
-    "brand_name":"Samson 10°",
+    "brand_name":"Řeporyje 12° Ejlík",
     "origin_country":"Česká republika",
-    "quantity":61
+    "quantity":1
   },
   {
-    "brand_name":"Samson 11°",
+    "brand_name":"Řeporyje 12° Prefunda",
     "origin_country":"Česká republika",
-    "quantity":4
+    "quantity":1
   },
   {
-    "brand_name":"Samson 12°",
+    "brand_name":"Řeporyje 12° Řeporyjská Polotmavá",
     "origin_country":"Česká republika",
-    "quantity":5
+    "quantity":1
+  },
+  {
+    "brand_name":"Řeporyje 14° Tmavý speciál",
+    "origin_country":"Česká republika",
+    "quantity":1
+  },
+  {
+    "brand_name":"Řeporyje 17° Starostova",
+    "origin_country":"Česká republika",
+    "quantity":1
+  },
+  {
+    "brand_name":"Římská X",
+    "origin_country":"Česká republika",
+    "quantity":1
+  },
+  {
+    "brand_name":"Římská XI American Red Ale",
+    "origin_country":"Česká republika",
+    "quantity":1
+  },
+  {
+    "brand_name":"Římská XII",
+    "origin_country":"Česká republika",
+    "quantity":1
+  },
+  {
+    "brand_name":"Římská XIII° Polotmavé",
+    "origin_country":"Česká republika",
+    "quantity":1
+  },
+  {
+    "brand_name":"Sagres",
+    "origin_country":"Portugalsko",
+    "quantity":1
+  },
+  {
+    "brand_name":"Sachsengold Landbier",
+    "origin_country":"Německo",
+    "quantity":1
+  },
+  {
+    "brand_name":"Samson 10° Černý",
+    "origin_country":"Česká republika",
+    "quantity":1
   },
   {
     "brand_name":"Samson 12° Tmavé",
@@ -5080,11 +7115,6 @@
     "quantity":1
   },
   {
-    "brand_name":"Sever Grepáč 11°",
-    "origin_country":"Česká republika",
-    "quantity":2
-  },
-  {
     "brand_name":"Sever Václav 11°",
     "origin_country":"Česká republika",
     "quantity":1
@@ -5105,9 +7135,24 @@
     "quantity":1
   },
   {
-    "brand_name":"Schlossbrauerei Au Auer Helles",
+    "brand_name":"Shepherd Neame India Pale Ale",
+    "origin_country":"Spojené království",
+    "quantity":1
+  },
+  {
+    "brand_name":"Schneider TAP04 Festweisse 6,2%",
     "origin_country":"Německo",
-    "quantity":2
+    "quantity":1
+  },
+  {
+    "brand_name":"Schneider Weisse Tap7 Unser Original",
+    "origin_country":"Německo",
+    "quantity":1
+  },
+  {
+    "brand_name":"Schöfferhofer Grapefruit",
+    "origin_country":"Německo",
+    "quantity":1
   },
   {
     "brand_name":"Schwarzenberg 10°",
@@ -5121,6 +7166,11 @@
   },
   {
     "brand_name":"Sibeeria 12° Fogtown",
+    "origin_country":"Česká republika",
+    "quantity":1
+  },
+  {
+    "brand_name":"Sibeeria 15° IPA Grapefruit",
     "origin_country":"Česká republika",
     "quantity":1
   },
@@ -5145,16 +7195,6 @@
     "quantity":1
   },
   {
-    "brand_name":"Soproni",
-    "origin_country":"Maďarsko",
-    "quantity":2
-  },
-  {
-    "brand_name":"Soproni 1895",
-    "origin_country":"Maďarsko",
-    "quantity":2
-  },
-  {
     "brand_name":"Soproni Fekete Démon",
     "origin_country":"Maďarsko",
     "quantity":1
@@ -5165,29 +7205,9 @@
     "quantity":1
   },
   {
-    "brand_name":"Spitt",
-    "origin_country":"Česká republika",
-    "quantity":3
-  },
-  {
-    "brand_name":"Staré Brno výčepní",
-    "origin_country":"Česká republika",
-    "quantity":2
-  },
-  {
     "brand_name":"Starij Melnik Svetloe",
     "origin_country":"Ruská federace",
     "quantity":1
-  },
-  {
-    "brand_name":"Starobrno 10°",
-    "origin_country":"Česká republika",
-    "quantity":8
-  },
-  {
-    "brand_name":"Starobrno 11°",
-    "origin_country":"Česká republika",
-    "quantity":91
   },
   {
     "brand_name":"Starobrno 11° Bitr",
@@ -5195,14 +7215,9 @@
     "quantity":1
   },
   {
-    "brand_name":"Starobrno 12° Červený ležák",
+    "brand_name":"Starobrno 12° Medák",
     "origin_country":"Česká republika",
-    "quantity":13
-  },
-  {
-    "brand_name":"Starobrno 13° Adventní speciál",
-    "origin_country":"Česká republika",
-    "quantity":7
+    "quantity":1
   },
   {
     "brand_name":"Starobrno Craft APA",
@@ -5220,49 +7235,24 @@
     "quantity":1
   },
   {
-    "brand_name":"Starobrno Zelené pivo",
-    "origin_country":"Česká republika",
-    "quantity":2
-  },
-  {
     "brand_name":"Staročech 0%",
     "origin_country":"Česká republika",
     "quantity":1
   },
   {
-    "brand_name":"Staročech 0% Mango",
-    "origin_country":"Česká republika",
-    "quantity":2
-  },
-  {
-    "brand_name":"Staročech 10°",
-    "origin_country":"Česká republika",
-    "quantity":99
-  },
-  {
-    "brand_name":"Staročech 12°",
-    "origin_country":"Česká republika",
-    "quantity":4
-  },
-  {
-    "brand_name":"Staročech 12° Extra chmelený",
-    "origin_country":"Česká republika",
-    "quantity":2
-  },
-  {
-    "brand_name":"Staročech ležák polotmavý",
-    "origin_country":"Česká republika",
-    "quantity":3
-  },
-  {
-    "brand_name":"Staročech Polotmavý citron 0%",
+    "brand_name":"Starokladno 10,8°",
     "origin_country":"Česká republika",
     "quantity":1
   },
   {
-    "brand_name":"Staročech Pomelo & Grep",
+    "brand_name":"Starokladno 12,8° Černý havíř",
     "origin_country":"Česká republika",
-    "quantity":2
+    "quantity":1
+  },
+  {
+    "brand_name":"Starokladno 13° Rytíř",
+    "origin_country":"Česká republika",
+    "quantity":1
   },
   {
     "brand_name":"Staropilsen 10°",
@@ -5280,79 +7270,14 @@
     "quantity":1
   },
   {
-    "brand_name":"Staropramen 0% Nealko",
-    "origin_country":"Česká republika",
-    "quantity":3
-  },
-  {
-    "brand_name":"Staropramen 10°",
-    "origin_country":"Česká republika",
-    "quantity":1050
-  },
-  {
     "brand_name":"Staropramen 10° Déčko",
     "origin_country":"Česká republika",
     "quantity":1
   },
   {
-    "brand_name":"Staropramen 11°",
-    "origin_country":"Česká republika",
-    "quantity":104
-  },
-  {
-    "brand_name":"Staropramen 11° Granát",
-    "origin_country":"Česká republika",
-    "quantity":2
-  },
-  {
-    "brand_name":"Staropramen 11° Nepasterizované",
-    "origin_country":"Česká republika",
-    "quantity":2
-  },
-  {
-    "brand_name":"Staropramen 12°",
-    "origin_country":"Česká republika",
-    "quantity":13
-  },
-  {
-    "brand_name":"Staropramen 12° Extra chmelená",
-    "origin_country":"Česká republika",
-    "quantity":5
-  },
-  {
-    "brand_name":"Staropramen 12° Nefiltrovaný ležák",
-    "origin_country":"Česká republika",
-    "quantity":3
-  },
-  {
-    "brand_name":"Staropramen Cool Grep",
-    "origin_country":"Česká republika",
-    "quantity":7
-  },
-  {
-    "brand_name":"Staropramen Cool Jablko & Hruška",
-    "origin_country":"Česká republika",
-    "quantity":2
-  },
-  {
-    "brand_name":"Staropramen Cool Lemon",
-    "origin_country":"Česká republika",
-    "quantity":31
-  },
-  {
-    "brand_name":"Staropramen Cool Nealko Grep",
-    "origin_country":"Česká republika",
-    "quantity":8
-  },
-  {
     "brand_name":"Staropramen Cool Tmavá švestka",
     "origin_country":"Česká republika",
     "quantity":1
-  },
-  {
-    "brand_name":"Staropramen Cool Višeň a Limetka",
-    "origin_country":"Česká republika",
-    "quantity":3
   },
   {
     "brand_name":"Staropramen Černá Barbora",
@@ -5395,11 +7320,6 @@
     "quantity":1
   },
   {
-    "brand_name":"Stella Artois",
-    "origin_country":"Belgie",
-    "quantity":10
-  },
-  {
     "brand_name":"Stella Artois NA",
     "origin_country":"Belgie",
     "quantity":1
@@ -5430,11 +7350,6 @@
     "quantity":1
   },
   {
-    "brand_name":"Sternburg Export",
-    "origin_country":"Německo",
-    "quantity":1
-  },
-  {
     "brand_name":"Sternquell Bockbier",
     "origin_country":"Německo",
     "quantity":1
@@ -5450,9 +7365,19 @@
     "quantity":1
   },
   {
-    "brand_name":"Strelka výčepní 4,3%",
+    "brand_name":"Stiegl Weisse Naturtrüb",
+    "origin_country":"Rakousko",
+    "quantity":1
+  },
+  {
+    "brand_name":"Stolichno Weiss",
+    "origin_country":"Bulharsko",
+    "quantity":1
+  },
+  {
+    "brand_name":"Střížovice Mlýn 11,5° Zelené",
     "origin_country":"Česká republika",
-    "quantity":5
+    "quantity":1
   },
   {
     "brand_name":"Suchdolský Jeník 12°",
@@ -5478,11 +7403,6 @@
     "brand_name":"Sušičák 16° Bock",
     "origin_country":"Česká republika",
     "quantity":1
-  },
-  {
-    "brand_name":"Sv. Florian tmavý uzený speciál 13°",
-    "origin_country":"Česká republika",
-    "quantity":2
   },
   {
     "brand_name":"Sv. Norbert 10° Session Hazy IPA",
@@ -5530,11 +7450,6 @@
     "quantity":1
   },
   {
-    "brand_name":"Svatováclavský pivovar 13° Tmavé pivo pana Bruna",
-    "origin_country":"Česká republika",
-    "quantity":2
-  },
-  {
     "brand_name":"Svatováclavský pivovar 13° zelené",
     "origin_country":"Česká republika",
     "quantity":1
@@ -5545,24 +7460,19 @@
     "quantity":1
   },
   {
-    "brand_name":"Svatý Florian 11° Tmavý",
+    "brand_name":"Svatý Florian 13° Tmavý speciál",
     "origin_country":"Česká republika",
-    "quantity":3
+    "quantity":1
   },
   {
-    "brand_name":"Svatý Florian 14° Rubínový speciál",
+    "brand_name":"Svatý Florian 15° Longin",
     "origin_country":"Česká republika",
-    "quantity":2
+    "quantity":1
   },
   {
     "brand_name":"Svijanská 11° Trumpetka",
     "origin_country":"Česká republika",
     "quantity":1
-  },
-  {
-    "brand_name":"Svijanská Trumpetka",
-    "origin_country":"Česká republika",
-    "quantity":3
   },
   {
     "brand_name":"Svijanský Fanda 11° 0,3L",
@@ -5573,26 +7483,6 @@
     "brand_name":"Svijanský Vozka 0% Černý rybíz s limetou",
     "origin_country":"Česká republika",
     "quantity":1
-  },
-  {
-    "brand_name":"Svijany 10°",
-    "origin_country":"Česká republika",
-    "quantity":7
-  },
-  {
-    "brand_name":"Svijany 11° 450",
-    "origin_country":"Česká republika",
-    "quantity":7
-  },
-  {
-    "brand_name":"Svijany 11° Fanda",
-    "origin_country":"Česká republika",
-    "quantity":5
-  },
-  {
-    "brand_name":"Svijany 11° Máz",
-    "origin_country":"Česká republika",
-    "quantity":29
   },
   {
     "brand_name":"Svijany 11° Šlik",
@@ -5610,17 +7500,12 @@
     "quantity":1
   },
   {
-    "brand_name":"Svijany 13° Kněžna",
-    "origin_country":"Česká republika",
-    "quantity":6
-  },
-  {
-    "brand_name":"Svijany 13° Kníže",
+    "brand_name":"Svijany 13° Dux",
     "origin_country":"Česká republika",
     "quantity":1
   },
   {
-    "brand_name":"Svijany 13° Kvasničák",
+    "brand_name":"Svijany 13° Kníže",
     "origin_country":"Česká republika",
     "quantity":1
   },
@@ -5640,11 +7525,6 @@
     "quantity":1
   },
   {
-    "brand_name":"Šariš 10°",
-    "origin_country":"Slovensko",
-    "quantity":5
-  },
-  {
     "brand_name":"Šariš 11° Tmavý",
     "origin_country":"Slovensko",
     "quantity":1
@@ -5660,9 +7540,79 @@
     "quantity":1
   },
   {
-    "brand_name":"Švihadlo 11° ALE",
+    "brand_name":"Šumensko",
+    "origin_country":"Bulharsko",
+    "quantity":1
+  },
+  {
+    "brand_name":"Švabín 10° Faun",
     "origin_country":"Česká republika",
-    "quantity":2
+    "quantity":1
+  },
+  {
+    "brand_name":"Švabín 11° Bard",
+    "origin_country":"Česká republika",
+    "quantity":1
+  },
+  {
+    "brand_name":"Švabín 11° Stínovlk polotmavé",
+    "origin_country":"Česká republika",
+    "quantity":1
+  },
+  {
+    "brand_name":"Švabín Leshy – TDH Double IPA",
+    "origin_country":"Česká republika",
+    "quantity":1
+  },
+  {
+    "brand_name":"Tahoun 10° Vyrovnaná",
+    "origin_country":"Česká republika",
+    "quantity":1
+  },
+  {
+    "brand_name":"Tahoun 11° Matylda",
+    "origin_country":"Česká republika",
+    "quantity":1
+  },
+  {
+    "brand_name":"Tahoun 11° Tahoun",
+    "origin_country":"Česká republika",
+    "quantity":1
+  },
+  {
+    "brand_name":"Tahoun 12° Divoká Saison",
+    "origin_country":"Česká republika",
+    "quantity":1
+  },
+  {
+    "brand_name":"Tahoun 12° Gregorův ležák",
+    "origin_country":"Česká republika",
+    "quantity":1
+  },
+  {
+    "brand_name":"Tahoun 12° Rozvážný",
+    "origin_country":"Česká republika",
+    "quantity":1
+  },
+  {
+    "brand_name":"Tahoun 13° Poklidná",
+    "origin_country":"Česká republika",
+    "quantity":1
+  },
+  {
+    "brand_name":"Tahoun 24° Belgický Tripel",
+    "origin_country":"Česká republika",
+    "quantity":1
+  },
+  {
+    "brand_name":"Tahoun 8° Mrazivá Cryo Pop ALE",
+    "origin_country":"Česká republika",
+    "quantity":1
+  },
+  {
+    "brand_name":"Tambor 11°",
+    "origin_country":"Česká republika",
+    "quantity":1
   },
   {
     "brand_name":"Tambor 12° R. A. Dvorský",
@@ -5680,11 +7630,6 @@
     "quantity":1
   },
   {
-    "brand_name":"Tatra Jasne Pełne",
-    "origin_country":"Polsko",
-    "quantity":2
-  },
-  {
     "brand_name":"Tatra Mocne",
     "origin_country":"Polsko",
     "quantity":1
@@ -5692,6 +7637,11 @@
   {
     "brand_name":"Teapa lui Vlad",
     "origin_country":"Rumunsko",
+    "quantity":1
+  },
+  {
+    "brand_name":"Teteriv Višně",
+    "origin_country":"Ukrajina",
     "quantity":1
   },
   {
@@ -5710,19 +7660,9 @@
     "quantity":1
   },
   {
-    "brand_name":"Točená 10° (Kladno Kročehlavy)",
-    "origin_country":"Česká republika",
-    "quantity":2
-  },
-  {
     "brand_name":"Tomislav Tamno Pivo",
     "origin_country":"Chorvatsko",
     "quantity":1
-  },
-  {
-    "brand_name":"Topvar 10°",
-    "origin_country":"Slovensko",
-    "quantity":2
   },
   {
     "brand_name":"Továrna 10° Továrenská",
@@ -5775,19 +7715,19 @@
     "quantity":1
   },
   {
-    "brand_name":"Tři sestry sváteční ležák",
+    "brand_name":"Trumer Pils",
+    "origin_country":"Rakousko",
+    "quantity":1
+  },
+  {
+    "brand_name":"Tři sestry 12° ležák",
     "origin_country":"Česká republika",
     "quantity":1
   },
   {
-    "brand_name":"Tsingtao Lager",
-    "origin_country":"Čína",
-    "quantity":2
-  },
-  {
-    "brand_name":"Tuborg Classic",
-    "origin_country":"Dánsko",
-    "quantity":5
+    "brand_name":"Tři sestry sváteční ležák",
+    "origin_country":"Česká republika",
+    "quantity":1
   },
   {
     "brand_name":"Tupadelská 11%, světlý ležák",
@@ -5805,19 +7745,9 @@
     "quantity":1
   },
   {
-    "brand_name":"Tyskie",
-    "origin_country":"Polsko",
-    "quantity":9
-  },
-  {
-    "brand_name":"Tyskie Gronie",
-    "origin_country":"Polsko",
-    "quantity":4
-  },
-  {
-    "brand_name":"Tyskie Klasyczne",
-    "origin_country":"Polsko",
-    "quantity":4
+    "brand_name":"Turnov 12° tmavé",
+    "origin_country":"Česká republika",
+    "quantity":1
   },
   {
     "brand_name":"U Bizona Čižice 11° Vzteklá Zmije",
@@ -5840,14 +7770,14 @@
     "quantity":1
   },
   {
-    "brand_name":"U Medvídků 13° Oldgott",
+    "brand_name":"U lenocha 12° světlé",
     "origin_country":"Česká republika",
     "quantity":1
   },
   {
-    "brand_name":"U Orloje 11° Žatecký Samec",
+    "brand_name":"U Medvídků 13° Oldgott",
     "origin_country":"Česká republika",
-    "quantity":2
+    "quantity":1
   },
   {
     "brand_name":"U Orloje 12° Sičák",
@@ -5855,27 +7785,22 @@
     "quantity":1
   },
   {
-    "brand_name":"U Stočesů 10° světlá",
-    "origin_country":"Česká republika",
-    "quantity":2
-  },
-  {
-    "brand_name":"U Stočesů 11° Stočeská",
-    "origin_country":"Česká republika",
-    "quantity":3
-  },
-  {
-    "brand_name":"U Stočesů 12° Řepiš Polotmavý",
-    "origin_country":"Česká republika",
-    "quantity":2
-  },
-  {
-    "brand_name":"U Stočesů 14° Nakuřovaný speciál",
-    "origin_country":"Česká republika",
-    "quantity":2
-  },
-  {
     "brand_name":"U Stočesů Stočeský grep",
+    "origin_country":"Česká republika",
+    "quantity":1
+  },
+  {
+    "brand_name":"U Tomana 10° Emanuelova",
+    "origin_country":"Česká republika",
+    "quantity":1
+  },
+  {
+    "brand_name":"U Tomana 11° Otakarova",
+    "origin_country":"Česká republika",
+    "quantity":1
+  },
+  {
+    "brand_name":"U Tomana 12° Tomanova",
     "origin_country":"Česká republika",
     "quantity":1
   },
@@ -5910,22 +7835,17 @@
     "quantity":1
   },
   {
-    "brand_name":"Únětické pivo 10,7°",
-    "origin_country":"Česká republika",
-    "quantity":3
-  },
-  {
-    "brand_name":"Únětické pivo 10° Nefiltrované",
+    "brand_name":"Únětické pivo 12° Nefiltrované",
     "origin_country":"Česká republika",
     "quantity":1
   },
   {
-    "brand_name":"Únětické pivo 10° Světlé",
+    "brand_name":"Únětické pivo 12° Světlé",
     "origin_country":"Česká republika",
-    "quantity":2
+    "quantity":1
   },
   {
-    "brand_name":"Únětické pivo 12° Světlé",
+    "brand_name":"Únětický vánoční speciál 13",
     "origin_country":"Česká republika",
     "quantity":1
   },
@@ -5935,14 +7855,9 @@
     "quantity":1
   },
   {
-    "brand_name":"Ur-Krostitzer Feinherbes Pilsner",
+    "brand_name":"Unser Bürgerbräu Braumeister Bier",
     "origin_country":"Německo",
     "quantity":1
-  },
-  {
-    "brand_name":"Urpiner 10°",
-    "origin_country":"Slovensko",
-    "quantity":7
   },
   {
     "brand_name":"Urpiner 11° Kaprál polotmavé",
@@ -5950,28 +7865,23 @@
     "quantity":1
   },
   {
-    "brand_name":"Urpiner 13° IPL",
-    "origin_country":"Slovensko",
-    "quantity":2
-  },
-  {
     "brand_name":"Urpiner 16° Exkluzívny ležiak svetlý",
     "origin_country":"Slovensko",
     "quantity":1
   },
   {
-    "brand_name":"Ursus",
-    "origin_country":"Rumunsko",
-    "quantity":8
-  },
-  {
-    "brand_name":"Ursus Black",
-    "origin_country":"Rumunsko",
-    "quantity":2
-  },
-  {
     "brand_name":"Ursus Cool",
     "origin_country":"Rumunsko",
+    "quantity":1
+  },
+  {
+    "brand_name":"Václav 11° Murica",
+    "origin_country":"Česká republika",
+    "quantity":1
+  },
+  {
+    "brand_name":"Václav 11° NEIPA - Hazy prázdniny",
+    "origin_country":"Česká republika",
     "quantity":1
   },
   {
@@ -6015,14 +7925,34 @@
     "quantity":1
   },
   {
-    "brand_name":"Veltins",
-    "origin_country":"Německo",
-    "quantity":2
+    "brand_name":"Vedett Extra Pilsner",
+    "origin_country":"Belgie",
+    "quantity":1
   },
   {
-    "brand_name":"Velvet",
+    "brand_name":"Velkorybnický Hastrman 11°",
     "origin_country":"Česká republika",
-    "quantity":2
+    "quantity":1
+  },
+  {
+    "brand_name":"Velkorybnický Hastrman 12°",
+    "origin_country":"Česká republika",
+    "quantity":1
+  },
+  {
+    "brand_name":"Velkorybnický Hastrman 12° Sklepní",
+    "origin_country":"Česká republika",
+    "quantity":1
+  },
+  {
+    "brand_name":"Velkorybnický Hastrman 6° Aloe Bier",
+    "origin_country":"Česká republika",
+    "quantity":1
+  },
+  {
+    "brand_name":"Velkorybnický Hastrman 9° Sour Cherries Beer",
+    "origin_country":"Česká republika",
+    "quantity":1
   },
   {
     "brand_name":"Veselá vdova 16°",
@@ -6043,11 +7973,6 @@
     "brand_name":"Vinohradský pivovar 11°",
     "origin_country":"Česká republika",
     "quantity":1
-  },
-  {
-    "brand_name":"Vinohradský pivovar 12°",
-    "origin_country":"Česká republika",
-    "quantity":2
   },
   {
     "brand_name":"Vinohradský pivovar 13° Jantar",
@@ -6105,6 +8030,16 @@
     "quantity":1
   },
   {
+    "brand_name":"Volfas Engelman Mango Pale Ale",
+    "origin_country":"Litva",
+    "quantity":1
+  },
+  {
+    "brand_name":"Volfas Engelman NEIPA",
+    "origin_country":"Litva",
+    "quantity":1
+  },
+  {
     "brand_name":"Volt 10° Dynamo",
     "origin_country":"Česká republika",
     "quantity":1
@@ -6140,11 +8075,6 @@
     "quantity":1
   },
   {
-    "brand_name":"Volt 20° Impuls Imperial Stout",
-    "origin_country":"Česká republika",
-    "quantity":2
-  },
-  {
     "brand_name":"Volt 6° Převodník",
     "origin_country":"Česká republika",
     "quantity":1
@@ -6153,31 +8083,6 @@
     "brand_name":"Votrok 11°",
     "origin_country":"Česká republika",
     "quantity":1
-  },
-  {
-    "brand_name":"Vratislav 11°",
-    "origin_country":"Česká republika",
-    "quantity":3
-  },
-  {
-    "brand_name":"Vukovarsko domaće pivo",
-    "origin_country":"Chorvatsko",
-    "quantity":1
-  },
-  {
-    "brand_name":"Vysoký Chlumec 10° Princ Max X",
-    "origin_country":"Česká republika",
-    "quantity":2
-  },
-  {
-    "brand_name":"Vysoký Chlumec 13° Masopustní speciál",
-    "origin_country":"Česká republika",
-    "quantity":3
-  },
-  {
-    "brand_name":"Warka",
-    "origin_country":"Polsko",
-    "quantity":2
   },
   {
     "brand_name":"Warka Radler",
@@ -6205,11 +8110,6 @@
     "quantity":1
   },
   {
-    "brand_name":"Weihenstephaner Hefe Weissbier",
-    "origin_country":"Německo",
-    "quantity":2
-  },
-  {
     "brand_name":"Weltenburger Kloster Anno 1050",
     "origin_country":"Německo",
     "quantity":1
@@ -6230,8 +8130,18 @@
     "quantity":1
   },
   {
-    "brand_name":"Wieselburger Gold",
-    "origin_country":"Rakousko",
+    "brand_name":"Wicküler Pilsener",
+    "origin_country":"Německo",
+    "quantity":1
+  },
+  {
+    "brand_name":"Wieninger Festbier 5,8°%",
+    "origin_country":"Německo",
+    "quantity":1
+  },
+  {
+    "brand_name":"Wildbräu Kirtabier 5,7%",
+    "origin_country":"Německo",
     "quantity":1
   },
   {
@@ -6250,6 +8160,11 @@
     "quantity":1
   },
   {
+    "brand_name":"Wywar  14° Lucia  IPA",
+    "origin_country":"Slovensko",
+    "quantity":1
+  },
+  {
     "brand_name":"Yugoslavia Pilsner",
     "origin_country":"Srbsko",
     "quantity":1
@@ -6260,18 +8175,28 @@
     "quantity":1
   },
   {
+    "brand_name":"Zagorka",
+    "origin_country":"Bulharsko",
+    "quantity":1
+  },
+  {
+    "brand_name":"Zagorka nepasterizovane",
+    "origin_country":"Bulharsko",
+    "quantity":1
+  },
+  {
     "brand_name":"Záhora 12° Vanilla Rauch",
+    "origin_country":"Česká republika",
+    "quantity":1
+  },
+  {
+    "brand_name":"Záhora 14° Cold IPA",
     "origin_country":"Česká republika",
     "quantity":1
   },
   {
     "brand_name":"Zähringer Premium",
     "origin_country":"Německo",
-    "quantity":1
-  },
-  {
-    "brand_name":"Zakarpatske svetle",
-    "origin_country":"Ukrajina",
     "quantity":1
   },
   {
@@ -6295,27 +8220,17 @@
     "quantity":1
   },
   {
-    "brand_name":"Ze Sklepa hořká 12",
-    "origin_country":"Česká republika",
-    "quantity":2
-  },
-  {
-    "brand_name":"Zichovec 10° Krahulík",
-    "origin_country":"Česká republika",
-    "quantity":3
-  },
-  {
-    "brand_name":"Zichovec 11° Goose APA",
+    "brand_name":"Zhůřák 15° Hopolish IPA",
     "origin_country":"Česká republika",
     "quantity":1
   },
   {
-    "brand_name":"Zichovec 11° Krahulík",
+    "brand_name":"Zhůřák 20° Bad Flash Imperial Stout",
     "origin_country":"Česká republika",
-    "quantity":3
+    "quantity":1
   },
   {
-    "brand_name":"Zichovec 12° Bayern Weisse",
+    "brand_name":"Zichovec 11° Goose APA",
     "origin_country":"Česká republika",
     "quantity":1
   },
@@ -6375,9 +8290,9 @@
     "quantity":1
   },
   {
-    "brand_name":"Zichovec 15° Juicy Lucy NEIPA",
+    "brand_name":"Zichovec 16° Lassi",
     "origin_country":"Česká republika",
-    "quantity":2
+    "quantity":1
   },
   {
     "brand_name":"Zichovec 17° Apricot Milk Power",
@@ -6385,7 +8300,17 @@
     "quantity":1
   },
   {
+    "brand_name":"Zichovec 17° Baby Revolution",
+    "origin_country":"Česká republika",
+    "quantity":1
+  },
+  {
     "brand_name":"Zichovec 17° Love is in the air",
+    "origin_country":"Česká republika",
+    "quantity":1
+  },
+  {
+    "brand_name":"Zichovec 17° Nectar of Happiness NEIPA",
     "origin_country":"Česká republika",
     "quantity":1
   },
@@ -6398,16 +8323,6 @@
     "brand_name":"Zichovec 8° Malá Neipa",
     "origin_country":"Česká republika",
     "quantity":1
-  },
-  {
-    "brand_name":"Zíchovec 8° Malý ležák",
-    "origin_country":"Česká republika",
-    "quantity":2
-  },
-  {
-    "brand_name":"Zipfer Pils",
-    "origin_country":"Rakousko",
-    "quantity":3
   },
   {
     "brand_name":"Zirndorfer Kellerbier",
@@ -6430,39 +8345,9 @@
     "quantity":1
   },
   {
-    "brand_name":"Zlatopramen 10°",
-    "origin_country":"Česká republika",
-    "quantity":460
-  },
-  {
-    "brand_name":"Zlatopramen 11°",
-    "origin_country":"Česká republika",
-    "quantity":1497
-  },
-  {
-    "brand_name":"Zlatopramen Radler 0% Brusinka & Rybíz",
-    "origin_country":"Česká republika",
-    "quantity":4
-  },
-  {
     "brand_name":"Zlatopramen Radler 0% Citrón, bezový květ a máta",
     "origin_country":"Česká republika",
     "quantity":1
-  },
-  {
-    "brand_name":"Zlatopramen Radler Citrón",
-    "origin_country":"Česká republika",
-    "quantity":2
-  },
-  {
-    "brand_name":"Zlatopramen Radler Grapefruit",
-    "origin_country":"Česká republika",
-    "quantity":3
-  },
-  {
-    "brand_name":"Zlatopramen Radler Mandarinka, Jasmín",
-    "origin_country":"Česká republika",
-    "quantity":17
   },
   {
     "brand_name":"Zlatopramen Radler Pomeranč a zázvor",
@@ -6470,48 +8355,58 @@
     "quantity":1
   },
   {
-    "brand_name":"Zlatopramen Radler Tmavá višeň",
-    "origin_country":"Česká republika",
-    "quantity":2
-  },
-  {
-    "brand_name":"Zlatovar 10° Axman",
-    "origin_country":"Česká republika",
-    "quantity":7
-  },
-  {
     "brand_name":"Zlatý Bažant ´73",
     "origin_country":"Slovensko",
     "quantity":1
   },
   {
-    "brand_name":"Zlatý Bažant 10°",
-    "origin_country":"Slovensko",
-    "quantity":20
-  },
-  {
-    "brand_name":"Zlatý Bažant 11°",
-    "origin_country":"Slovensko",
-    "quantity":5
-  },
-  {
-    "brand_name":"Zlatý Bažant 12°",
-    "origin_country":"Slovensko",
-    "quantity":18
-  },
-  {
-    "brand_name":"Zlatý Bažant Radler Citron",
-    "origin_country":"Slovensko",
-    "quantity":3
-  },
-  {
-    "brand_name":"Zlatý Bažant Radler Grapefruit",
-    "origin_country":"Slovensko",
-    "quantity":4
-  },
-  {
     "brand_name":"Zlatý Bažant Tmavý",
     "origin_country":"Slovensko",
+    "quantity":1
+  },
+  {
+    "brand_name":"Zlínský švec 10°",
+    "origin_country":"Česká republika",
+    "quantity":1
+  },
+  {
+    "brand_name":"Zlínský švec 11°",
+    "origin_country":"Česká republika",
+    "quantity":1
+  },
+  {
+    "brand_name":"Zlínský švec 11° Polotmavý ležák",
+    "origin_country":"Česká republika",
+    "quantity":1
+  },
+  {
+    "brand_name":"Zlínský švec 12°",
+    "origin_country":"Česká republika",
+    "quantity":1
+  },
+  {
+    "brand_name":"Zlínský švec 12° Pšenice",
+    "origin_country":"Česká republika",
+    "quantity":1
+  },
+  {
+    "brand_name":"Zlínský švec 12° Ševcův stout",
+    "origin_country":"Česká republika",
+    "quantity":1
+  },
+  {
+    "brand_name":"Zlínský švec 13° Citra",
+    "origin_country":"Česká republika",
+    "quantity":1
+  },
+  {
+    "brand_name":"Zlínský švec 13° New Zealand IPA",
+    "origin_country":"Česká republika",
+    "quantity":1
+  },
+  {
+    "brand_name":"Zlínský švec 13° Single Hop Ale Citra",
+    "origin_country":"Česká republika",
     "quantity":1
   },
   {
@@ -6520,27 +8415,7 @@
     "quantity":1
   },
   {
-    "brand_name":"Złoty Pies Bokser Lager",
-    "origin_country":"Polsko",
-    "quantity":1
-  },
-  {
-    "brand_name":"Złoty Pies Bokser Lager",
-    "origin_country":"Polsko",
-    "quantity":1
-  },
-  {
     "brand_name":"Zloty Pies Briard Brown ALE",
-    "origin_country":"Polsko",
-    "quantity":1
-  },
-  {
-    "brand_name":"Złoty Pies Golden Weizen",
-    "origin_country":"Polsko",
-    "quantity":1
-  },
-  {
-    "brand_name":"Złoty Pies Pit Bull IPA",
     "origin_country":"Polsko",
     "quantity":1
   },
@@ -6565,6 +8440,36 @@
     "quantity":1
   },
   {
+    "brand_name":"Złoty Pies Bokser Lager",
+    "origin_country":"Polsko",
+    "quantity":1
+  },
+  {
+    "brand_name":"Złoty Pies Bokser Lager",
+    "origin_country":"Polsko",
+    "quantity":1
+  },
+  {
+    "brand_name":"Złoty Pies Golden Weizen",
+    "origin_country":"Polsko",
+    "quantity":1
+  },
+  {
+    "brand_name":"Złoty Pies Pit Bull IPA",
+    "origin_country":"Polsko",
+    "quantity":1
+  },
+  {
+    "brand_name":"Znojemský městský pivovar 12° Kyseláč",
+    "origin_country":"Česká republika",
+    "quantity":1
+  },
+  {
+    "brand_name":"Znojemský městský pivovar 17° Zaříkávač chmele",
+    "origin_country":"Česká republika",
+    "quantity":1
+  },
+  {
     "brand_name":"Zrzavá veverka 12°",
     "origin_country":"Česká republika",
     "quantity":1
@@ -6573,26 +8478,6 @@
     "brand_name":"Zrzavá veverka Eva 12° APA",
     "origin_country":"Česká republika",
     "quantity":1
-  },
-  {
-    "brand_name":"Żubr",
-    "origin_country":"Polsko",
-    "quantity":4
-  },
-  {
-    "brand_name":"Zubr 10°",
-    "origin_country":"Česká republika",
-    "quantity":246
-  },
-  {
-    "brand_name":"Zubr 11°",
-    "origin_country":"Česká republika",
-    "quantity":5
-  },
-  {
-    "brand_name":"Zubr 11° Grand",
-    "origin_country":"Česká republika",
-    "quantity":8
   },
   {
     "brand_name":"Żubr Szlachetny Mocny",
@@ -6610,14 +8495,14 @@
     "quantity":1
   },
   {
-    "brand_name":"Zwierzynieckie jasne",
-    "origin_country":"Polsko",
+    "brand_name":"Zwettler Original",
+    "origin_country":"Rakousko",
     "quantity":1
   },
   {
-    "brand_name":"Żywiec",
+    "brand_name":"Zwierzynieckie jasne",
     "origin_country":"Polsko",
-    "quantity":2
+    "quantity":1
   },
   {
     "brand_name":"Żywiec APA",
@@ -6635,24 +8520,14 @@
     "quantity":1
   },
   {
-    "brand_name":"Żywiec Premium ",
+    "brand_name":"Żywiec Premium\t",
     "origin_country":"Polsko",
     "quantity":1
-  },
-  {
-    "brand_name":"Žatec 10° Plavčík",
-    "origin_country":"Česká republika",
-    "quantity":2
   },
   {
     "brand_name":"Žatec 11° Celia",
     "origin_country":"Česká republika",
     "quantity":1
-  },
-  {
-    "brand_name":"Žatec 11° Premium",
-    "origin_country":"Česká republika",
-    "quantity":3
   },
   {
     "brand_name":"Žatec 12° Export",
@@ -6668,11 +8543,6 @@
     "brand_name":"Žatec 13° Baronka Premium",
     "origin_country":"Česká republika",
     "quantity":1
-  },
-  {
-    "brand_name":"Žatec 13° Sedmý schod",
-    "origin_country":"Česká republika",
-    "quantity":2
   },
   {
     "brand_name":"Žatec 14° Dark",
@@ -6698,11 +8568,6 @@
     "brand_name":"Žiguli Lager",
     "origin_country":"Ruská federace",
     "quantity":1
-  },
-  {
-    "brand_name":"Žiwell Jedenástka 11° svetlý ležiak",
-    "origin_country":"Slovensko",
-    "quantity":3
   },
   {
     "brand_name":"Žltý kabát",

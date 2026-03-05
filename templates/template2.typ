@@ -1,3 +1,5 @@
+#import "@preview/shadowed:0.3.0": shadow
+
 #set page(
   paper: "a4",
   // flipped: true,
@@ -14,11 +16,15 @@
 
 #let unique_countries = beer-data.map(item => item.at("origin_country", default: "")).dedup().len()
 
-#let total_quantity = beer-data.map(item => {
-  let val = item.at("quantity", default: 0)
-  // Убеждаемся, что значение — это число
-  if type(val) == str { int(val) } else { val }
-}).sum(default: 0) // Добавили default: 0 на случай пустого списка
+#let total_quantity = (
+  beer-data
+    .map(item => {
+      let val = item.at("quantity", default: 0)
+      // Убеждаемся, что значение — это число
+      if type(val) == str { int(val) } else { val }
+    })
+    .sum(default: 0)
+) // Добавили default: 0 на случай пустого списка
 
 // 1. Сортировка по алфавиту по ключу "brand_name" (или "Značka piva")
 #let sorted-data = beer-data.sorted(key: it => it.at("brand_name", default: ""))
@@ -62,22 +68,21 @@
 
 // --- ФИНАЛЬНЫЙ БЛОК С ИТОГАМИ ---
 // Добавляем float: true, чтобы разрешить scope: "parent"
-#block(width: 100%)[
-  #set text(size: 10pt)
-  #v(1em) 
-  #block(
-    width: 100%,
-    stroke: 0.5pt + gray,
-    inset: 5pt,
-    radius: 0pt,
-    fill: luma(250)
-  )[
-    #grid(
-      columns: (1fr, 0.9fr, 1fr),
-      align: center,
-      [*Unikátní značky:* #unique_brands],
-      [*Unikátní země:* #unique_countries],
-      [*Celkový počet:* #total_quantity]
-    )
+  #shadow(
+  blur: 4pt,
+)[#block(
+      width: 100%,
+      // stroke: 0.5pt + gray,
+      inset: 5pt,
+      radius: 0pt,
+      fill: rgb("#F8CBAD"),
+    )[
+      #grid(
+        columns: (1fr, 0.9fr, 1fr),
+        align: center,
+        [*Unikátní značky:* #unique_brands], 
+        [*Unikátní země:* #unique_countries], 
+        [*Celkový počet:* #total_quantity],
+      )]
   ]
-]
+
