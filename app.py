@@ -143,23 +143,31 @@ def load_language():
 languages = load_language()
 
 # Кастомный CSS для компактного выбора языка в углу
-st.markdown("""
-    <style>
-    div[data-testid="stSelectbox"] {
-        margin-left: auto;
-        width: 80px !important;
-    }
-    </style>
-    """, unsafe_allow_html=True)
+# st.markdown("""
+#     <style>
+#     div[data-testid="stSelectbox"] {
+#         margin-left: auto;
+#         width: 80px !important;
+#     }
+#     </style>
+#     """, unsafe_allow_html=True)
 
-# Выбор языка (лейбл скрыт для красоты)
-temp_lang_list = list(languages.keys())
-lang_choice = st.selectbox(
-    "Language Selection", 
-    options=temp_lang_list, 
-    index=0, 
-    label_visibility="collapsed"
-)
+# # Выбор языка (лейбл скрыт для красоты)
+# temp_lang_list = list(languages.keys())
+# lang_choice = st.selectbox(
+#     "Language Selection", 
+#     options=temp_lang_list, 
+#     index=0, 
+#     label_visibility="collapsed"
+# )
+# lang = languages[lang_choice]
+
+lang_choice = "en" 
+
+# Проверка на случай, если в JSON почему-то нет ключа "en"
+if lang_choice not in languages:
+    lang_choice = list(languages.keys())[0]
+
 lang = languages[lang_choice]
 
 # Заголовок и описание
