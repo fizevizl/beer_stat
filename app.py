@@ -88,18 +88,24 @@ if uploaded_file is not None:
     file_ext = uploaded_file.name.split('.')[-1].lower()
     
     try:
-        if file_ext == "xls":
-            # Читаем старый формат
-            df_xls = pd.read_excel(uploaded_file, sheet_name=None, engine='xlrd')
-            # Конвертируем в XLSX в оперативной памяти
-            output = io.BytesIO()
-            with pd.ExcelWriter(output, engine='openpyxl') as writer:
-                for sheet_name, df_sheet in df_xls.items():
-                    df_sheet.to_excel(writer, sheet_name=sheet_name, index=False)
-            output.seek(0)
-            processed_file = output
-        else:
-            processed_file = uploaded_file
+        # Пытаемся прочитать файл. Pandas сам попробует разные движки.
+        # Если файл .xls на самом деле является xml/xlsx, Pandas это поймет.
+        try:
+            # Сначала пробуем стандартный способ
+            df_dict = pd.read_excel(uploaded_file, sheet_name=None)
+        except Exception:
+            # Если не вышло (например, нужен xlrd), пробуем явно указать движок
+            df_dict = pd.read_excel(uploaded_file, sheet_name=None, engine='xlrd')
+
+        # Конвертируем все в XLSX в памяти (BytesIO), чтобы унифицировать данные
+        output = io.BytesIO()
+        with pd.ExcelWriter(output, engine='openpyxl') as writer:
+            for sheet_name, df_sheet in df_dict.items():
+                df_sheet.to_excel(writer, sheet_name=sheet_name, index=False)
+        output.seek(0)
+        processed_file = output
+
+        xls_tool = pd.ExcelFile(processed_file)
 
         # Определяем параметры листов
         xls_tool = pd.ExcelFile(processed_file)
