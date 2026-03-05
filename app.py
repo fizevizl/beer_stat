@@ -84,28 +84,36 @@ st.write(t["description"])
 uploaded_file = st.file_uploader(t["file_label"], type=["xlsx", "xls"])
 
 if uploaded_file is not None:
-    # --- БЛОК КОНВЕРТАЦИИ XLS -> XLSX ---
-    file_ext = uploaded_file.name.split('.')[-1].lower()
-    
     try:
-        # Пытаемся прочитать файл. Pandas сам попробует разные движки.
-        # Если файл .xls на самом деле является xml/xlsx, Pandas это поймет.
+        # --- УЛУЧШЕННЫЙ БЛОК ЧТЕНИЯ (Поддержка XML-XLS) ---
+        df_dict = None
+        
         try:
-            # Сначала пробуем стандартный способ
+            # 1. Пробуем прочитать как стандартный Excel (xlsx или честный xls)
             df_dict = pd.read_excel(uploaded_file, sheet_name=None)
         except Exception:
-            # Если не вышло (например, нужен xlrd), пробуем явно указать движок
-            df_dict = pd.read_excel(uploaded_file, sheet_name=None, engine='xlrd')
+            try:
+                # 2. Если упало, пробуем движок xlrd (старый бинарный xls)
+                uploaded_file.seek(0)
+                df_dict = pd.read_excel(uploaded_file, sheet_name=None, engine='xlrd')
+            except Exception:
+                # 3. Если всё еще ошибка "Expected BOF record", значит это XML-таблица
+                uploaded_file.seek(0)
+                # Читаем HTML-таблицу внутри XML
+                tables = pd.read_html(uploaded_file)
+                if tables:
+                    # Имитируем словарь листов для совместимости с остальным кодом
+                    df_dict = {"Sheet1": tables[0]}
+                else:
+                    raise ValueError("Could not find any tables in the file.")
 
-        # Конвертируем все в XLSX в памяти (BytesIO), чтобы унифицировать данные
+        # Конвертируем всё в XLSX в памяти для унификации
         output = io.BytesIO()
         with pd.ExcelWriter(output, engine='openpyxl') as writer:
             for sheet_name, df_sheet in df_dict.items():
                 df_sheet.to_excel(writer, sheet_name=sheet_name, index=False)
         output.seek(0)
         processed_file = output
-
-        xls_tool = pd.ExcelFile(processed_file)
 
         # Определяем параметры листов
         xls_tool = pd.ExcelFile(processed_file)
