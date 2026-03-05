@@ -134,19 +134,39 @@ if uploaded_file is not None:
         sheet_num = 0  # Первый лист
 
         if st.button(t["button"]):
-            # Читаем только первые 3 колонки
-            df = pd.read_excel(processed_file, sheet_name=sheet_num, usecols=[0, 1, 2])
+            # 1. Читаем лист БЕЗ usecols, чтобы не упасть, если колонок мало
+            df = pd.read_excel(processed_file, sheet_name=sheet_num)
             
+            # 2. Если все данные "слиплись" в одну колонку (бывает в XML/CSV), 
+            # пробуем разделить их (например, по точке с запятой)
+            if df.shape[1] == 1:
+                col_name = df.columns[0]
+                # Пробуем разбить первую колонку, если там есть разделители
+                temp_df = df[col_name].astype(str).str.split(';', expand=True)
+                if temp_df.shape[1] >= 3:
+                    df = temp_df
+                else:
+                    temp_df = df[col_name].astype(str).str.split('\t', expand=True)
+                    if temp_df.shape[1] >= 3:
+                        df = temp_df
+
+            # 3. Теперь, когда мы сделали всё возможное, берем первые 3 колонки
+            # Если их всё равно меньше, берем сколько есть, чтобы не вылетала ошибка
+            cols_to_take = min(3, df.shape[1])
+            df = df.iloc[:, :cols_to_take]
+
             # Очистка пустых строк
             df = df.dropna(subset=[df.columns[0]])
             
-            # Переименование колонок
-            rename_map = {
-                df.columns[0]: "brand_name",
-                df.columns[1]: "origin_country",
-                df.columns[2]: "quantity"
-            }
+            # Переименование колонок (динамическое)
+            new_names = ["brand_name", "origin_country", "quantity"]
+            rename_map = {df.columns[i]: new_names[i] for i in range(len(df.columns))}
             df = df.rename(columns=rename_map)
+            
+            # Если каких-то колонок не хватило, создаем пустые, чтобы Typst не ругался
+            for col in new_names:
+                if col not in df.columns:
+                    df[col] = ""
             
             # Сохраняем JSON
             os.makedirs('data', exist_ok=True)
