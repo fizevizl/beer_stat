@@ -35,14 +35,10 @@ def install_typst():
             return "typst"
     return bin_path
 
-# --- ЛОГИКА ПРЕОБРАЗОВАНИЯ ДЛЯ ОБЛАКА (БЕЗ EXCEL) ---
+# --- ЛОГИКА ПРЕОБРАЗОВАНИЯ ДЛЯ ОБЛАКА ---
 def load_excel_data(uploaded_file):
-    """
-    Универсальная логика чтения: пробует XLSX, бинарный XLS и XML-XLS.
-    Работает в Linux/Cloud без установленного Microsoft Office.
-    """
     try:
-        # 1. Пробуем стандартный pandas (xlsx или правильный xls)
+        # 1. Пробуем стандартный pandas (xlsx или честный бинарный xls)
         uploaded_file.seek(0)
         return pd.read_excel(uploaded_file, sheet_name=0)
     except Exception:
@@ -52,18 +48,31 @@ def load_excel_data(uploaded_file):
             return pd.read_excel(uploaded_file, sheet_name=0, engine='xlrd')
         except Exception:
             try:
-                # 3. Если это XML-XLS (тот самый заголовок <?xml), читаем как HTML/XML таблицу
+                # 3. ПОСЛЕДНИЙ ШАНС: Читаем как Microsoft XML Spreadsheet 2003
                 uploaded_file.seek(0)
-                # Нужны библиотеки: lxml, beautifulsoup4
-                tables = pd.read_html(uploaded_file, flavor='bs4')
-                if tables:
+                # Парсим XML напрямую через read_xml с учетом пространств имен Microsoft
+                df_xml = pd.read_xml(
+                    uploaded_file, 
+                    xpath=".//ss:Row", 
+                    namespaces={"ss": "urn:schemas-microsoft-com:office:spreadsheet"}
+                )
+                
+                # Очищаем названия колонок от префиксов {urn:...}
+                df_xml.columns = [c.split('}')[-1] for c in df_xml.columns]
+                
+                # Если вместо данных в колонках мы получили список "Data", 
+                # значит XML слишком сложный. Пробуем прочитать через BeautifulSoup более агрессивно.
+                if "Data" in df_xml.columns or df_xml.empty:
+                    uploaded_file.seek(0)
+                    # Используем flavor 'bs4' для парсинга "грязного" XML как HTML
+                    tables = pd.read_html(uploaded_file, flavor='bs4')
                     return tables[0]
-                else:
-                    raise ValueError("Таблицы не найдены внутри XML")
+                
+                return df_xml
             except Exception as e:
-                st.error(f"Ошибка при чтении файла: {e}")
+                st.error(f"Не удалось разобрать XML структуру: {e}")
                 return None
-
+            
 # --- ИНИЦИАЛИЗАЦИЯ ---
 TYPST_PATH = install_typst()
 FIXED_TEMPLATE = "template2.typ"
