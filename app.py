@@ -11,25 +11,35 @@ def install_typst():
     if platform.system() == "Windows":
         return "typst"
     
-    bin_path = "typst_bin/typst"
+    # Создаем папку и путь к самому бинарнику
+    bin_dir = os.path.abspath("typst_executable")
+    bin_path = os.path.join(bin_dir, "typst")
+    
     if not os.path.exists(bin_path):
-        os.makedirs("typst_bin", exist_ok=True)
+        os.makedirs(bin_dir, exist_ok=True)
         url = "https://github.com/typst/typst/releases/latest/download/typst-x86_64-unknown-linux-musl.tar.xz"
         archive = "typst.tar.xz"
         try:
             urllib.request.urlretrieve(url, archive)
             with tarfile.open(archive, "r:xz") as tar:
-                tar.extractall(path="typst_bin")
-            for root, dirs, files in os.walk("typst_bin"):
-                if "typst" in files and root != "typst_bin":
-                    os.rename(os.path.join(root, "typst"), bin_path)
+                tar.extractall(path=bin_dir)
+            
+            # Ищем файл typst внутри распакованных папок и переносим в корень bin_dir
+            for root, dirs, files in os.walk(bin_dir):
+                if "typst" in files and root != bin_dir:
+                    os.replace(os.path.join(root, "typst"), bin_path)
                     break
-            os.chmod(bin_path, 0o755)
-            if os.path.exists(archive): os.remove(archive)
+            
+            # ВАЖНО: Принудительно ставим права на чтение и выполнение
+            os.chmod(bin_path, 0o775) 
+            
+            if os.path.exists(archive): 
+                os.remove(archive)
         except Exception as e:
             st.error(f"Failed to install Typst: {e}")
             return "typst"
-    return "./" + bin_path
+            
+    return bin_path
 
 TYPST_PATH = install_typst()
 FIXED_TEMPLATE = "template2.typ"
@@ -82,7 +92,7 @@ if uploaded_file is not None:
     sheet_names = xls.sheet_names
     sheet_num = 2  # Индекс 1 — это второй лист в Excel
     
-    # Кнопка генерации (теперь она ОДНА)
+    # Кнопка генерации
     if st.button(t["button"]):
         try:
             # Читаем только первые 3 колонки (индексы 0, 1, 2)
@@ -114,7 +124,6 @@ if uploaded_file is not None:
                 output_path
             ]
 
-            # Замените subprocess.run(command, check=True) на этот блок:
             result = subprocess.run(command, capture_output=True, text=True)
             if result.returncode != 0:
                 st.error(f"Typst Error: {result.stderr}") # Это покажет реальную причину
