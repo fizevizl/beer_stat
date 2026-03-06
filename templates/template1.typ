@@ -1,32 +1,57 @@
 #set page(
   paper: "a4",
   margin: (x: 1cm, y: 1.5cm),
-  header: align(right)[Beer Statistics Report],
-  // Добавляем ключевое слово context перед счетчиком
-  footer: context align(center)[
-    Page #counter(page).display()
-  ],
+  header: align(right)[Beer List by Country],
+  footer: context align(center)[Page #counter(page).display()],
 )
 
-// Используем шрифт с поддержкой спецсимволов
-#set text(font: "Arial", lang: "en")
+#set text(font: "Libertinus Serif", size: 8pt)
 
-#let beer-data = json("../data/pivo.json")
+// 1. Загрузка данных (исправляем имя переменной на beer_data)
+#let beer_data = json("../data/pivo.json")
 
-#table(
-  columns: (1fr, 1fr, 50pt), 
-  fill: (x, y) => if y > 0 and calc.even(y) { luma(245) },
-  stroke: 0.5pt + gray,
-  inset: 7pt,
-  
-  // Вместо header-rows: 1 используем это:
-  table.header(
-    [*Značka piva*], [*Země původu*], [*Počet*],
-  ),
+// 2. Логика группировки данных по странам
+#let countries = beer_data.map(item => item.at("origin_country", default: "Unknown")).dedup().sorted()
 
-  ..beer-data.map(item => (
-    item.at("brand_name", default: "-"), 
-    item.at("origin_country", default: "-"), 
-    str(item.at("quantity", default: 0)),    
-  )).flatten()
-)
+#columns(2, gutter: 15pt)[
+  #for country in countries {
+    // Фильтруем пиво только для текущей страны
+    let beers = beer_data.filter(item => item.at("origin_country", default: "Unknown") == country)
+
+    // Считаем общий итог по стране
+    let total = beers
+      .map(b => {
+        let val = b.at("quantity", default: 0)
+        if type(val) == str { int(val) } else { val }
+      })
+      .sum()
+
+    // Заголовок страны
+    // heading(level: 2, outlined: false,)[#country]
+
+    table(
+      columns: (1fr, 30pt),
+      fill: (x, y) => if y == 0 {
+        rgb("#F8CBAD")
+      } else if x == 0 {
+        rgb("#C6E0B4")
+      } else if x == 1 {
+        rgb("#FFD966")
+      },
+      stroke: 0.5pt + gray,
+      inset: 3pt,
+      table.header([*Značka piva* *(#country)*], [*Počet*]),
+
+      ..beers
+        .map(item => (
+          item.at("brand_name", default: "-"),
+          align(center)[#str(item.at("quantity", default: 0))],
+        ))
+        .flatten(),
+    )
+
+    block(width: 100%, inset: 2pt)[
+      #align(right)[*Celkem:* #total]
+    ]
+  }
+]

@@ -174,6 +174,17 @@ st.info(lang["description"])
 # Поле загрузки файла
 uploaded_file = st.file_uploader("Excel file", type=["xlsx", "xls", "xml"])
 
+def report_generator(btn_start_caption, template_name, output_name):
+    if st.button(btn_start_caption):
+        with st.spinner('Generating report...'):
+            res, path = generate_pdf(template_name, output_name)
+            if res.returncode == 0:
+                st.success("Report ready!")
+                with open(path, "rb") as f:
+                    st.download_button('Download PDF', f, output_name, "application/pdf")
+            else:
+                st.error(f"Error: {res.stderr}")
+
 if uploaded_file:
     try:
         # ЭТАП 1: Чтение
@@ -190,22 +201,29 @@ if uploaded_file:
         DATA_DIR.mkdir(exist_ok=True)
         df.to_json(DATA_DIR / 'pivo.json', orient='records', force_ascii=False, indent=2)
 
-        # ЭТАП 4: Генерация PDF через Typst
-        OUTPUT_DIR.mkdir(exist_ok=True)
-        pdf_path = OUTPUT_DIR / "beer_report.pdf"          
+        st.subheader("Generate Reports")
+        
+        # Создаем две колонки для кнопок
+        col1, col2, col3 = st.columns(3)
         
         typst_bin = get_typst_path()
-        cmd = [typst_bin, "compile", "--root", ".", str(TEMPLATE_PATH), str(pdf_path)]
-        
-        result = subprocess.run(cmd, capture_output=True, text=True)
-        
-        if result.returncode == 0:
-            st.success(lang["success"])
-            # ЭТАП 5: Кнопка скачивания готового файла
-            with open(pdf_path, "rb") as f:
-                st.download_button(lang["download"], f, "beer_report.pdf", "application/pdf")
-        else:
-            st.error(f"Typst Error: {result.stderr}")
+        OUTPUT_DIR.mkdir(exist_ok=True)
 
+        # Функция для генерации PDF (чтобы не дублировать код)
+        def generate_pdf(template_name, output_name):
+            t_path = Path("templates") / template_name
+            p_path = OUTPUT_DIR / output_name
+            cmd = [typst_bin, "compile", "--root", ".", str(t_path), str(p_path)]
+            result = subprocess.run(cmd, capture_output=True, text=True)
+            return result, p_path
+
+        with col1:
+            report_generator("🍺 Full Beer List", "template2.typ", "beer_statistics.pdf")            
+        with col2:
+            report_generator("🌍 Country Stats", "template3.typ", "country_statistics.pdf")
+        with col3:
+            report_generator("🍻 Beer in Contry Stat", "template1.typ", "beer_country_statistics.pdf")
+
+        
     except Exception as e:
         st.error(f"Error: {e}")

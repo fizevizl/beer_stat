@@ -8,7 +8,7 @@
   footer: context align(center)[Page #counter(page).display()],
 )
 
-#set text(font: "Libertinus Serif", lang: "en", size: 8pt) // Уменьшим шрифт, чтобы влезало больше
+#set text(font: "Libertinus Serif", size: 8pt) // Уменьшим шрифт, чтобы влезало больше
 
 #let beer-data = json("../data/pivo.json")
 
