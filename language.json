@@ -4,5 +4,11 @@
         "description": "Upload Excel. The data for the transfer must be on the first sheet.",
         "success": "PDF created!",
         "download": "📥 Download PDF"
+    },
+    "🇨🇿": {
+        "title": "🍺 Generátor pivních statistik",
+        "description": "Nahrajte Excel. Údaje pro převod musí být na prvním listu.",
+        "success": "PDF vytvořeno!",
+        "download": "📥 Stáhnout PDF"
     }
 }

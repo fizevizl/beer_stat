@@ -13,6 +13,8 @@ from bs4 import XMLParsedAsHTMLWarning
 # Отключаем специфическое предупреждение парсера BS4, чтобы не засорять консоль
 warnings.filterwarnings("ignore", category=XMLParsedAsHTMLWarning)
 
+st.set_page_config(page_title='Beer Stat', page_icon='🍺')
+
 # --- ГЛОБАЛЬНЫЕ НАСТРОЙКИ И ПУТИ ---
 TYPST_VERSION_URL = "https://github.com/typst/typst/releases/latest/download/typst-x86_64-unknown-linux-musl.tar.xz"
 DATA_DIR = Path("data")              # Папка для промежуточных JSON данных
@@ -59,7 +61,6 @@ def get_typst_path():
 def try_read_excel(file) -> pd.DataFrame:
     """
     Универсальный «комбайн» для чтения таблиц. 
-    Пробует по очереди: XLSX, старый XLS, XML Spreadsheet 2003 и HTML.
     """
     
     # 1. Пробуем стандартные движки Pandas (XLSX, XLS)
@@ -70,7 +71,7 @@ def try_read_excel(file) -> pd.DataFrame:
         except Exception:
             continue
 
-    # 2. Ручной разбор XML Spreadsheet 2003 (частый формат выгрузок из 1С/SAP)
+    # 2. Ручной разбор XML Spreadsheet 2003
     try:
         file.seek(0)
         import xml.etree.ElementTree as ET
@@ -91,7 +92,6 @@ def try_read_excel(file) -> pd.DataFrame:
         if rows_data:
             return pd.DataFrame(rows_data)
     except Exception as e:
-        # Если XML не подошел, ошибка запишется, но мы пойдем дальше
         pass
 
     # Если ничего не помогло — выбрасываем исключение
@@ -102,7 +102,7 @@ def clean_data(df: pd.DataFrame) -> pd.DataFrame:
     """
     Приводит таблицу к единому стандарту:
     - Разделяет слипшиеся колонки (CSV-style).
-    - Выбирает первые 3 колонки (Бренд, Страна, Кол-во).
+    - Выбирает первые 3 колонки.
     - Удаляет пустые строки и преобразует числа.
     """
     # Если данные загрузились одной строкой текста — пробуем разделить по разделителям
@@ -140,8 +140,6 @@ def load_language():
         }
 
 # Подготовка словаря языков
-languages = load_language()
-
 # Кастомный CSS для компактного выбора языка в углу
 # st.markdown("""
 #     <style>
@@ -164,10 +162,8 @@ languages = load_language()
 
 # --- ИНТЕРФЕЙС ПРИЛОЖЕНИЯ ---
 languages = load_language()
-
 # Устанавливаем английский по умолчанию без отрисовки интерфейса выбора
 lang_choice = "en" 
-
 # Если в будущем захотите вернуть выбор, 
 # вы сможете снова добавить st.selectbox, использующий keys из languages
 lang = languages.get(lang_choice, languages[list(languages.keys())[0]])
