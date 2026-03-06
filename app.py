@@ -220,9 +220,9 @@ if uploaded_file:
         with col1:
             report_generator("🍺 Full Beer List", "template2.typ", "beer_statistics.pdf")            
         with col2:
-            report_generator("🌍 Country Stats", "template3.typ", "country_statistics.pdf")
-        with col3:
             report_generator("🍻 Beer in Contry Stat", "template1.typ", "beer_country_statistics.pdf")
+        with col3:
+            report_generator("🌍 Country Stats", "template3.typ", "country_statistics.pdf")
 
         
     except Exception as e:
