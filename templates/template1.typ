@@ -1,3 +1,5 @@
+#import "@preview/shadowed:0.3.0": shadow
+
 #set page(
   paper: "a4",
   margin: (x: 1cm, y: 1.5cm),
@@ -50,8 +52,24 @@
         .flatten(),
     )
 
-    block(width: 100%, inset: 2pt)[
-      #align(right)[*Celkem:* #total]
-    ]
+    align(right)[
+      #shadow(
+      blur: 4pt,
+      )[
+      #block(
+        width: 20%,
+        // stroke: 0.5pt + gray,
+        inset: 5pt,
+        radius: 0pt,
+        fill: rgb("#F8CBAD"),
+      )[
+        #set text(size: 6pt)
+        #grid(
+          columns: 1fr,
+          align: right,
+          [*Celkem:* #total],
+        )]
+      ]]
   }
 ]
+
