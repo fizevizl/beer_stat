@@ -1,10 +1,12 @@
 #import "@preview/shadowed:0.3.0": shadow
 
+#let today = datetime.today().display("[day].[month].[year]")
+
 #set page(
   paper: "a4",
   // flipped: true,
   margin: (x: 1cm, y: 1.5cm),
-  header: align(right)[Beer List],
+  header: align(right)[Beer List (#today)],
   footer: context align(center)[Page #counter(page).display()],
 )
 

@@ -1,7 +1,9 @@
+#let today = datetime.today().display("[day].[month].[year]")
+
 #set page(
   paper: "a4",
   margin: (x: 1cm, y: 1cm), // Уменьшили отступы, чтобы влезло больше
-  header: align(right)[Spotřeba piva podle země],
+  header: align(right)[Spotřeba piva podle země (#today)],
   footer: context align(center)[Page #counter(page).display()],
 )
 
