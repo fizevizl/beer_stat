@@ -40,7 +40,7 @@
   stroke: 0.5pt + luma(100),
   row-gutter: 0pt,
   inset: 3pt,
-
+  align: (x, y) => if x > 0 { center } else { left },
   fill: (x, y) => if y == 0 {
     rgb("#F8CBAD")
   } else if x == 0 {
@@ -50,18 +50,16 @@
   } else if x == 2 {
     rgb("#FFD966")
   },
-
+ 
   table.header([*Značka piva*], [*Země původu*], [*Počet*]),
 
   ..sorted-data
     .map(item => (
       item.at("brand_name", default: "-"),
       table.cell(
-        align: center + horizon,
         item.at("origin_country", default: "-"),
       ),
       table.cell(
-        align: center + horizon,
         str(item.at("quantity", default: 0)),
       ),
     ))

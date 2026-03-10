@@ -35,6 +35,9 @@
 
     table(
       columns: (1fr, 30pt),
+      stroke: 0.5pt + gray,
+      inset: 3pt,
+      align: (x, y) => if x > 0 { center } else { left },
       fill: (x, y) => if y == 0 {
         rgb("#F8CBAD")
       } else if x == 0 {
@@ -42,8 +45,7 @@
       } else if x == 1 {
         rgb("#FFD966")
       },
-      stroke: 0.5pt + gray,
-      inset: 3pt,
+
       table.header([*Značka piva* *(#country)*], [*Počet*]),
 
       ..beers

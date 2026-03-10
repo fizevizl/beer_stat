@@ -31,6 +31,7 @@
   columns: (1fr, 40pt), // Узкая колонка для цифр
   stroke: 0.5pt + luma(180),
   inset: 4pt,
+  align: (x, y) => if x > 0 { center } else { left },
   fill: (x, y) => if y == 0 {
     rgb("#F8CBAD")
   } else if x == 0 {
@@ -38,7 +39,6 @@
   } else if x == 1 {
     rgb("#FFD966")
   },
-  align: horizon + center,
   
   table.header(
     [*Země původu*], 
