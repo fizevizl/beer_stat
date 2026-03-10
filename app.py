@@ -8,6 +8,7 @@ import platform
 import json
 import warnings
 from pathlib import Path
+from datetime import datetime
 from bs4 import XMLParsedAsHTMLWarning
 
 # Отключаем специфическое предупреждение парсера BS4, чтобы не засорять консоль
@@ -174,14 +175,28 @@ st.info(lang["description"])
 # Поле загрузки файла
 uploaded_file = st.file_uploader("Excel file", type=["xlsx", "xls", "xml"])
 
-def report_generator(btn_start_caption, template_name, output_name):
+def report_generator(btn_start_caption, template_name, base_name):
+    # Генерируем текущую дату в формате ГГГГ-ММ-ДД
+    current_date = datetime.now().strftime("%d-%m-%y")
+    
+    # Формируем новое имя файла: "beer_statistics_2026-03-10.pdf"
+    # base_name здесь — это префикс (например, "beer_statistics")
+    file_name = f"{base_name}_{current_date}.pdf"
+    
     if st.button(btn_start_caption):
         with st.spinner('Generating report...'):
-            res, path = generate_pdf(template_name, output_name)
+            # Передаем file_name в функцию генерации
+            res, path = generate_pdf(template_name, file_name)
+            
             if res.returncode == 0:
-                st.success("Report ready!")
+                st.success(f"Report ready!")
                 with open(path, "rb") as f:
-                    st.download_button('Download PDF', f, output_name, "application/pdf")
+                    st.download_button(
+                        label='Download PDF', 
+                        data=f, 
+                        file_name=file_name, # Это имя увидит пользователь при сохранении
+                        mime="application/pdf"
+                    )
             else:
                 st.error(f"Error: {res.stderr}")
 
@@ -203,7 +218,7 @@ if uploaded_file:
 
         st.subheader("Generate Reports")
         
-        # Создаем две колонки для кнопок
+        # Создаем 3 колонки для кнопок
         col1, col2, col3 = st.columns(3)
         
         typst_bin = get_typst_path()
@@ -218,11 +233,11 @@ if uploaded_file:
             return result, p_path
 
         with col1:
-            report_generator("🍺 Full Beer List", "template2.typ", "beer_statistics.pdf")            
+            report_generator("🍺 Full Beer List", "template2.typ", "beer_full_stat")            
         with col2:
-            report_generator("🍻 Beer in Contry Stat", "template1.typ", "beer_country_statistics.pdf")
+            report_generator("🍻 Beer in Contry Stat", "template1.typ", "beer_country_stat")
         with col3:
-            report_generator("🌍 Country Stats", "template3.typ", "country_statistics.pdf")
+            report_generator("🌍 Country Stats", "template3.typ", "country_stat")
 
         
     except Exception as e:
