@@ -51,7 +51,7 @@
       ..beers
         .map(item => (
           item.at("brand_name", default: "-"),
-          align(center)[#str(item.at("quantity", default: 0))],
+          str(item.at("quantity", default: 0)),
         ))
         .flatten(),
     )
